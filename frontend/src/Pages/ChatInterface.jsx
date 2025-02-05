@@ -1,158 +1,191 @@
-import { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import axios from "axios";
 
 const ChatInterface = () => {
-  const [step, setStep] = useState("selection");
-  const [topic, setTopic] = useState("");
-  const [chat, setChat] = useState([]);
-  const [input, setInput] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [category, setCategory] = useState("frontend");
+  const [questions, setQuestions] = useState([]);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [userAnswer, setUserAnswer] = useState("");
+  const [feedback, setFeedback] = useState("");
+  const [chatHistory, setChatHistory] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const chatEndRef = useRef(null);
 
-  const askAI = async (prompt) => {
+  const englishOnlyRegex = /^[a-zA-Z0-9\s.,!?'"-]*$/;
+
+  const fetchQuestions = async () => {
     try {
-      const response = await fetch("http://localhost:3001/api/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ prompt }),
-      });
-      const data = await response.json();
-      return data.message;
+      setIsLoading(true);
+      const response = await axios.get(`http://localhost:3000/api/questions/${category}`);
+      setQuestions(response.data);
+      setCurrentQuestionIndex(0);
+      setUserAnswer("");
+      setFeedback("");
+      setChatHistory([]);
+      setIsLoading(false);
     } catch (error) {
-      console.error("Error with API:", error);
-      return "Unable to process the request.";
+      console.error("Error fetching questions:", error);
+      setQuestions([]);
+      setIsLoading(false);
     }
   };
 
-  const handleStartChat = async () => {
-    setLoading(true);
-    const question = await askAI(
-      `Generate a ${topic} interview question for a beginner-level candidate.`
-    );
-    setChat([{ sender: "bot", message: question }]);
-    setLoading(false);
+  const submitAnswer = async () => {
+    if (!userAnswer.trim()) {
+      alert("Please provide an answer before submitting.");
+      return;
+    }
+
+    // Check if the answer contains only English characters
+    if (!englishOnlyRegex.test(userAnswer)) {
+      alert("Please use English only for your answer.");
+      return;
+    }
+
+    try {
+      const currentQuestion = questions[currentQuestionIndex];
+      const response = await axios.post("http://localhost:3000/api/questions/evaluate", {
+        category,
+        questionId: currentQuestion._id,
+        userAnswer,
+      });
+
+      const feedbackReceived = response.data.feedback;
+      setFeedback(feedbackReceived);
+
+      // Save current interaction in chat history
+      setChatHistory((prevHistory) => [
+        ...prevHistory,
+        {
+          question: currentQuestion.questionText,
+          answer: userAnswer,
+          feedback: feedbackReceived,
+        },
+      ]);
+
+      setUserAnswer(""); // Clear user input
+    } catch (error) {
+      console.error("Error submitting answer:", error);
+      alert("Failed to submit answer. Please try again.");
+    }
   };
 
-  const handleResponse = async () => {
-    setLoading(true);
-    const feedback = await askAI(
-      `Evaluate this answer for the following question: "${chat[chat.length - 1]?.message}". Answer: "${input}". Provide constructive feedback.`
-    );
-    const nextQuestion = await askAI(
-      `Generate the next ${topic} interview question for a beginner-level candidate.`
-    );
-    setChat([
-      ...chat,
-      { sender: "user", message: input },
-      { sender: "bot", message: feedback },
-      { sender: "bot", message: nextQuestion },
-    ]);
-    setInput("");
-    setLoading(false);
+  const handleNextQuestion = () => {
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+      setFeedback(""); // Clear feedback for the next question
+    } else {
+      alert("You have completed all questions in this category!");
+    }
   };
+
+  useEffect(() => {
+    fetchQuestions();
+  }, [category]);
+
+  // Auto-scroll to the latest message
+  useEffect(() => {
+    if (chatEndRef.current) {
+      chatEndRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [chatHistory, feedback]);
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      {step === "selection" && (
-        <div className="bg-white p-6 rounded shadow-md text-center">
-          <h2 className="text-xl font-semibold mb-4">Choose Interview Type</h2>
-          <button
-            className="px-4 py-2 bg-blue-500 text-white rounded mr-2"
-            onClick={() => setStep("topic")}
-          >
-            Technical
-          </button>
-          <button
-            className="px-4 py-2 bg-green-500 text-white rounded"
-            onClick={() => {
-              setTopic("hr");
-              setStep("chat");
-              setChat([
-                {
-                  sender: "bot",
-                  message: "Welcome to the HR interview! Let's get started.",
-                },
-              ]);
-            }}
-          >
-            HR
-          </button>
-        </div>
-      )}
-      {step === "topic" && (
-        <div className="bg-white p-6 rounded shadow-md text-center">
-          <h2 className="text-xl font-semibold mb-4">Choose Technical Topic</h2>
-          <button
-            className="px-4 py-2 bg-blue-500 text-white rounded mr-2"
-            onClick={() => {
-              setTopic("frontend");
-              setStep("chat");
-              handleStartChat();
-            }}
-          >
-            Frontend
-          </button>
-          <button
-            className="px-4 py-2 bg-blue-500 text-white rounded mr-2"
-            onClick={() => {
-              setTopic("backend");
-              setStep("chat");
-              handleStartChat();
-            }}
-          >
-            Backend
-          </button>
-          <button
-            className="px-4 py-2 bg-blue-500 text-white rounded"
-            onClick={() => {
-              setTopic("fullstack");
-              setStep("chat");
-              handleStartChat();
-            }}
-          >
-            Fullstack
-          </button>
-        </div>
-      )}
-      {step === "chat" && (
-        <div className="bg-white p-6 rounded shadow-md w-96">
-          <h2 className="text-lg font-bold mb-4">Chat - {topic.toUpperCase()}</h2>
-          <div className="h-64 overflow-y-scroll border p-2 mb-4">
-            {chat.map((c, index) => (
-              <div
-                key={index}
-                className={`mb-2 ${
-                  c.sender === "bot" ? "text-left" : "text-right"
-                }`}
-              >
-                <span
-                  className={`${
-                    c.sender === "bot" ? "text-blue-500" : "text-green-500"
-                  }`}
-                >
-                  {c.message}
-                </span>
-              </div>
-            ))}
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-purple-50">
+      <div className="w-full max-w-2xl bg-white shadow-xl rounded-lg flex flex-col h-[85vh] overflow-hidden">
+        {/* Header */}
+        <div className="p-6 border-b bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="flex justify-between items-center">
+            <h1 className="text-2xl font-bold text-white">Mock Interview Chatbot</h1>
+            <select
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+              className="text-sm border rounded-lg p-2 bg-white focus:ring-2 focus:ring-blue-300"
+            >
+              <option value="frontend">Frontend</option>
+              <option value="backend">Backend</option>
+              <option value="fullstack">Fullstack</option>
+              <option value="hr">HR</option>
+            </select>
           </div>
-          {loading && <p className="text-center text-gray-500">Loading...</p>}
-          {!loading && (
+        </div>
+
+        {/* Chat History */}
+        <div className="flex-1 p-6 overflow-y-auto bg-gray-50">
+          {isLoading ? (
+            <div className="flex justify-center items-center h-full">
+              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+            </div>
+          ) : (
             <>
-              <input
-                type="text"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                className="border w-full px-2 py-1 mb-2"
-                placeholder="Your answer..."
-              />
-              <button
-                onClick={handleResponse}
-                className="px-4 py-2 bg-blue-500 text-white rounded"
-              >
-                Submit
-              </button>
+              {chatHistory.map((chat, index) => (
+                <div key={index} className="space-y-4">
+                  {/* Bot Question */}
+                  <div className="flex justify-start">
+                    <div className="bg-white p-4 rounded-xl shadow-md max-w-[70%]">
+                      <p className="text-sm font-medium text-gray-600">Bot:</p>
+                      <p className="text-gray-800">{chat.question}</p>
+                    </div>
+                  </div>
+                  {/* User Answer */}
+                  <div className="flex justify-end">
+                    <div className="bg-blue-500 p-4 rounded-xl shadow-md max-w-[70%]">
+                      <p className="text-sm font-medium text-white">You:</p>
+                      <p className="text-white">{chat.answer}</p>
+                    </div>
+                  </div>
+                  {/* Bot Feedback */}
+                  <div className="flex justify-start">
+                    <div className="bg-white p-4 rounded-xl shadow-md max-w-[70%]">
+                      <p className="text-sm font-medium text-gray-600">Bot:</p>
+                      <p className="text-gray-800">{chat.feedback}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+
+              {questions.length > 0 && feedback === "" && (
+                <div className="flex justify-start">
+                  <div className="bg-white p-4 rounded-xl shadow-md max-w-[70%]">
+                    <p className="text-sm font-medium text-gray-600">Bot:</p>
+                    <p className="text-gray-800">{questions[currentQuestionIndex].questionText}</p>
+                  </div>
+                </div>
+              )}
+              <div ref={chatEndRef} />
             </>
           )}
         </div>
-      )}
+
+        {/* Input Area */}
+        <div className="border-t p-6 bg-white">
+          <div className="flex items-center space-x-4">
+            <textarea
+              value={userAnswer}
+              onChange={(e) => setUserAnswer(e.target.value)}
+              placeholder="Type your answer..."
+              className="flex-1 border rounded-xl p-3 focus:ring-2 focus:ring-blue-300 resize-none transition-all duration-200"
+              rows={2}
+            />
+            <button
+              onClick={submitAnswer}
+              className="bg-blue-500 text-white px-6 py-3 rounded-xl shadow-md hover:bg-blue-600 transition-all duration-200"
+            >
+              Submit
+            </button>
+            <button
+              onClick={handleNextQuestion}
+              className={`px-6 py-3 rounded-xl shadow-md transition-all duration-200 ${
+                feedback
+                  ? "bg-blue-500 text-white ring-4 ring-blue-300 animate-pulse"
+                  : "bg-gray-500 text-white"
+              }`}
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,23 +1,40 @@
-const express = require("express")
-const app = express()
-const bodyParser = require('body-parser')
-const cors = require('cors')
-const AuthRouter = require("./Routes/AuthRouter")
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const dotenv = require("dotenv");
+const bodyParser = require("body-parser");
+
+// Import Routes
+const AuthRouter = require("./Routes/AuthRouter");
 const feedbackRoutes = require("./Routes/Feedback");
-require("dotenv").config()
-require('./Models/db')
+const questionsRoutes = require("./Routes/questions");
 
-const PORT = process.env.PORT || 3000
+// Load environment variables
+dotenv.config();
 
-app.get('/ping',(req, res)=>{
-    res.send('PONG')
-})
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-app.use(bodyParser.json())
-app.use(cors())
-app.use('/auth',AuthRouter)
+// Middleware
+app.use(express.json());
+app.use(bodyParser.json());
+app.use(cors());
+
+// MongoDB Connection
+mongoose
+  .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log("MongoDB Connected"))
+  .catch((err) => console.error(err));
+
+// API Routes
+app.get("/ping", (req, res) => {
+  res.send("PONG");
+});
+app.use("/auth", AuthRouter);
 app.use("/api/feedback", feedbackRoutes);
+app.use("/api/questions", questionsRoutes);
 
-app.listen(PORT, ()=>{
-    console.log(`Server is running on ${PORT}`)
-})
+// Start Server
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
