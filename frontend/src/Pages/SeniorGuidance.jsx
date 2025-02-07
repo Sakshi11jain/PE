@@ -121,11 +121,13 @@ const SeniorGuidance = () => {
     }
   ];
 
+
+
   return (
-    <div className="p-10 bg-slate-800">
+    <div className="p-10 bg-gradient-to-br from-blue-200 to-blue-50 min-h-screen">
       <h1
         className="text-6xl font-bold mb-8 text-white text-center"
-        style={{ textShadow: '0 0 3px #fff, 0 0 6px #0077ff' }}
+        style={{ textShadow: '0 0 6px #fff, 0 0 12px #a855f7' }}
       >
         Senior Guidance
       </h1>
@@ -137,9 +139,9 @@ const SeniorGuidance = () => {
           >
             <div className="card-inner">
               {/* Front Side */}
-              <div className="card-front bg-slate-100 text-black p-7 rounded shadow-md">
+              <div className="card-front bg-white text-gray-800 p-7 rounded-xl shadow-lg transform transition-all duration-300">
                 <img
-                  className="mx-auto h-32 w-32 rounded-full mb-3"
+                  className="mx-auto h-32 w-32 rounded-full mb-3 shadow-md"
                   src={user.profilePhoto || "https://via.placeholder.com/150"}
                   alt={user.name}
                 />
@@ -150,17 +152,18 @@ const SeniorGuidance = () => {
                 <h2 className="pl-6"><strong>Email:</strong> {user.contact || "N/A"}</h2>
                 <button
                   onClick={() => toggleFlip(index)}
-                  className="bg-emerald-700 text-white px-4 py-2 rounded font-medium mt-3"
+                  className="mt-4 w-full bg-gradient-to-r from-purple-500 to-purple-700 text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
                 >
-                  Experience
+                  View Experience
                 </button>
               </div>
+
               {/* Back Side */}
-              <div className="card-back bg-slate-200 flex flex-col items-center justify-center rounded shadow-md">
-                <p className="text-base font-medium px-6 mb-4">{user.experience}</p>
+              <div className="card-back bg-gray-100 flex flex-col items-center justify-center rounded-xl shadow-lg p-6">
+                <p className="text-base font-medium px-6 text-gray-800 mb-4">{user.experience}</p>
                 <button
                   onClick={() => toggleFlip(index)}
-                  className="bg-emerald-700 text-white px-4 py-2 rounded font-medium"
+                  className="w-full bg-gradient-to-r from-purple-500 to-purple-700 text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
                 >
                   Back to Details
                 </button>

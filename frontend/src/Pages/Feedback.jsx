@@ -24,10 +24,12 @@ const FeedbackForm = () => {
   };
 
   return (
-    <div className="flex flex-wrap items-center justify-center h-screen space-x-0 bg-slate-900">
+    <div className="flex flex-wrap items-center justify-center h-screen space-x-0 bg-gradient-to-r from-blue-100 to-purple-200 p-8">
       <div className="flex w-full max-w-4xl">
-        <div className="w-1/2 p-8 bg-white shadow-2xl rounded-l-3xl transform transition-all duration-300">
-          <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">Your Feedback Matters!</h2>
+        <div className="w-1/2 p-8 bg-purple-100 shadow-2xl rounded-l-3xl transform transition-all duration-300">
+          <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">
+            Your Feedback Matters!
+          </h2>
           {submitted ? (
             <p className="text-green-600 text-md text-center font-semibold">
               🎉🎉🎉 Thank you for your valuable feedback! 🎉🎉🎉
@@ -74,26 +76,32 @@ const FeedbackForm = () => {
               </div>
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-lg hover:from-blue-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                className="w-full bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold py-3 rounded-lg shadow-lg backdrop-blur-md bg-opacity-90 hover:bg-opacity-100 hover:shadow-xl transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-400"
               >
-                Submit Feedback
+                🚀 Submit Feedback
               </button>
             </form>
           )}
         </div>
 
-        <div className="relative w-1/2 p-0 bg-slate-800 text-white rounded-r-3xl transform transition-all duration-300">
-        <div className=" m-0 p-0
+        <div className="relative w-1/2 p-0 bg-purple-700 text-white rounded-r-3xl transform transition-all duration-300">
+          <div
+            className=" m-0 p-0
           border-t-[45px] border-t-transparent
-          border-l-[60px] border-l-white
-          border-b-[45px] border-b-transparent">
-        </div>
-        <div className="flex flex-wrap h-80 items-center justify-center">
-          <h2 className="text-3xl font-semibold text-center mb-6">Let’s Connect</h2>
-          <p className="text-lg text-center mb-6">Got a question or want to collaborate ? <br/>Send us an email!</p>
+          border-l-[60px] border-l-purple-100
+          border-b-[45px] border-b-transparent"
+          ></div>
+          <div className="flex flex-wrap h-80 items-center justify-center">
+            <h2 className="text-3xl font-semibold text-center mb-6">
+              Let’s Connect
+            </h2>
+            <p className="text-lg text-center mb-6">
+              Got a question or want to collaborate ? <br />
+              Send us an email!
+            </p>
             <div className="flex justify-center">
               <a href="mailto:prepedge2k25@gmail.com">
-                <button className="w-auto p-12 bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-lg hover:from-blue-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                <button className="w-auto px-6 py-3 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 text-white font-semibold rounded-full shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-400">
                   📧 Send an Email
                 </button>
               </a>
