@@ -9,6 +9,7 @@ import SeniorGuidance from './SeniorGuidance';
 import ScrollToTopButton from "./ScrollToTop";
 import Footer from "./Footer";
 import { motion, AnimatePresence } from "framer-motion";
+import Faq from "./Faq";
 
 function Home() {
   const words = ["Fear", "Doubt", "Anxiety"];
@@ -285,6 +286,7 @@ function Home() {
     </div>
         </div>
         </div>
+        <Faq/>
       <Company/>
       <ResumeBuilder/>
       <SeniorGuidance/>

@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const bodyParser = require("body-parser");
+const faqData = require('./faqData.json');
 
 // Import Routes
 const AuthRouter = require("./Routes/AuthRouter");
@@ -19,6 +20,11 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(cors());
+
+//faqData
+app.get('/api/faqs', (req, res) => {
+  res.json(faqData);
+});
 
 // MongoDB Connection
 mongoose

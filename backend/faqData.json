@@ -1,0 +1,156 @@
+{
+  "frontend": [
+    {
+      "question": "What is React?",
+      "answer": "React is a JavaScript library for building user interfaces."
+    },
+    {
+      "question": "What is the virtual DOM?",
+      "answer": "The virtual DOM is a lightweight copy of the real DOM used to improve performance in React."
+    },
+    {
+      "question": "What are React hooks?",
+      "answer": "Hooks are functions in React that let you use state and lifecycle features in functional components."
+    },
+    {
+      "question": "What is JSX?",
+      "answer": "JSX is a syntax extension for JavaScript that allows you to write HTML-like code in React."
+    },
+    {
+      "question": "What is the difference between a controlled and an uncontrolled component?",
+      "answer": "A controlled component's state is managed by React, while an uncontrolled component maintains its own state via the DOM."
+    }
+  ],
+  "backend": [
+    {
+      "question": "What is Node.js?",
+      "answer": "Node.js is a JavaScript runtime built on Chrome's V8 engine used for server-side programming."
+    },
+    {
+      "question": "What is Express.js?",
+      "answer": "Express.js is a Node.js framework used to build web applications and APIs."
+    },
+    {
+      "question": "What is middleware in Express.js?",
+      "answer": "Middleware functions are functions that execute during the lifecycle of a request to the server."
+    },
+    {
+      "question": "What is REST API?",
+      "answer": "REST API is an architectural style for designing networked applications using HTTP methods like GET, POST, PUT, DELETE."
+    },
+    {
+      "question": "What is the purpose of a database in backend development?",
+      "answer": "Databases are used to store, manage, and retrieve data for backend applications."
+    }
+  ],
+  "fullstack": [
+    {
+      "question": "What is the MERN stack?",
+      "answer": "MERN stands for MongoDB, Express.js, React, and Node.js, used to build full-stack web applications."
+    },
+    {
+      "question": "How do you handle authentication in a MERN stack app?",
+      "answer": "Authentication can be handled using tools like JWT (JSON Web Token) or OAuth."
+    },
+    {
+      "question": "What is the purpose of Redux in a full-stack app?",
+      "answer": "Redux is used for state management in React applications."
+    },
+    {
+      "question": "How does client-server communication work in the MERN stack?",
+      "answer": "The client (React) sends requests to the server (Node.js and Express), which interacts with the database (MongoDB) to provide data."
+    },
+    {
+      "question": "What is CORS and why is it needed?",
+      "answer": "CORS (Cross-Origin Resource Sharing) is a security feature that allows or restricts resource sharing between different origins."
+    }
+  ],
+  "database": [
+    {
+      "question": "What is MongoDB?",
+      "answer": "MongoDB is a NoSQL database used for storing data in the form of documents."
+    },
+    {
+      "question": "What is a primary key?",
+      "answer": "A primary key is a unique identifier for a record in a database table."
+    },
+    {
+      "question": "What is the difference between SQL and NoSQL databases?",
+      "answer": "SQL databases use structured tables, while NoSQL databases store data in a flexible, document-oriented format."
+    },
+    {
+      "question": "What is indexing in databases?",
+      "answer": "Indexing is a technique to optimize database queries by creating a data structure to locate records faster."
+    },
+    {
+      "question": "What is a foreign key?",
+      "answer": "A foreign key is a field in one table that uniquely identifies a row in another table."
+    }
+  ],
+  "logical": [
+    {
+      "question": "How many times does the digit '1' appear from 1 to 100?",
+      "answer": "The digit '1' appears 21 times."
+    },
+    {
+      "question": "If a train travels 60 km in 1 hour, how long will it take to travel 180 km?",
+      "answer": "It will take 3 hours."
+    },
+    {
+      "question": "What comes next in the sequence: 2, 4, 8, 16?",
+      "answer": "The next number is 32."
+    },
+    {
+      "question": "How many minutes are there in 2.5 hours?",
+      "answer": "There are 150 minutes in 2.5 hours."
+    },
+    {
+      "question": "What is the smallest number divisible by both 6 and 9?",
+      "answer": "The smallest number divisible by both is 18."
+    }
+  ],
+  "aptitude": [
+    {
+      "question": "What is 15% of 200?",
+      "answer": "15% of 200 is 30."
+    },
+    {
+      "question": "If a product costs $120 after a 20% discount, what was the original price?",
+      "answer": "The original price was $150."
+    },
+    {
+      "question": "A person covers 120 km in 3 hours. What is their speed?",
+      "answer": "The speed is 40 km/h."
+    },
+    {
+      "question": "What is the square root of 144?",
+      "answer": "The square root of 144 is 12."
+    },
+    {
+      "question": "If the sum of two numbers is 50 and their difference is 10, what are the numbers?",
+      "answer": "The numbers are 30 and 20."
+    }
+  ],
+  "hr": [
+    {
+      "question": "Tell me about yourself.",
+      "answer": "Provide a brief summary of your education, work experience, and achievements."
+    },
+    {
+      "question": "Why do you want to work for our company?",
+      "answer": "Express enthusiasm for the company’s mission, values, or recent achievements."
+    },
+    {
+      "question": "What are your strengths and weaknesses?",
+      "answer": "Highlight relevant strengths and mention a minor weakness with steps you're taking to improve."
+    },
+    {
+      "question": "Where do you see yourself in five years?",
+      "answer": "Explain your career goals and how they align with the company's vision."
+    },
+    {
+      "question": "How do you handle pressure?",
+      "answer": "Describe strategies like prioritizing tasks, staying calm, and seeking support when needed."
+    }
+  ]
+}
