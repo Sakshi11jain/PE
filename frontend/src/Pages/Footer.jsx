@@ -2,21 +2,29 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-400 p-4">
-      <div className="container mx-auto flex flex-wrap items-center justify-evenly text-center space-y-8 md:space-y-0">
+    <footer className="bg-gray-900 text-gray-400 p-6 md:p-8">
+      <div className="container mx-auto flex flex-wrap items-center justify-between text-center space-y-8 md:space-y-0">
+        
+        <div className="w-full md:w-1/3 flex justify-center">
+          <img
+            src="./images/footer_logo.jpg"
+            alt="SCSIT logo"
+            className="w-32 h-32 md:w-40 md:h-40 rounded-full border-2 border-gray-700"
+          />
+        </div>
         <div className="w-full md:w-1/3 space-y-4">
           <h2 className="text-xl md:text-2xl font-semibold text-gray-200 pt-4 pb-2">
             Sakshi Jain & Ayushi Pawar
           </h2>
-          <p className="text-sm md:text-base">
-            Built with ❤️ using MongoDB, Express, Reactjs and Nodejs
+          <p className="text-sm md:text-base text-gray-400">
+            Built with ❤️ using MongoDB, Express, Reactjs, and Nodejs
           </p>
-          <div className="flex justify-center space-x-6 pt-4">
+          <div className="flex justify-center space-x-8 pt-4">
             <a
               href="https://linkedin.com/in/prepedge2k25/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-gray-200 transition"
+              className="text-gray-400 hover:text-blue-500 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -31,13 +39,13 @@ const Footer = () => {
               href="https://github.com/prepedge2k25"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-gray-200 transition"
+              className="text-gray-400 hover:text-gray-600 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="w-6 h-6 md:w-7 md:h-7"
+                className="w-6 h-6 md:w-9 md:h-7"
               >
                 <path d="M12 0a12 12 0 00-3.79 23.39c.6.11.82-.26.82-.58V20.9c-3.34.73-4.04-1.44-4.04-1.44-.55-1.41-1.33-1.79-1.33-1.79-1.09-.74.08-.73.08-.73 1.2.08 1.83 1.24 1.83 1.24 1.08 1.85 2.83 1.32 3.52 1.01.11-.78.42-1.32.76-1.63-2.66-.3-5.46-1.34-5.46-5.96a4.67 4.67 0 011.24-3.24 4.34 4.34 0 01.12-3.2s1-.32 3.3 1.23a11.5 11.5 0 016 0c2.3-1.55 3.3-1.23 3.3-1.23.73 1.82.28 3.17.14 3.5a4.67 4.67 0 011.24 3.24c0 4.62-2.8 5.66-5.46 5.96.42.36.8 1.08.8 2.18v3.24c0 .32.21.7.82.58A12 12 0 0012 0z" />
               </svg>
@@ -46,7 +54,7 @@ const Footer = () => {
               href="https://www.instagram.com/prep_edge2k25/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-gray-200 transition"
+              className="text-gray-400 hover:text-pink-500 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +72,7 @@ const Footer = () => {
           <img
             src="./images/SCSIT logo.png"
             alt="SCSIT logo"
-            className="w-28 h-28 md:w-40 md:h-40 rounded"
+            className="w-32 h-32 md:w-40 md:h-40 rounded-full border-2 border-gray-700"
           />
         </div>
       </div>

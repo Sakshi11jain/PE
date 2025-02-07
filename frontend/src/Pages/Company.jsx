@@ -420,7 +420,7 @@ const Company = () => {
         Top 20 IT Companies
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-5 m-4">
-      <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
+      <div className="absolute mt-80 left-4 transform -translate-y-1/2">
       <button
           className=" text-white text-8xl rounded-full disabled:opacity-50"
           onClick={handlePrev}
@@ -485,7 +485,7 @@ const Company = () => {
           </ul>
             </div>
           ))}
-          <div className="absolute top-1/2 right-4 transform -translate-y-1/2">
+          <div className="absolute mt-80 right-4 transform -translate-y-1/2">
           <button
           className=" text-white text-8xl rounded-full disabled:opacity-50"
           onClick={handleNext}
