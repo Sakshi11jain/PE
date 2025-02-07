@@ -15,7 +15,7 @@ export default function FaqPage() {
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-100 to-purple-200 p-8">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">Interview FAQ</h1>
+        <h1 className="text-6xl font-bold font-serif text-center mb-8 text-gray-800">Interview FAQ</h1>
         <div className="flex justify-center gap-4 mb-8 flex-wrap">
           {categories?.map(category => (
             <button

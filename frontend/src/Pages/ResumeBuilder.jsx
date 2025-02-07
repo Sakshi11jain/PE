@@ -42,8 +42,14 @@ const ResumeBuilder = () => {
     },
   ];
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className="bg-slate-900 p-10 relative">
+    <div className="bg-gradient-to-r from-blue-200 via-blue-50 to-blue-200 p-10 relative animate-fadeIn">
       {/* Background Blur and Fullscreen Preview */}
       {previewImage && (
         <div
@@ -59,31 +65,101 @@ const ResumeBuilder = () => {
       )}
 
       <div className="text-center mb-8">
-        <h1 className="text-6xl font-bold mb-4 text-white text-center" style={{ textShadow: '0 0 3px #fff, 0 0 6px #0077ff' }}>Resume Templates</h1>
-        <h3 className="text-gray-300 font-bold text-center mb-2">
+        <div className="flex items-center justify-center mb-2">
+          <h1 className="text-6xl font-bold mb-4 font-serif text-gray-800 mr-4">
+            Resume Templates
+          </h1>
+          {/* Icon */}
+          <div
+            className="w-12 h-12 rounded-full bg-blue-500 flex justify-center items-center cursor-pointer glow-icon animate-spin"
+            onClick={toggleModal}
+            onMouseOver={toggleModal}
+            onMouseEnter={(e) => e.target.classList.add("glow")}
+            onMouseLeave={(e) => e.target.classList.remove("glow")}
+          >
+            <i className="text-white">📄</i>
+          </div>
+        </div>
+        <h3 className="text-gray-700 font-bold text-center mb-2">
           Download a professional and ATS-friendly resume templates (Word file),<br/> customize it effortlessly, and shine in your job interviews! Best of luck! 🎉
         </h3>
-        <p className="text-gray-400">
+        <p className="text-gray-600">
           Click on a template image to preview it in full screen.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
+      {/* Modal */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 px-8 bg-gray-900 bg-opacity-50 flex justify-center items-center z-50"
+          onClick={toggleModal}
+        >
+          <div
+            className="bg-gradient-to-r from-slate-50 px-10 via-blue-50 to-blue-100 py-10 w-full md:w-3/4 lg:w-1/2 rounded-lg relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              className="absolute top-1 right-3 text-gray-600 hover:text-gray-800 text-3xl"
+              onClick={toggleModal}
+              aria-label="Close modal"
+            >
+              &times;
+            </button>
+            <div className="max-w-5xl mx-auto text-center">
+              <h2 className="text-4xl font-extrabold text-gray-800 mb-6 animate__animated animate__fadeInDown">
+                Why You Need an ATS-Friendly Resume
+              </h2>
+              <p className="text-lg text-gray-600 mb-8">
+                Did you know that 75% of resumes never reach a recruiter because they fail ATS checks? Here’s why an ATS-friendly resume is essential for your success.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div className="p-6 bg-white rounded-lg shadow hover:shadow-lg hover:scale-105 transition-all">
+                  <h3 className="text-lg font-semibold mb-3 text-blue-700">Higher Selection Chances</h3>
+                  <p className="text-sm text-gray-600">
+                    ATS-friendly resumes pass filters to ensure your application gets seen.
+                  </p>
+                </div>
+                <div className="p-6 bg-white rounded-lg shadow hover:shadow-lg hover:scale-105 transition-all">
+                  <h3 className="text-lg font-semibold mb-3 text-blue-700">Improved Readability</h3>
+                  <p className="text-sm text-gray-600">
+                    Organized formats make it easy for systems and recruiters to scan.
+                  </p>
+                </div>
+                <div className="p-6 bg-white rounded-lg shadow hover:shadow-lg hover:scale-105 transition-all">
+                  <h3 className="text-lg font-semibold mb-3 text-blue-700">Keyword Optimization</h3>
+                  <p className="text-sm text-gray-600">
+                    Incorporates job-relevant keywords for better match scores.
+                  </p>
+                </div>
+              </div>
+              <a
+                href="https://recruiterflow.com/blog/applicant-tracking-system-benefits-of-ats/" target="_blank"
+                className="mt-10 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all"
+              >
+                Learn More About ATS Resumes
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 p-8">
         {templates.map((template) => (
-          <div 
-            key={template.id} 
-            className="border p-4 rounded-xl shadow flex flex-col items-center bg-slate-300 transform hover:scale-105 transition duration-300 ease-in-out"
+          <div
+            key={template.id}
+            className="border border-gray-300 hover:shadow-xl hover:-translate-y-2 transition-transform p-4 rounded-xl shadow flex flex-col items-center bg-gray-100 transform hover:scale-105 duration-300 ease-in-out"
           >
             <h3 className="text-lg font-semibold text-center">{template.name}</h3>
             <h3 className="text-gray-800 mb-2">Click to Preview:</h3>
-            <img 
-              src={template.preview} 
-              alt={`${template.name} Preview`} 
+            <img
+              src={template.preview}
+              alt={`${template.name} Preview`}
               className="w-48 h-60 mb-4 border-2 border-slate-500 rounded cursor-pointer hover:shadow-lg"
               onClick={() => setPreviewImage(template.preview)}
             />
             <button
-              className="bg-emerald-700 text-white px-10 py-2 text-lg rounded font-medium mt-3"
+              className="bg-blue-600 hover:bg-blue-700 hover:ring-2 hover:ring-blue-400 text-white px-10 py-2 text-lg rounded-3xl font-medium mt-3 border-2 border-transparent hover:border-blue-300 shadow-md hover:shadow-lg transition-all"
               onClick={() => {
                 const link = document.createElement("a");
                 link.href = template.path;
