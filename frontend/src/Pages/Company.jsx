@@ -384,118 +384,93 @@ const Company = () => {
       }      
     ]
     )
- const [currentStartIndex, setCurrentStartIndex] = useState(0);
-  const companiesPerPage = 3;
 
-  const handleNext = () => {
-    if (currentStartIndex + companiesPerPage < companies.length) {
-      setCurrentStartIndex(currentStartIndex + companiesPerPage);
+    const getStarRating = (rating) => {
+      const fullStars = Math.floor(rating);
+      const halfStar = rating % 1 !== 0;
+      return (
+        <span className="flex items-center">
+          {Array.from({ length: fullStars }, (_, index) => (
+            <span key={index} className="text-yellow-500 text-2xl">&#9733;</span>
+          ))}
+          {halfStar && <span className="text-yellow-500 text-2xl">&#9734;</span>}
+          <span className="ml-2 text-gray-600 text-sm">({rating}/5)</span>
+        </span>
+      );
+    };
+    
+    function toggleDetails(id) {
+      const details = document.getElementById(`details-${id}`);
+      details.classList.toggle("hidden");
     }
-  };
-
-  const handlePrev = () => {
-    if (currentStartIndex - companiesPerPage >= 0) {
-      setCurrentStartIndex(currentStartIndex - companiesPerPage);
-    }
-  };
-
-  const getStarRating = (rating) => {
-    const fullStars = Math.floor(rating);
-    const halfStar = rating % 1 !== 0;
-    return (
-      <span className="flex items-center">
-        {Array.from({ length: fullStars }, (_, index) => (
-          <span key={index} className="text-yellow-500 text-3xl">&#9733;</span>
-        ))}
-        {halfStar && <span className="text-yellow-500 text-3xl">&#9734;</span>}
-        <span className="ml-2 text-gray-600 text-xl">({rating}/5)</span>
-      </span>
-    );
-  };
-  
 
   return (
-    <div className="pt-2 p-6 bg-slate-900">
-      <h1 className="text-5xl font-bold text-white text-center mb-5" style={{ textShadow: '0 0 3px #fff, 0 0 6px #0077ff' }}>
-        Top 20 IT Companies
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-5 m-4">
-      <div className="absolute mt-80 left-4 transform -translate-y-1/2">
-      <button
-          className=" text-white text-8xl rounded-full disabled:opacity-50"
-          onClick={handlePrev}
-          disabled={currentStartIndex === 0}
-        >
-          〈
-        </button>
-        </div>
-        {companies
-          .slice(currentStartIndex, currentStartIndex + companiesPerPage)
-          .map((company) => (
-            <div
-              key={company.id}
-              className="border p-4 rounded-lg shadow-lg shadow-blue-700/50 bg-slate-300 "
+    <div className="bg-gradient-to-r from-blue-200 to-blue-50 min-h-screen py-8 px-4">
+      <h1 className="text-6xl font-bold font-serif text-center mb-8 text-gray-800">Top 15 IT Companies</h1>
+      <div className="flex flex-row gap-[2%] m-8 flex-wrap">
+        {companies.slice(0, 15).map((company, index) => (
+          <div
+            key={company.id}
+            className={`h-[32%] mb-4 ${
+              index === 0 || index === 4 || index === 6 || index === 10 || index === 12
+                ? "w-[40%]"
+                : index === 1 || index === 7 || index === 13 || index === 11
+                ? "w-[30%] basis-[30%]"
+                : index === 2 || index === 5 || index === 8 || index === 14
+                ? "grow basis-[100px]"
+                : "w-1/4"
+            } bg-white shadow-xl rounded-lg overflow-hidden transform transition hover:scale-105 hover:shadow-2xl p-4 text-center flex flex-col`}
+          >
+            <img
+              src={company.logo}
+              alt={`${company.name} logo`}
+              className="h-16 w-40 mx-auto rounded mb-4"
+            />
+            <h2 className="text-lg font-semibold">{company.name}</h2>
+            <a
+              href={company.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-purple-600 underline hover:text-purple-800"
             >
-              <div className="flex items-center justify-center">
-                <img
-                  src={company.logo}
-                  alt={`${company.name} Logo`}
-                  className="h-20 w-30 mt-2 mb-3"
-                />
-              </div>
-              <h1 className="text-xl font-semibold text-center mb-1">
-                Company Name: {company.name}
-              </h1>
-              <p className="text-gray-600 mb-2">{company.description}
-              <strong></strong>{" "}
-                <a
-                  href={company.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 underline"
-                >
-                  Visit
-                </a>
+              Visit Website
+            </a>
+            <button
+              className="mt-2 text-sm text-purple-600 flex items-center justify-center gap-1"
+              onClick={() => toggleDetails(company.id)}
+            >
+              Read More v
+            </button>
+            <div id={`details-${company.id}`} className="hidden text-left mt-3">
+              <p className="text-gray-700">{company.description}</p>
+              <p className="text-gray-700">
+                <strong>Founder:</strong> {company.founder}
               </p>
-              <p>
-                <strong>Founder:</strong> {company.founder} &emsp;{" "}
+              <p className="text-gray-700">
+                <strong>CEO:</strong> {company.ceo}
               </p>
-              <p>
-              <strong>CEO:</strong> {company.ceo}
+              <p className="text-gray-700">
+                <strong>Founded:</strong> {company.startDate}
               </p>
-              <p>
-                <strong>Founded:</strong> {company.startDate} &emsp;{" "}
-              </p>
-              <h2 className="flex items-center">
-                <strong>Average Rating:</strong>&nbsp;{getStarRating(company.rating)}
-              </h2>
-
-              <h2><strong>Reviews:</strong></h2>
-          <h4><strong>Pros:</strong></h4>
-          <ul>
-            {company.pros.map((pros, index) => (
-              <li key={index}>{pros}</li>
-            ))}
-          </ul>
-          <h4><strong>Cons:</strong></h4>
-          <ul>
-            {company.cons.map((cons, index) => (
-              <li key={index}>{cons}</li>
-            ))}
-          </ul>
+              <h3 className="mt-2 font-semibold">Rating:</h3>
+              {getStarRating(company.rating)}
+              <h3 className="mt-2 font-semibold">Pros:</h3>
+              <ul className="list-disc list-inside">
+                {company.pros.map((pro, i) => (
+                  <li key={i}>{pro}</li>
+                ))}
+              </ul>
+              <h3 className="mt-2 font-semibold">Cons:</h3>
+              <ul className="list-disc list-inside">
+                {company.cons.map((con, i) => (
+                  <li key={i}>{con}</li>
+                ))}
+              </ul>
             </div>
-          ))}
-          <div className="absolute mt-80 right-4 transform -translate-y-1/2">
-          <button
-          className=" text-white text-8xl rounded-full disabled:opacity-50"
-          onClick={handleNext}
-          disabled={currentStartIndex + companiesPerPage >= companies.length}
-        >
-          〉
-        </button>
-        </div>
+          
+          </div>
+        ))}
       </div>
-      <p className="text-slate-500 text-center"><strong>Disclaimer: </strong>The Ratings and Reviews are extracted from the Glassdoor.com.</p>
     </div>
   );
 };

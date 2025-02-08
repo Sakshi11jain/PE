@@ -32,7 +32,7 @@ const FeedbackForm = () => {
           </h2>
           {submitted ? (
             <p className="text-green-600 text-md text-center font-semibold">
-              🎉🎉🎉 Thank you for your valuable feedback! 🎉🎉🎉
+              🎉 Thank you for your valuable feedback! 🎉
             </p>
           ) : (
             <form onSubmit={handleSubmit}>
@@ -84,7 +84,7 @@ const FeedbackForm = () => {
           )}
         </div>
 
-        <div className="relative w-1/2 p-0 bg-purple-700 text-white rounded-r-3xl transform transition-all duration-300">
+        <div className="relative w-1/2 p-0 bg-purple-800 text-white rounded-r-3xl transform transition-all duration-300">
           <div
             className=" m-0 p-0
           border-t-[45px] border-t-transparent

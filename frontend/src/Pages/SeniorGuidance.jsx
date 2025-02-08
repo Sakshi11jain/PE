@@ -125,10 +125,7 @@ const SeniorGuidance = () => {
 
   return (
     <div className="p-10 bg-gradient-to-br from-blue-200 to-blue-50 min-h-screen">
-      <h1
-        className="text-6xl font-bold mb-8 text-white text-center"
-        style={{ textShadow: '0 0 6px #fff, 0 0 12px #a855f7' }}
-      >
+      <h1 className="text-6xl font-bold font-serif text-center mb-8 text-gray-800">
         Senior Guidance
       </h1>
       <div className="grid gap-7 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">

@@ -148,7 +148,7 @@ const ResumeBuilder = () => {
         {templates.map((template) => (
           <div
             key={template.id}
-            className="border border-gray-300 hover:shadow-xl hover:-translate-y-2 transition-transform p-4 rounded-xl shadow flex flex-col items-center bg-gray-100 transform hover:scale-105 duration-300 ease-in-out"
+            className="border border-gray-300 p-4 rounded-xl shadow flex flex-col items-center bg-gray-100 "
           >
             <h3 className="text-lg font-semibold text-center">{template.name}</h3>
             <h3 className="text-gray-800 mb-2">Click to Preview:</h3>
