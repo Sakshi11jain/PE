@@ -57,7 +57,7 @@ const Navbar = () => {
 
       {/* Navigation Links */}
       <div
-        className={`absolute md:static top-16 left-0 w-full md:w-auto bg-slate-800 md:bg-transparent shadow-md md:shadow-none transform transition-transform duration-300 md:flex ${
+        className={`absolute md:static top-16 left-0 w-full md:w-auto bg-slate-800 md:bg-transparent shadow-md md:shadow-none transform transition-transform duration-300 z-50 md:flex ${
           isNavOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
         }`}
       >

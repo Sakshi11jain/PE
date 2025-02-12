@@ -127,58 +127,55 @@ function Home() {
     <>
       <NavBar />
       <div className="w-full h-full overflow-hidden">
-        <div className="flex flex-wrap items-center justify-between px-6 md:px-10 py-20 bg-gradient-to-r from-blue-200 to-blue-50">
+        <div className="flex flex-wrap items-center justify-between py-20 bg-gradient-to-r from-blue-200 to-blue-50">
           {/* Left Side */}
-          <div className="w-full md:w-1/2 space-y-6 text-center md:text-left p-6 md:p-12">
-            <h1 className="text-3xl md:text-5xl font-semibold font-serif flex flex-col">
-              {/* Transform + Sliding Fear, Doubt, Anxiety */}
-              <div className="flex items-center space-x-3">
-                <span>Transform</span>
-                <div className="relative h-14 w-[200px] overflow-hidden">
-                  <div
-                    className="absolute top-0 left-0 flex flex-col transition-transform duration-700 ease-in-out"
-                    style={{ transform: `translateY(-${index * 3.5}rem)` }}
-                  >
-                    {words.map((word, i) => (
-                      <div
-                        key={i}
-                        className="h-14 flex items-center text-red-500"
-                      >
-                        {word}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+          <div className="w-full md:w-1/2 space-y-6 text-center md:text-left p-6 md:p-12 flex flex-col items-center md:items-start">
+          <h1 className="w-full text-3xl md:text-5xl font-semibold font-serif flex flex-col items-center justify-center md:items-start md:justify-start">
+  {/* Transform + Sliding Fear, Doubt, Anxiety */}
+  <div className="flex items-center space-x-4 justify-center w-[90%] md:justify-start">
+    <span>Transform</span>
+    <div className="relative h-14 w-[200px] overflow-hidden">
+      <div
+        className="absolute top-0 left-0 flex flex-col transition-transform duration-700 ease-in-out"
+        style={{ transform: `translateY(-${index * 3.5}rem)` }}
+      >
+        {words.map((word, i) => (
+          <div key={i} className="h-14 flex items-center text-red-500">
+            {word}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
 
-              {/* Into + Sliding Confidence, Clarity, Success */}
-              <div className="flex items-center space-x-3 mt-3">
-                <span>Into</span>
-                <div className="relative h-14 w-[300px] overflow-hidden">
-                  <div
-                    className="absolute top-0 left-0 flex flex-col transition-transform duration-700 ease-in-out"
-                    style={{ transform: `translateY(-${index * 3.5}rem)` }}
-                  >
-                    {results.map((word, i) => (
-                      <div
-                        key={i}
-                        className="h-14 flex items-center text-green-500"
-                      >
-                        {word}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </h1>
+  {/* Into + Sliding Confidence, Clarity, Success */}
+  <div className="flex items-center space-x-4 mt-3 justify-center w-[90%] md:justify-start">
+    <span>Into</span>
+    <div className="relative h-14 w-[300px] overflow-hidden">
+      <div
+        className="absolute top-0 left-0 flex flex-col transition-transform duration-700 ease-in-out"
+        style={{ transform: `translateY(-${index * 3.5}rem)` }}
+      >
+        {results.map((word, i) => (
+          <div key={i} className="h-14 flex items-center text-green-500">
+            {word}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</h1>
+
+
             <p className="text-lg text-gray-600 italic mt-0">
               PrepEdge transforms your interview journey, providing you with the
               practice and feedback needed to build confidence and excel in
               every round.
             </p>
+
             <button
               className="relative mt-4 px-6 py-3 bg-slate-700 text-white rounded-lg text-lg font-semibold transition-all duration-300 ease-in-out 
-  hover:bg-slate-800 hover:w-52 flex items-center justify-center group overflow-hidden shadow-lg hover:shadow-blue-500/50"
+    hover:bg-slate-800 hover:w-52 flex items-center justify-center group overflow-hidden shadow-lg hover:shadow-blue-500/50"
             >
               {/* Background Glow Effect */}
               <span className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 opacity-0 group-hover:opacity-30 transition-opacity duration-300"></span>
@@ -196,20 +193,19 @@ function Home() {
           </div>
 
           {/* Right Side - Compact Rotating Slider */}
-          <div className="w-full md:w-1/2 flex flex-col justify-center items-center mt-10 md:mt-0 py-6 relative">
+          <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:mt-0 py-6 relative">
             {/* Slider Container */}
-            <div className="relative w-full h-80 flex items-center justify-center">
+            <div className="relative w-[95%] sm:w-3/4 md:w-full h-56 sm:h-44 md:h-80 flex items-center justify-center overflow-hidden">
               {/* Left Button */}
               <button
                 onClick={handlePrev}
-                className="absolute text-4xl left-9 text-black rounded-full p-2 transform duration-200 active:scale-95 hover:bg-gray-200 focus:outline-none transition z-10 "
-                //absolute right-0 text-4xl text-black
+                className="absolute text-4xl sm:text-2xl md:text-4xl left-1 sm:left-4 md:left-9 text-black rounded-full p-2 sm:p-3 transform duration-200 active:scale-95 hover:bg-gray-200 focus:outline-none transition z-10"
               >
                 ⇜
               </button>
 
               {/* Slides */}
-              <div className="relative w-full h-80 overflow-hidden">
+              <div className="relative w-[70%] sm:w-3/4 md:w-full h-52 sm:h-44 md:h-80 flex items-center justify-center overflow-hidden">
                 <AnimatePresence initial={false}>
                   {slides.map((slide, index) => {
                     const position = getSlidePosition(index);
@@ -219,26 +215,26 @@ function Home() {
                         initial={{
                           x:
                             position === "center"
-                              ? 0
+                              ? "-50%"
                               : position === "right"
-                              ? "100%"
-                              : "-100%",
-                          scale: position === "center" ? 1 : 0.8,
-                          opacity: position === "center" ? 1 : 0.7,
+                              ? "30%"
+                              : "-80%", // Reduced gap
+                          scale: position === "center" ? 1 : 0.9, // Slightly bigger for non-center slides
+                          opacity: position === "center" ? 1 : 0.8,
                         }}
                         animate={{
                           x:
                             position === "center"
-                              ? 0
+                              ? "-50%"
                               : position === "right"
-                              ? "50%"
-                              : "-50%",
-                          scale: position === "center" ? 1 : 0.8,
-                          opacity: position === "center" ? 1 : 0.7,
+                              ? "-10%"
+                              : "-90%",
+                          scale: position === "center" ? 1 : 0.9,
+                          opacity: position === "center" ? 1 : 0.8,
                         }}
                         exit={{
-                          x: position === "left" ? "-200%" : "200%", // Move far out of view
-                          scale: 0.5,
+                          x: position === "left" ? "-100%" : "100%",
+                          scale: 0.7,
                           opacity: 0,
                         }}
                         transition={{
@@ -246,16 +242,10 @@ function Home() {
                           stiffness: 100,
                           damping: 20,
                         }}
-                        className="absolute w-80 h-80 bg-white shadow-lg rounded-lg p-4"
+                        className="absolute w-60 md:w-72 h-60 md:h-72 bg-white shadow-lg rounded-lg p-4"
                         style={{
-                          left: "30%",
-                          transform: `translateX(${
-                            position === "center"
-                              ? "-50%"
-                              : position === "right"
-                              ? "50%"
-                              : "-150%"
-                          })`,
+                          left: "50%",
+                          transform: `translateX(-50%)`,
                           zIndex: position === "center" ? 3 : 1,
                           display: position === "hidden" ? "none" : "block",
                         }}
@@ -269,10 +259,10 @@ function Home() {
                             style={{ backgroundImage: `url(${slide.image})` }}
                           >
                             <div className="absolute bottom-0 p-2 backdrop-blur-sm w-full text-center bg-gradient-to-t from-black via-transparent to-transparent text-white">
-                              <h3 className="text-2xl font-bold">
+                              <h3 className="text-xl md:text-2xl font-bold">
                                 {slide.title}
                               </h3>
-                              <p className="text-sm mt-2">
+                              <p className="text-xs md:text-sm mt-2">
                                 {slide.description}
                               </p>
                             </div>
@@ -287,7 +277,7 @@ function Home() {
               {/* Right Button */}
               <button
                 onClick={handleNext}
-                className="absolute right-0 text-4xl text-black p-2 rounded-full transform transition-all duration-200 active:scale-95 hover:bg-gray-200 focus:outline-none"
+                className="absolute right-1 sm:right-4 md:right-9 text-4xl sm:text-2xl md:text-4xl text-black p-2 sm:p-3 rounded-full transform transition-all duration-200 active:scale-95 hover:bg-gray-200 focus:outline-none"
               >
                 ⇝
               </button>
@@ -298,7 +288,7 @@ function Home() {
               {slides.map((_, index) => (
                 <button
                   key={index}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ease-in-out ${
+                  className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 ease-in-out ${
                     currentSlide === index
                       ? "bg-blue-500 scale-110"
                       : "bg-gray-400 hover:bg-gray-500"
