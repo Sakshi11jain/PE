@@ -310,8 +310,8 @@ function Home() {
         </div>
       </div>
       <Faq />
-      <Company />
       <ResumeBuilder />
+      <Company />
       <SeniorGuidance />
       <Feedback />
       <Footer />

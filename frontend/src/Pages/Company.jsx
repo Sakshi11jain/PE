@@ -427,7 +427,7 @@ const Company = () => {
   }
 
   return (
-    <div className="bg-gradient-to-r from-blue-200 to-blue-50 min-h-screen py-8 px-4">
+    <div className="bg-gradient-to-r from-blue-100 to-purple-200 min-h-screen py-8 px-4">
       <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-serif text-center mb-8 text-gray-800">
         Top 15 IT Companies
       </h1>
