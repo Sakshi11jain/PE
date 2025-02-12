@@ -32,15 +32,18 @@ export default function FaqPage() {
           ))}
         </div>
         <div className="bg-white shadow-lg rounded-lg p-6">
-          {faqData[selectedCategory]?.map((faq, index) => (
-            <div
-              key={index}
-              className="mb-6 border-b pb-4 last:border-b-0 last:pb-0"
-            >
-              <h2 className="font-semibold text-lg text-gray-900">{faq.question}</h2>
-              <p className="text-gray-700 mt-2">{faq.answer}</p>
-            </div>
-          ))}
+          {/* Scrollable container for FAQs */}
+          <div className="max-h-[500px] overflow-y-auto">
+            {faqData[selectedCategory]?.map((faq, index) => (
+              <div
+                key={index}
+                className="mb-6 border-b pb-4 last:border-b-0 last:pb-0"
+              >
+                <h2 className="font-semibold text-lg text-gray-900">{faq.question}</h2>
+                <p className="text-gray-700 mt-2">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

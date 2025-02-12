@@ -285,7 +285,7 @@ const Company = () => {
     {
       id: 15,
       name: "FICO",
-      logo: "./Company_logos/Fico.png",
+      logo: "./Company_logos/FICO.svg",
       description:
         "An American data analytics company focused on credit scoring services.",
       founder: "Bill Fair & Earl Isaac",

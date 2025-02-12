@@ -53,21 +53,22 @@ const Navbar = () => {
       </button>
 
       {/* Logo */}
-      <img src="./images/logo.png" alt="PrepEdge Logo" className="w-28 h-12 mr-24" />
+      <img src="./images/logo.png" alt="PrepEdge Logo" className="w-20 h-12 mr-24" />
 
       {/* Navigation Links */}
       <div
-        className={`absolute md:static top-16 left-0 w-full md:w-auto bg-slate-800 md:bg-transparent shadow-md md:shadow-none transform transition-transform duration-300 z-50 md:flex ${
+        className={`px-12 absolute md:static top-16 left-0 w-full md:w-auto bg-slate-800 md:bg-transparent shadow-md md:shadow-none transform transition-transform duration-300 z-50 md:flex ${
           isNavOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
         }`}
       >
-        <div className="flex flex-col md:flex-row md:space-x-6 p-4 md:p-0">
+        <div className="flex flex-col md:flex-row md:space-x-6">
           <a href="#" className="text-gray-300 hover:text-blue-500 py-2 md:py-0">Interview Etiquettes</a>
           <a href="#" className="text-gray-300 hover:text-blue-500 py-2 md:py-0">Senior Guidance</a>
           <a href="#" className="text-gray-300 hover:text-blue-500 py-2 md:py-0">Resume Builder</a>
           <a href="#" className="text-gray-300 hover:text-blue-500 py-2 md:py-0">Companies Info</a>
           <a href="#" className="text-gray-300 hover:text-blue-500 py-2 md:py-0">RoadMap</a>
-          <a href="#" className="text-gray-300 hover:text-blue-500 py-2 md:py-0">Job</a>
+          <a href="#" className="text-gray-300 hover:text-blue-500 py-2 md:py-0">Job Preference</a>
+          <a href="#" className="text-gray-300 hover:text-blue-500 py-2 md:py-0">Coding</a>
           <a href="#" className="text-gray-300 hover:text-blue-500 py-2 md:py-0">About us</a>
           <a href="#" className="text-gray-300 hover:text-blue-500 py-2 md:py-0">Contact us</a>
         </div>
