@@ -149,7 +149,7 @@ const SeniorGuidance = () => {
                 <h2 className="pl-6"><strong>Email:</strong> {user.contact || "N/A"}</h2>
                 <button
                   onClick={() => toggleFlip(index)}
-                  className="mt-4 w-full bg-gradient-to-r from-purple-500 to-purple-700 text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+                  className="mt-4 w-full bg-gradient-to-r from-blue-800 to-blue-900 text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
                 >
                   View Experience
                 </button>
@@ -160,7 +160,7 @@ const SeniorGuidance = () => {
                 <p className="text-base font-medium px-6 text-gray-800 mb-4">{user.experience}</p>
                 <button
                   onClick={() => toggleFlip(index)}
-                  className="w-full bg-gradient-to-r from-purple-500 to-purple-700 text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+                  className="w-full bg-gradient-to-r from-purple-800 to-purple-900 text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
                 >
                   Back to Details
                 </button>

@@ -5,7 +5,7 @@ const Company = () => {
     {
       id: 1,
       name: "Google",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/800px-Google_2015_logo.svg.png",
+      logo: "./Company_logos/Google.webp",
       description:
         "A global leader in internet-related services, including search engines, online advertising, and cloud computing.",
       founder: "Larry Page & Sergey Brin",
@@ -25,7 +25,7 @@ const Company = () => {
     {
       id: 2,
       name: "TCS",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Tata_Consultancy_Services_Logo.svg/1200px-Tata_Consultancy_Services_Logo.svg.png",
+      logo: "./Company_logos/TCS.png",
       description:
         "India's largest IT services firm offering consulting, IT solutions, and business outsourcing services globally.",
       founder: "Tata Sons",
@@ -45,7 +45,7 @@ const Company = () => {
     {
       id: 3,
       name: "Infosys",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Infosys_logo.svg/1280px-Infosys_logo.svg.png",
+      logo: "./Company_logos/Infosys.png",
       description:
         "A global leader in consulting, technology, outsourcing, and next-generation services.",
       founder: "Narayana Murthy & team",
@@ -65,7 +65,7 @@ const Company = () => {
     {
       id: 4,
       name: "Wipro",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Primary_Logo_Color_RGB.svg",
+      logo: "./Company_logos/Wipro.svg",
       description:
         "A multinational company specializing in IT, consulting, and business process services.",
       founder: "M.H. Hasham Premji",
@@ -85,7 +85,7 @@ const Company = () => {
     {
       id: 5,
       name: "IBM",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/2560px-IBM_logo.svg.png",
+      logo: "./Company_logos/IBM.png",
       description:
         "A leading provider of hardware, software, cloud-based services, and cognitive computing.",
       founder: "Charles Ranlett Flint",
@@ -105,7 +105,7 @@ const Company = () => {
     {
       id: 6,
       name: "Cognizant Technology Solutions",
-      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd32c-5m8mp3-lhf_EDX0EiFRPYr3j3kLRjw&s",
+      logo: "./Company_logos/cognizant.jpeg",
       description:
         "A global provider of IT services, consulting, and business process outsourcing.",
       founder: "Kumar Mahadeva",
@@ -125,7 +125,7 @@ const Company = () => {
     {
       id: 7,
       name: "Accenture",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Accenture_logo.svg/2560px-Accenture_logo.svg.png",
+      logo: "./Company_logos/Accenture.png",
       description:
         "A global professional services company providing consulting and strategy in digital, technology, and operations.",
       founder: "Arthur Andersen",
@@ -145,7 +145,7 @@ const Company = () => {
     {
       id: 8,
       name: "Capgemini",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Capgemini_201x_logo.svg",
+      logo: "./Company_logos/Capgemini.svg",
       description:
         "A leader in consulting, digital transformation, technology, and engineering services.",
       founder: "Serge Kampf",
@@ -165,7 +165,7 @@ const Company = () => {
     {
       id: 9,
       name: "HCLTech",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/HCLTech-new-logo.svg/1280px-HCLTech-new-logo.svg.png",
+      logo: "./Company_logos/HCLTech.png",
       description:
         "An IT services company providing software development, infrastructure management, and business outsourcing.",
       founder: "Shiv Nadar",
@@ -185,7 +185,7 @@ const Company = () => {
     {
       id: 10,
       name: "Microsoft",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/1280px-Microsoft_logo_%282012%29.svg.png",
+      logo: "./Company_logos/Microsoft.webp",
       description:
         "A multinational technology company developing software, hardware, and cloud-based services.",
       founder: "Bill Gates & Paul Allen",
@@ -205,7 +205,7 @@ const Company = () => {
     {
       id: 11,
       name: "Oracle",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Oracle_logo.svg/2560px-Oracle_logo.svg.png",
+      logo: "./Company_logos/Oracle.png",
       description:
         "A leading global provider of database software, cloud solutions, and enterprise IT systems.",
       founder: "Larry Ellison, Bob Miner, Ed Oates",
@@ -225,7 +225,7 @@ const Company = () => {
     {
       id: 12,
       name: "Mphasis Limited",
-      logo: "https://www.mphasis.com/content/dam/mphasis-com/global/logo/mphasis-logo.png.thumb.468.468.png",
+      logo: "./Company_logos/mphasis.png",
       description:
         "Mphasis Limited is an Indian multinational information technology services and consulting company, providing infrastructure technology and applications outsourcing services, as well as architecture guidance, application development and integration, and application management services.",
       founder: "Jerry Rao & Jeroen Tas",
@@ -245,7 +245,7 @@ const Company = () => {
     {
       id: 13,
       name: "Cisco Systems",
-      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpN6aBizk7tcnKkgX8_JDOLEl8KjnoHg4kwQ&s",
+      logo: "./Company+logos/cisco.png",
       description:
         "An American multinational technology conglomerate that develops and sells networking hardware, software, telecommunications equipment, and other high-technology services and products.",
       founder: "Leonard Bosack & Sandra Lerner",
@@ -265,7 +265,7 @@ const Company = () => {
     {
       id: 14,
       name: "Adobe",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Adobe_Corporate_logo.svg/1024px-Adobe_Corporate_logo.svg.png",
+      logo: "./Company_logos/Adobe.png",
       description:
         "A global leader in creative software solutions, specializing in digital media and marketing.",
       founder: "John Warnock, Charles Geschke",
@@ -285,13 +285,13 @@ const Company = () => {
     {
       id: 15,
       name: "FICO",
-      logo: "https://internationalfintech.com/company/fico/fico-2/",
+      logo: "./Company_logos/Fico.png",
       description:
         "An American data analytics company focused on credit scoring services.",
       founder: "Bill Fair & Earl Isaac",
       ceo: "William Lansing",
       startDate: "1956",
-      website: "https://www.fico.com/",
+      website: "./Company_logos/FICO.svg",
       rating: 4.1,
       pros: [
         "1. Good work/life balance depending on manager and role (in 185 ratings)",
@@ -447,19 +447,19 @@ const Company = () => {
                 : index === 2 || index === 5 || index === 8 || index === 14
                 ? "w-full sm:grow sm:basis-[100px]"
                 : "w-full sm:w-1/4"
-            } bg-white shadow-xl rounded-lg overflow-hidden transform transition hover:scale-105 hover:shadow-2xl p-4 text-center flex flex-col`}
+            } bg-white shadow-xl rounded-lg overflow-hidden transform transition hover:scale-100 hover:shadow-2xl p-4 text-center flex flex-col`}
           >
             <img
               src={company.logo}
               alt={`${company.name} logo`}
-              className="h-16 w-48 mx-auto mb-4"
+              className="h-16 mt-2 w-48 mx-auto mb-4"
             />
             <h2 className="text-lg font-semibold">{company.name}</h2>
             <a
               href={company.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-purple-600 underline hover:text-purple-800"
+              className="text-blue-700 underline hover:text-blue-800"
             >
               Visit Website
             </a>

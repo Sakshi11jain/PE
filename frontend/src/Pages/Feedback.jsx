@@ -84,7 +84,7 @@ const FeedbackForm = () => {
         )}
       </div>
   
-      <div className="w-full lg:w-1/2 bg-purple-800 text-white rounded-b-3xl lg:rounded-r-3xl lg:rounded-bl-none transform transition-all duration-300">
+      <div className="w-full lg:w-1/2 bg-blue-950 text-white rounded-b-3xl lg:rounded-r-3xl lg:rounded-bl-none transform transition-all duration-300">
         <div className="border-t-[45px] border-t-transparent border-l-[60px] border-l-purple-100 border-b-[45px] border-b-transparent"></div>
         <div className="flex flex-col items-center justify-center h-full">
           <h2 className="text-2xl md:text-3xl font-semibold text-center mb-6">
