@@ -85,7 +85,7 @@ const Company = () => {
     {
       id: 5,
       name: "IBM",
-      logo: "https://www.ibm.com/brand/experience-guides/developer/b1db1ae501d522a1a4b49613fe07c9f1/01_8-bar-positive.svg",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/2560px-IBM_logo.svg.png",
       description:
         "A leading provider of hardware, software, cloud-based services, and cognitive computing.",
       founder: "Charles Ranlett Flint",
@@ -452,7 +452,7 @@ const Company = () => {
             <img
               src={company.logo}
               alt={`${company.name} logo`}
-              className="h-16 w-32 mx-auto mb-4"
+              className="h-16 w-48 mx-auto mb-4"
             />
             <h2 className="text-lg font-semibold">{company.name}</h2>
             <a

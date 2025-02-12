@@ -126,46 +126,51 @@ function Home() {
   return (
     <>
       <NavBar />
-      <div className="w-full h-full overflow-hidden">
-        <div className="flex flex-wrap items-center justify-between py-20 bg-gradient-to-r from-blue-200 to-blue-50">
+      <div className="w-full h-full overflow-hidden py-28 bg-gradient-to-r from-blue-200 to-blue-50">
+        <div className="flex flex-wrap items-center justify-between ">
           {/* Left Side */}
           <div className="w-full md:w-1/2 space-y-6 text-center md:text-left p-6 md:p-12 flex flex-col items-center md:items-start">
-          <h1 className="w-full text-3xl md:text-5xl font-semibold font-serif flex flex-col items-center justify-center md:items-start md:justify-start">
-  {/* Transform + Sliding Fear, Doubt, Anxiety */}
-  <div className="flex items-center space-x-4 justify-center w-[90%] md:justify-start">
-    <span>Transform</span>
-    <div className="relative h-14 w-[200px] overflow-hidden">
-      <div
-        className="absolute top-0 left-0 flex flex-col transition-transform duration-700 ease-in-out"
-        style={{ transform: `translateY(-${index * 3.5}rem)` }}
-      >
-        {words.map((word, i) => (
-          <div key={i} className="h-14 flex items-center text-red-500">
-            {word}
-          </div>
-        ))}
-      </div>
-    </div>
-  </div>
+            <h1 className="w-full text-3xl md:text-5xl font-semibold font-serif flex flex-col items-center justify-center md:items-start md:justify-start">
+              {/* Transform + Sliding Fear, Doubt, Anxiety */}
+              <div className="flex items-center space-x-4 justify-center w-[90%] md:justify-start">
+                <span>Transform</span>
+                <div className="relative h-14 w-[200px] overflow-hidden">
+                  <div
+                    className="absolute top-0 left-0 flex flex-col transition-transform duration-700 ease-in-out"
+                    style={{ transform: `translateY(-${index * 3.5}rem)` }}
+                  >
+                    {words.map((word, i) => (
+                      <div
+                        key={i}
+                        className="h-14 flex items-center text-red-500"
+                      >
+                        {word}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
 
-  {/* Into + Sliding Confidence, Clarity, Success */}
-  <div className="flex items-center space-x-4 mt-3 justify-center w-[90%] md:justify-start">
-    <span>Into</span>
-    <div className="relative h-14 w-[300px] overflow-hidden">
-      <div
-        className="absolute top-0 left-0 flex flex-col transition-transform duration-700 ease-in-out"
-        style={{ transform: `translateY(-${index * 3.5}rem)` }}
-      >
-        {results.map((word, i) => (
-          <div key={i} className="h-14 flex items-center text-green-500">
-            {word}
-          </div>
-        ))}
-      </div>
-    </div>
-  </div>
-</h1>
-
+              {/* Into + Sliding Confidence, Clarity, Success */}
+              <div className="flex items-center space-x-4 mt-3 justify-center w-[90%] md:justify-start">
+                <span>Into</span>
+                <div className="relative h-14 w-[300px] overflow-hidden">
+                  <div
+                    className="absolute top-0 left-0 flex flex-col transition-transform duration-700 ease-in-out"
+                    style={{ transform: `translateY(-${index * 3.5}rem)` }}
+                  >
+                    {results.map((word, i) => (
+                      <div
+                        key={i}
+                        className="h-14 flex items-center text-green-500"
+                      >
+                        {word}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </h1>
 
             <p className="text-lg text-gray-600 italic mt-0">
               PrepEdge transforms your interview journey, providing you with the
