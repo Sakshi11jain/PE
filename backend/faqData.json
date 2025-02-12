@@ -119,10 +119,6 @@
     {
       "question": "What is JSX?",
       "answer": "JSX is a syntax extension for JavaScript that allows you to write HTML-like code in React."
-    },
-    {
-      "question": "What is the difference between a controlled and an uncontrolled component?",
-      "answer": "A controlled component's state is managed by React, while an uncontrolled component maintains its own state via the DOM."
     }
   ],
   "backend": [
@@ -241,7 +237,11 @@
     {
       "question": "What is a webhook?",
       "answer": "A webhook is a user-defined HTTP callback that triggers an action when an event occurs."
-    } 
+    } ,
+    {
+      "question":" What is Pub-Sub architecture?",
+      "answer":"Publisher Subscriber basically known as Pub-Sub is an asynchronous message-passing system that solves the drawback above. The sender is called the publisher whereas the receiver is called the subscriber. The main advantage of pub-sub is that it decouples the subsystem which means all the components can work independently."
+    }
   ],
   "fullstack": [
     {
@@ -267,10 +267,6 @@
     {
       "question": "What is the purpose of version control systems?",
       "answer": "Version control systems, such as Git, are used to track changes in code, facilitate collaboration among developers, and manage different versions of a project efficiently."
-    },
-    {
-      "question": "What is the difference between SQL and NoSQL databases?",
-      "answer": "SQL databases are relational and use structured query language for defining and manipulating data. They are table-based and suitable for structured data. NoSQL databases are non-relational, can be document-based, key-value pairs, or graph databases, and are suitable for unstructured data."
     },
     {
       "question": "What is continuous integration and continuous deployment (CI/CD)?",
@@ -301,10 +297,6 @@
       "answer": "Web sockets are a communication protocol that provides full-duplex communication channels over a single TCP connection. They enable real-time interaction between a client and a server, allowing data to be sent and received simultaneously."
     },
     {
-      "question": "What is the purpose of a package manager in web development?",
-      "answer": "A package manager, such as npm or Yarn, is a tool that automates the process of installing, updating, configuring, and managing software packages or libraries, making it easier to manage project dependencies."
-    },
-    {
       "question": "Can you explain the concept of MVC architecture?",
       "answer": "Model-View-Controller (MVC) is a design pattern that separates an application into three interconnected components: the Model (data), the View (user interface), and the Controller (business logic). This separation facilitates modularity and makes the application easier to manage and scale."
     },
@@ -319,10 +311,6 @@
     {
       "question": "What is a microservices architecture?",
       "answer": "Microservices architecture is an approach to software development where an application is composed of small, independent services that communicate over well-defined APIs. Each service is focused on a specific business function and can be developed, deployed, and scaled independently."
-    },
-    {
-      "question": "What is the purpose of using a task runner or build tool in web development?",
-      "answer": "Task runners and build tools, such as Gulp or Webpack, automate repetitive tasks like minification, compilation, unit testing, and linting, streamlining the development process and improving efficiency."
     },
     {
       "question": "Can you explain the concept of progressive web apps (PWAs)?",
@@ -573,10 +561,6 @@
       "answer": "Use a hash set to store elements of the first array. Iterate through the second array, and for each element that exists in the set, add it to the result."
     },
     {
-      "question": "How do you implement a singleton pattern in a programming language?",
-      "answer": "Ensure that a class has only one instance and provide a global point of access to it. This can be done by making the constructor private and providing a static method that returns the instance."
-    },
-    {
       "question": "How do you reverse a linked list?",
       "answer": "Iterate through the linked list, reversing the pointers of each node to point to the previous node instead of the next."
     },
@@ -609,10 +593,6 @@
       "answer": "To detect a loop, use Floyd's Cycle-Finding Algorithm with two pointers (slow and fast). Once a loop is detected, reset one pointer to the head and move both pointers one step at a time until they meet; the meeting point is the start of the loop. To remove the loop, find the node just before the start of the loop and set its next pointer to null."
     },
     {
-      "question": "How do you implement an LRU (Least Recently Used) cache?",
-      "answer": "An LRU cache can be implemented using a combination of a hash map and a doubly linked list. The hash map provides O(1) access to cache entries, and the doubly linked list maintains the order of usage, allowing for efficient updates when entries are accessed or evicted."
-    },
-    {
       "question": "How do you find the kth largest element in an unsorted array?",
       "answer": "You can use the Quickselect algorithm, which is a selection algorithm to find the kth smallest (or largest) element in an unordered list. It has an average-case time complexity of O(n)."
     },
@@ -625,10 +605,6 @@
       "answer": "A trie is a tree-like data structure where each node represents a character of a string. It is used to store a dynamic set of strings, where each path down the tree may represent a word or a prefix."
     },
     {
-      "question": "How do you perform a topological sort on a directed acyclic graph (DAG)?",
-      "answer": "Topological sorting can be performed using Depth-First Search (DFS). During the DFS, vertices are added to a stack upon completion of their recursive calls. The stack then represents the topological order."
-    },
-    {
       "question": "How do you find the longest common subsequence of two strings?",
       "answer": "Use dynamic programming to build a 2D table where each entry represents the length of the longest common subsequence for substrings of the two input strings up to that point."
     },
@@ -639,46 +615,246 @@
   ],
   "aptitude": [
     {
-      "question": "What is 15% of 200?",
-      "answer": "15% of 200 is 30."
+      "question": "What is the next number in the series: 2, 6, 12, 20, 30?",
+      "answer": "The pattern is n^2 + n. The next number is 6^2 + 6 = 42."
     },
     {
-      "question": "If a product costs $120 after a 20% discount, what was the original price?",
-      "answer": "The original price was $150."
+      "question": "If a train travels 60 miles in 1 hour, how long will it take to travel 180 miles?",
+      "answer": "It will take 3 hours to travel 180 miles at 60 miles per hour."
     },
     {
-      "question": "A person covers 120 km in 3 hours. What is their speed?",
-      "answer": "The speed is 40 km/h."
+      "question": "What is the angle between the hour and minute hands at 3:15?",
+      "answer": "The angle is 7.5 degrees."
     },
     {
-      "question": "What is the square root of 144?",
-      "answer": "The square root of 144 is 12."
+      "question": "If the ratio of milk to water in a mixture is 3:2 and 10 liters of water is added, making the ratio 3:3, what was the original quantity of the mixture?",
+      "answer": "The original quantity of the mixture was 30 liters."
     },
     {
-      "question": "If the sum of two numbers is 50 and their difference is 10, what are the numbers?",
-      "answer": "The numbers are 30 and 20."
+      "question": "A company's profit increased by 20% in the second year and decreased by 10% in the third year compared to the previous year. If the profit in the third year was $97,200, what was the profit in the first year?",
+      "answer": "The profit in the first year was $90,000."
+    },
+    {
+      "question": "If a car's value depreciates by 20% each year, what will be its value after 3 years if its current value is $10,000?",
+      "answer": "The value after 3 years will be $5,120."
+    },
+    {
+      "question": "If 5 workers can complete a task in 20 days, how many days will it take 10 workers to complete the same task?",
+      "answer": "It will take 10 workers 10 days to complete the task."
+    },
+    {
+      "question": "What is the probability of drawing an ace from a standard deck of 52 cards?",
+      "answer": "The probability is 1/13."
+    },
+    {
+      "question": "If a person walks at 4 km/h and runs at 8 km/h, how long will it take to cover 24 km if they walk half the distance and run the other half?",
+      "answer": "It will take 5 hours."
+    },
+    {
+      "question": "If the sum of two numbers is 30 and their product is 216, what are the numbers?",
+      "answer": "The numbers are 12 and 18."
+    },
+    {
+      "question": "A man spends 1/3 of his salary on rent, 1/4 on food, and 1/5 on transportation. If he saves the remaining $200, what is his total salary?",
+      "answer": "His total salary is $1,200."
+    },
+    {
+      "question": "If the average of five consecutive numbers is 20, what is the largest number?",
+      "answer": "The largest number is 22."
+    },
+    {
+      "question": "A boat travels upstream at 6 km/h and downstream at 10 km/h. What is the speed of the current?",
+      "answer": "The speed of the current is 2 km/h."
+    },
+    {
+      "question": "If a rectangle's length is increased by 20% and its width is decreased by 10%, what is the percentage change in its area?",
+      "answer": "The area increases by 8%."
+    },
+    {
+      "question": "If the sum of the ages of a father and son is 60 years and the father's age is four times the son's age, how old is the son?",
+      "answer": "The son is 12 years old."
+    },
+    {
+      "question": "If a number is divided by 5, the remainder is 2. What is the remainder when the square of this number is divided by 5?",
+      "answer": "The remainder is 4."
+    },
+    {
+      "question": "If the price of an item is increased by 25% and then decreased by 20%, what is the net percentage change in its price?",
+      "answer": "The net change is a 0% increase."
+    },
+    {
+      "question": "If a person can type a page in 5 minutes, how many pages can they type in 2 hours?",
+      "answer": "They can type 24 pages in 2 hours."
+    },
+    {
+      "question": "If the ratio of the ages of two people is 3:4 and the sum of their ages is 56, what are their ages?",
+      "answer": "Their ages are 24 and 32."
+    },
+    {
+      "question": "If a person invests $1,000 at an annual interest rate of 5%, compounded annually, what will be the total amount after 3 years?",
+      "answer": "The total amount will be $1,157.63."
+    },
+    {
+      "question": "If a train 100 meters long passes a pole in 10 seconds, what is its speed in km/h?",
+      "answer": "The speed is 36 km/h."
+    },
+    {
+      "question": "If the perimeter of a square is equal to the circumference of a circle, which has a greater area?",
+      "answer": "The circle has a greater area."
+    },
+    {
+      "question": "If a person spends 60% of their salary and saves the rest, what fraction of their salary do they save?",
+      "answer": "They save 2/5 of their salary."
+    },
+    {
+      "question": "If the average of three numbers is 15 and two of the numbers are 12 and 18, what is the third number?",
+      "answer": "The third number is 15."
+    },
+    {
+      "question": "If a person travels 10 km at 5 km/h and returns at 10 km/h, what is their average speed for the entire journey?",
+      "answer": "The average speed is 6.67 km/h."
+    },
+    {
+      "question": "If the sum of the squares of two numbers is 100 and their product is 24, what are the numbers?",
+      "answer": "The numbers are 4 and 6."
+    },
+    {
+      "question": "If a person can paint a fence in 6 hours and another person can paint it in 4 hours, how long will it take them to paint it together?",
+      "answer": "It will take them 2.4 hours to paint it together."
+    },
+    {
+      "question": "If the ratio of the sides of two squares is 2:3, what is the ratio of their areas?",
+      "answer": "The ratio of their areas is 4:9."
+    },
+    {
+      "question": "If a person buys 3 items for $10 each and sells them for $15 each, what is their profit percentage?",
+      "answer": "The cost price for 3 items is $30, and the selling price is $45. The profit is $15, which is a 50% profit."
+    },
+    {
+      "question": "If a person can complete a task in 12 days and another person can complete the same task in 8 days, how long will it take them to complete the task together?",
+      "answer": "Together, they can complete the task in 4.8 days."
     }
   ],
   "hr": [
     {
       "question": "Tell me about yourself.",
-      "answer": "Provide a brief summary of your education, work experience, and achievements."
+      "answer": "I am a software engineer with over 5 years of experience in developing web applications. I have a strong background in JavaScript and Python, and I have worked on various projects that have enhanced my problem-solving skills."
+    },
+    {
+      "question": "What are your strengths?",
+      "answer": "My key strengths include strong analytical skills, effective communication, and the ability to work collaboratively in a team. I am also adept at learning new technologies quickly."
+    },
+    {
+      "question": "What are your weaknesses?",
+      "answer": "I tend to be a perfectionist, which sometimes leads me to spend more time on a task than necessary. However, I am working on managing my time more effectively and setting realistic expectations."
     },
     {
       "question": "Why do you want to work for our company?",
-      "answer": "Express enthusiasm for the company’s mission, values, or recent achievements."
-    },
-    {
-      "question": "What are your strengths and weaknesses?",
-      "answer": "Highlight relevant strengths and mention a minor weakness with steps you're taking to improve."
+      "answer": "I am impressed by your company's commitment to innovation and excellence. I believe that my skills and values align well with your mission, and I am excited about the opportunity to contribute to your team's success."
     },
     {
       "question": "Where do you see yourself in five years?",
-      "answer": "Explain your career goals and how they align with the company's vision."
+      "answer": "In five years, I aim to have advanced to a senior developer role, leading projects and mentoring junior team members. I also plan to continue expanding my knowledge in emerging technologies."
     },
     {
-      "question": "How do you handle pressure?",
-      "answer": "Describe strategies like prioritizing tasks, staying calm, and seeking support when needed."
+      "question": "Can you describe a challenging situation you've faced at work and how you handled it?",
+      "answer": "In a previous project, we faced a tight deadline due to unforeseen technical issues. I took the initiative to coordinate with the team, prioritize tasks, and implement a streamlined workflow, which allowed us to deliver the project on time."
+    },
+    {
+      "question": "How do you handle stress and pressure?",
+      "answer": "I manage stress by staying organized, breaking tasks into manageable parts, and maintaining open communication with my team. I also practice mindfulness techniques to stay focused and calm under pressure."
+    },
+    {
+      "question": "What motivates you?",
+      "answer": "I am motivated by the opportunity to solve complex problems and create solutions that have a positive impact. Continuous learning and the chance to work with a talented team also drive me."
+    },
+    {
+      "question": "How do you prioritize your work?",
+      "answer": "I prioritize tasks based on their urgency and importance, using tools like to-do lists and project management software. I also communicate with stakeholders to ensure alignment on priorities."
+    },
+    {
+      "question": "Can you provide an example of a time when you worked in a team?",
+      "answer": "In a recent project, I collaborated with designers and other developers to create a user-friendly application. We held regular meetings to discuss progress, share feedback, and ensure that we were all aligned with the project goals."
+    },
+    {
+      "question": "How do you handle conflict in the workplace?",
+      "answer": "I approach conflict by addressing it directly and professionally. I listen to the other party's perspective, express my viewpoint, and work together to find a mutually agreeable solution."
+    },
+    {
+      "question": "What are your salary expectations?",
+      "answer": "Based on my experience and the industry standards, I am looking for a salary in the range of $70,000 to $80,000. However, I am open to discussion and willing to consider the overall compensation package."
+    },
+    {
+      "question": "Why are you leaving your current job?",
+      "answer": "I am seeking new challenges and opportunities to grow professionally. While I have learned a lot in my current role, I believe that your company offers the environment and projects that align with my career goals."
+    },
+    {
+      "question": "What do you know about our company?",
+      "answer": "I know that your company is a leader in the tech industry, known for its innovative products and commitment to customer satisfaction. I am particularly impressed by your recent project on AI-driven solutions."
+    },
+    {
+      "question": "How do you handle feedback?",
+      "answer": "I view feedback as an opportunity for growth. I listen carefully, ask questions to understand the perspective, and take actionable steps to improve based on the feedback received."
+    },
+    {
+      "question": "Can you describe a time when you demonstrated leadership skills?",
+      "answer": "In a group project, I took the lead in organizing tasks, setting deadlines, and ensuring that everyone had the resources they needed. This coordination helped us complete the project ahead of schedule."
+    },
+    {
+      "question": "What is your greatest professional achievement?",
+      "answer": "One of my greatest achievements was developing a feature that increased user engagement by 30%. This involved analyzing user data, identifying pain points, and implementing a solution that enhanced the user experience."
+    },
+    {
+      "question": "How do you stay updated with industry trends?",
+      "answer": "I regularly read industry blogs, attend webinars, and participate in professional networks. I also take online courses to learn about new technologies and best practices."
+    },
+    {
+      "question": "What are your hobbies outside of work?",
+      "answer": "I enjoy hiking, reading science fiction novels, and volunteering at local community centers. These activities help me maintain a balanced life and bring fresh perspectives to my work."
+    },
+    {
+      "question": "How do you handle tight deadlines?",
+      "answer": "I handle tight deadlines by prioritizing tasks, focusing on efficiency, and communicating proactively with my team to ensure that we stay on track and address any potential roadblocks promptly."
+    },
+    {
+      "question": "What do you consider to be your biggest professional failure?",
+      "answer": "Early in my career, I underestimated the time required for a project, which led to a delayed delivery. I learned the importance of realistic planning and have since improved my time management skills."
+    },
+    {
+      "question": "How do you handle working with difficult colleagues?",
+      "answer": "I approach working with difficult colleagues by maintaining professionalism, seeking to understand their perspective, and finding common ground to collaborate effectively."
+    },
+    {
+      "question": "What are your career goals?",
+      "answer": "My career goals include advancing to a leadership position where I can mentor others and drive strategic initiatives. I also aim to continue developing my technical skills and stay abreast of industry advancements."
+    },
+    {
+      "question": "How do you handle repetitive tasks?",
+      "answer": "I handle repetitive tasks by finding ways to optimize and automate them where possible. I also remind myself of the importance of these tasks in achieving the overall objectives."
+    },
+    {
+      "question": "Can you describe a time when you went above and beyond at work?",
+      "answer": "In a previous role, I noticed a process inefficiency that was causing delays. I took the initiative to develop a new workflow, which reduced processing time by 20% and improved team productivity."
+    },
+    {
+      "question": "How do you ensure accuracy in your work?",
+      "answer": "I ensure accuracy by double-checking my work, using tools to catch errors, and seeking feedback from peers. Attention to detail is crucial in delivering high-quality results."
+    },
+    {
+      "question": "How do you handle tight deadlines?",
+      "answer": "I handle tight deadlines by prioritizing tasks, focusing on efficiency, and communicating proactively with my team to ensure that we stay on track and address any potential roadblocks promptly."
+    },
+    {
+      "question": "What do you consider to be your biggest professional failure?",
+      "answer": "Early in my career, I underestimated the time required for a project, which led to a delayed delivery. I learned the importance of realistic planning and have since improved my time management skills."
+    },
+    {
+      "question": "How do you handle working with difficult colleagues?",
+      "answer": "I approach working with difficult colleagues by maintaining professionalism, seeking to understand their perspective, and finding common ground to collaborate effectively."
+    },
+    {
+      "question": "What are your career goals?",
+      "answer": "My career goals include advancing to a leadership position where I can mentor others and drive strategic initiatives. I also aim to continue developing my technical skills and stay abreast of industry advancements."
     }
   ]
 }
