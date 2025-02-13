@@ -8,7 +8,7 @@ import ResumeBuilder from "./ResumeBuilder";
 import SeniorGuidance from "./SeniorGuidance";
 import ScrollToTopButton from "./ScrollToTop";
 import Footer from "./Footer";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll } from "framer-motion";
 import Faq from "./Faq";
 
 function Home() {
@@ -123,9 +123,16 @@ function Home() {
       : "hidden";
   };
 
+  const { scrollYProgress } = useScroll();
+
   return (
     <>
       <NavBar />
+      <motion.div
+    className="w-full h-[0.35rem] origin-left fixed top-0 left-0 bg-gradient-to-r from-purple-400 via-purple-600 to-purple-900 
+               shadow-[0px_0px_15px_4px_rgba(168,85,247,0.8)] z-50"
+    style={{ scaleX: scrollYProgress }}
+></motion.div>
       <div className="w-full h-full overflow-hidden py-28 bg-gradient-to-r from-blue-200 to-blue-50">
         <div className="flex flex-wrap items-center justify-between ">
           {/* Left Side */}
