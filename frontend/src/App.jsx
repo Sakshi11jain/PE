@@ -1,8 +1,9 @@
-import { Navigate, Route, Routes } from 'react-router-dom';
-import Home from './Pages/Home';
-import MainPage from './Pages/MainPage';
-import { useState } from 'react';
-import RefrshHandler from './RefrshHandler';
+import { Navigate, Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home";
+import MainPage from "./Pages/MainPage";
+import ChatInterface from "./Pages/ChatInterface"; // Import the chat page
+import { useState } from "react";
+import RefrshHandler from "./RefrshHandler";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
+        <Route path="/chat-interface" element={<PrivateRoute><ChatInterface /></PrivateRoute>} />
       </Routes>
     </div>
   );

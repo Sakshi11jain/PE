@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import NavBar from "./NavBar";
-import ChatInterface from "./ChatInterface";
 import Company from "./Company";
 import Feedback from "./Feedback";
 import ResumeBuilder from "./ResumeBuilder";
@@ -12,6 +11,7 @@ import { motion, AnimatePresence, useScroll } from "framer-motion";
 import Faq from "./Faq";
 
 function Home() {
+  const navigate = useNavigate();
   const words = ["Fear", "Doubt", "Anxiety"];
   const results = ["Confidence", "Clarity", "Success"];
   const [index, setIndex] = useState(0);
@@ -129,10 +129,10 @@ function Home() {
     <>
       <NavBar />
       <motion.div
-    className="w-full h-[0.35rem] origin-left fixed top-0 left-0 bg-gradient-to-r from-purple-400 via-purple-600 to-purple-900 
+        className="w-full h-[0.35rem] origin-left fixed top-0 left-0 bg-gradient-to-r from-purple-400 via-purple-600 to-purple-900 
                shadow-[0px_0px_15px_4px_rgba(168,85,247,0.8)] z-50"
-    style={{ scaleX: scrollYProgress }}
-></motion.div>
+        style={{ scaleX: scrollYProgress }}
+      ></motion.div>
       <div className="w-full h-full overflow-hidden py-28 bg-gradient-to-r from-blue-200 to-blue-50">
         <div className="flex flex-wrap items-center justify-between ">
           {/* Left Side */}
@@ -186,18 +186,14 @@ function Home() {
             </p>
 
             <button
+              onClick={() => navigate("/chat-interface")}
               className="relative mt-4 px-6 py-3 bg-slate-700 text-white rounded-lg text-lg font-semibold transition-all duration-300 ease-in-out 
-    hover:bg-slate-800 hover:w-52 flex items-center justify-center group overflow-hidden shadow-lg hover:shadow-blue-500/50"
+        hover:bg-slate-800 hover:w-52 flex items-center justify-center group overflow-hidden shadow-lg hover:shadow-blue-500/50"
             >
-              {/* Background Glow Effect */}
               <span className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 opacity-0 group-hover:opacity-30 transition-opacity duration-300"></span>
-
-              {/* Button Text */}
               <span className="relative transition-all duration-300 ease-in-out group-hover:mr-2">
                 Start Interview
               </span>
-
-              {/* Sliding Arrow */}
               <span className="relative transform translate-x-[-10px] opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
                 ➜
               </span>
@@ -317,7 +313,6 @@ function Home() {
         </div>
       </div>
       <Faq />
-      <ChatInterface/>
       <ResumeBuilder />
       <Company />
       <SeniorGuidance />
