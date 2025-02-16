@@ -317,6 +317,7 @@ function Home() {
         </div>
       </div>
       <Faq />
+      <ChatInterface/>
       <ResumeBuilder />
       <Company />
       <SeniorGuidance />

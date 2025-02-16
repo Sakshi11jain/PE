@@ -16,7 +16,9 @@ const ChatInterface = () => {
   const fetchQuestions = async () => {
     try {
       setIsLoading(true);
-      const response = await axios.get(`http://localhost:3000/api/questions/${category}`);
+      const response = await axios.get(
+        `http://localhost:3000/api/questions/${category}`
+      );
       setQuestions(response.data);
       setCurrentQuestionIndex(0);
       setUserAnswer("");
@@ -44,11 +46,14 @@ const ChatInterface = () => {
 
     try {
       const currentQuestion = questions[currentQuestionIndex];
-      const response = await axios.post("http://localhost:3000/api/questions/evaluate", {
-        category,
-        questionId: currentQuestion._id,
-        userAnswer,
-      });
+      const response = await axios.post(
+        "http://localhost:3000/api/questions/evaluate",
+        {
+          category,
+          questionId: currentQuestion._id,
+          userAnswer,
+        }
+      );
 
       const feedbackReceived = response.data.feedback;
       setFeedback(feedbackReceived);
@@ -96,7 +101,9 @@ const ChatInterface = () => {
         {/* Header */}
         <div className="p-6 border-b bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-white">Mock Interview Chatbot</h1>
+            <h1 className="text-2xl font-bold text-white">
+              Mock Interview Chatbot
+            </h1>
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value)}
@@ -148,7 +155,9 @@ const ChatInterface = () => {
                 <div className="flex justify-start">
                   <div className="bg-white p-4 rounded-xl shadow-md max-w-[70%]">
                     <p className="text-sm font-medium text-gray-600">Bot:</p>
-                    <p className="text-gray-800">{questions[currentQuestionIndex].questionText}</p>
+                    <p className="text-gray-800">
+                      {questions[currentQuestionIndex].questionText}
+                    </p>
                   </div>
                 </div>
               )}
@@ -163,10 +172,17 @@ const ChatInterface = () => {
             <textarea
               value={userAnswer}
               onChange={(e) => setUserAnswer(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !e.shiftKey) {
+                  e.preventDefault();
+                  submitAnswer();
+                }
+              }}
               placeholder="Type your answer..."
               className="flex-1 border rounded-xl p-3 focus:ring-2 focus:ring-blue-300 resize-none transition-all duration-200"
               rows={2}
             />
+
             <button
               onClick={submitAnswer}
               className="bg-blue-500 text-white px-6 py-3 rounded-xl shadow-md hover:bg-blue-600 transition-all duration-200"

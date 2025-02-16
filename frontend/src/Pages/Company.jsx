@@ -245,7 +245,7 @@ const Company = () => {
     {
       id: 13,
       name: "Cisco Systems",
-      logo: "./Company+logos/cisco.png",
+      logo: "./Company_logos/cisco.png",
       description:
         "An American multinational technology conglomerate that develops and sells networking hardware, software, telecommunications equipment, and other high-technology services and products.",
       founder: "Leonard Bosack & Sandra Lerner",
