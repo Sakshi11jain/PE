@@ -96,7 +96,7 @@ const FeedbackForm = () => {
           </p>
           <div className="flex justify-center">
             <a href="mailto:prepedge2k25@gmail.com">
-              <button className="w-auto px-6 py-3 mb-4 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 text-white font-semibold rounded-full shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-400">
+              <button className="w-auto px-6 py-3 mb-20 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 text-white font-semibold rounded-full shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-400">
                 📧 Send an Email
               </button>
             </a>
