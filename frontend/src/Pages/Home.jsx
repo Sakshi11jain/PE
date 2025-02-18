@@ -87,11 +87,11 @@ function Home() {
   const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
-    if (isPaused) return; // Stop auto-slide when paused
+    if (isPaused) return;
 
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000); // Auto-slide every 5 sec
+    }, 4000);
 
     return () => clearInterval(interval);
   }, [slides.length, isPaused]);
@@ -108,7 +108,7 @@ function Home() {
 
   const pauseSlider = () => {
     setIsPaused(true);
-    setTimeout(() => setIsPaused(false), 10000); // Pause for 10 sec
+    setTimeout(() => setIsPaused(false), 5000); 
   };
 
   const getSlidePosition = (index) => {

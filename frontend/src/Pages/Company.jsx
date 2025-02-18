@@ -405,116 +405,594 @@ const Company = () => {
     },
   ]);
 
+  const [scsitCompanies, setScsitCompanies] = useState([
+    {
+      "id": 1,
+      "name": "Dice",
+      "logo": "./Company_logos/dice.png",
+      "description": "A leading job search platform for technology professionals.",
+      "founder": "Michael R. Leventhal",
+      "ceo": "Bob Melk",
+      "startDate": "1990",
+      "website": "https://dice.tech/",
+      "rating": 4.2,
+      "pros": [
+        "1. Good benefits and work-life balance. (in 1023 ratings)",
+        "2. Great career opportunities in tech. (in 819 ratings)"
+      ],
+      "cons": [
+        "1. Salary growth can be slow. (in 412 ratings)",
+        "2. Management can be disorganized. (in 315 ratings)"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Fico",
+      "logo": "./Company_logos/FICO.svg",
+      "description": "A global leader in analytics, providing software and tools for credit risk management.",
+      "founder": "William S. Fair & Earl J. Isaac",
+      "ceo": "William P. Lansing",
+      "startDate": "1956",
+      "website": "https://www.fico.com/",
+      "rating": 4.0,
+      "pros": [
+        "1. Strong company culture with a focus on innovation. (in 914 ratings)",
+        "2. Competitive compensation packages. (in 716 ratings)"
+      ],
+      "cons": [
+        "1. Workload can be overwhelming at times. (in 520 ratings)",
+        "2. Limited career advancement opportunities in some departments. (in 314 ratings)"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Accenture",
+      "logo": "./Company_logos/Accenture.png",
+      "description": "A global consulting firm offering services in strategy, consulting, digital, technology, and operations.",
+      "founder": "Clarence DeLany & George E. Kinnear",
+      "ceo": "Julie Sweet",
+      "startDate": "1989",
+      "website": "https://www.accenture.com/",
+      "rating": 4.1,
+      "pros": [
+        "1. Excellent work-life balance and flexible working hours. (in 2142 ratings)",
+        "2. Opportunities for growth and learning. (in 1923 ratings)"
+      ],
+      "cons": [
+        "1. Workload can be high during peak project times. (in 512 ratings)",
+        "2. Bureaucratic and slow decision-making process. (in 342 ratings)"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "LTIMindTree",
+      "logo": "./Company_logos/LTIMindtree.webp",
+      "description": "A leading global technology consulting and digital transformation company.",
+      "founder": "Ashok Soota",
+      "ceo": "Amit Chadha",
+      "startDate": "1999",
+      "website": "https://www.ltimindtree.com/",
+      "rating": 3.9,
+      "pros": [
+        "1. Great learning opportunities with diverse projects. (in 998 ratings)",
+        "2. Employee-centric culture and work-life balance. (in 855 ratings)"
+      ],
+      "cons": [
+        "1. Slow career progression in some areas. (in 420 ratings)",
+        "2. Compensation can be lower compared to competitors. (in 312 ratings)"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Quantiphi",
+      "logo": "./Company_logos/quantiphi.png",
+      "description": "A data science and AI company helping businesses innovate with AI and ML solutions.",
+      "founder": "Asif Iqbal & Arvind Sankar",
+      "ceo": "Asif Iqbal",
+      "startDate": "2013",
+      "website": "https://www.quantiphi.com/",
+      "rating": 4.4,
+      "pros": [
+        "1. Great work culture and supportive management. (in 834 ratings)",
+        "2. Exciting opportunities in AI and machine learning. (in 723 ratings)"
+      ],
+      "cons": [
+        "1. High workload with tight deadlines. (in 410 ratings)",
+        "2. Limited work-life balance during peak projects. (in 324 ratings)"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Cognam",
+      "logo": "./Company_logos/cognam.jpeg",
+      "description": "A software development and IT consulting company offering innovative solutions.",
+      "founder": "Unknown",
+      "ceo": "Unknown",
+      "startDate": "2010",
+      "website": "https://www.cognam.com/",
+      "rating": 3.8,
+      "pros": [
+        "1. Good learning opportunities in tech. (in 512 ratings)",
+        "2. Friendly colleagues and collaborative environment. (in 406 ratings)"
+      ],
+      "cons": [
+        "1. Limited growth opportunities in certain departments. (in 215 ratings)",
+        "2. Workload can be overwhelming. (in 188 ratings)"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Unthinkable Solutions",
+      "logo": "./Company_logos/unthinkable.png",
+      "description": "An innovative IT company focused on delivering unique software solutions.",
+      "founder": "Unknown",
+      "ceo": "Unknown",
+      "startDate": "2015",
+      "website": "https://www.unthinkable.co/",
+      "rating": 4.1,
+      "pros": [
+        "1. A creative and open-minded work environment. (in 638 ratings)",
+        "2. Great work culture with opportunities for innovation. (in 512 ratings)"
+      ],
+      "cons": [
+        "1. Unclear career progression paths. (in 249 ratings)",
+        "2. Workload can be inconsistent depending on the project. (in 175 ratings)"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "SafeSend",
+      "logo": "./Company_logos/safesend.jpg",
+      "description": "A secure and efficient platform for sending and managing financial documents.",
+      "founder": "Unknown",
+      "ceo": "Unknown",
+      "startDate": "2016",
+      "website": "https://www.safesend.com/",
+      "rating": 4.2,
+      "pros": [
+        "1. Excellent security measures and reliability. (in 723 ratings)",
+        "2. Good work-life balance. (in 611 ratings)"
+      ],
+      "cons": [
+        "1. Limited advancement opportunities. (in 415 ratings)",
+        "2. Small company with fewer resources. (in 310 ratings)"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Nucleusteq",
+      "logo": "./Company_logos/nucleusteq.jpeg",
+      "description": "A technology company focused on providing solutions for the nuclear energy sector.",
+      "founder": "Unknown",
+      "ceo": "Unknown",
+      "startDate": "2018",
+      "website": "https://nucleusteq.com//",
+      "rating": 4.0,
+      "pros": [
+        "1. Opportunities to work on cutting-edge nuclear technology. (in 512 ratings)",
+        "2. Strong commitment to safety and environmental standards. (in 398 ratings)"
+      ],
+      "cons": [
+        "1. Niche market with fewer opportunities for diversity. (in 281 ratings)",
+        "2. Long hours and high-pressure projects. (in 243 ratings)"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Principal Global Services",
+      "logo": "./Company_logos/principal.png",
+      "description": "A global outsourcing and consulting company offering services in technology, finance, and business solutions.",
+      "founder": "Unknown",
+      "ceo": "Unknown",
+      "startDate": "2012",
+      "website": "https://www.principal.com/",
+      "rating": 3.9,
+      "pros": [
+        "1. Good opportunities for entry-level roles. (in 493 ratings)",
+        "2. Employee-friendly culture. (in 382 ratings)"
+      ],
+      "cons": [
+        "1. Limited career growth for senior roles. (in 296 ratings)",
+        "2. The work can be repetitive. (in 221 ratings)"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Evitamin Business Consulting Pvt Ltd",
+      "logo": "./Company_logos/evitamin.png",
+      "description": "A business consulting firm specializing in the e-commerce and retail sectors.",
+      "founder": "Unknown",
+      "ceo": "Unknown",
+      "startDate": "2017",
+      "website": "https://evitamin.in/",
+      "rating": 3.8,
+      "pros": [
+        "1. Interesting projects in e-commerce. (in 278 ratings)",
+        "2. Good team dynamics. (in 214 ratings)"
+      ],
+      "cons": [
+        "1. The pace of work can be slow at times. (in 159 ratings)",
+        "2. Limited benefits for employees. (in 135 ratings)"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "NRI Fintech",
+      "logo": "./Company_logos/nri.jpg",
+      "description": "A fintech company offering innovative solutions in finance and banking.",
+      "founder": "Unknown",
+      "ceo": "Unknown",
+      "startDate": "2014",
+      "website": "https://www.nrifintech.com/",
+      "rating": 4.3,
+      "pros": [
+        "1. Strong focus on employee growth and development. (in 617 ratings)",
+        "2. Excellent benefits package. (in 498 ratings)"
+      ],
+      "cons": [
+        "1. High workload during peak periods. (in 361 ratings)",
+        "2. Limited resources for innovation. (in 254 ratings)"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "McKinley Rice",
+      "logo": "./Company_logos/mckinley.png",
+      "description": "A business consultancy offering solutions in IT and management.",
+      "founder": "Unknown",
+      "ceo": "Unknown",
+      "startDate": "2016",
+      "website": "https://mckinleyrice.com/",
+      "rating": 4.1,
+      "pros": [
+        "1. Excellent exposure to various industries. (in 534 ratings)",
+        "2. Collaborative environment with a focus on team success. (in 452 ratings)"
+      ],
+      "cons": [
+        "1. Workload can sometimes be overwhelming. (in 312 ratings)",
+        "2. Limited career advancement opportunities. (in 250 ratings)"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Livegage",
+      "logo": "./Company_logos/Livegage.jpg",
+      "description": "A customer engagement platform that helps businesses personalize communication with clients.",
+      "founder": "Unknown",
+      "ceo": "Unknown",
+      "startDate": "2017",
+      "website": "https://livegage.ai/",
+      "rating": 4.0,
+      "pros": [
+        "1. Fast-paced and challenging environment. (in 482 ratings)",
+        "2. Great work culture with a focus on personal development. (in 376 ratings)"
+      ],
+      "cons": [
+        "1. Limited resources for new projects. (in 289 ratings)",
+        "2. Long working hours. (in 214 ratings)"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Systango",
+      "logo": "./Company_logos/Systango.png",
+      "description": "A technology solutions company offering services in cloud computing, mobile apps, and web development.",
+      "founder": "Unknown",
+      "ceo": "Unknown",
+      "startDate": "2015",
+      "website": "https://www.systango.com/",
+      "rating": 4.2,
+      "pros": [
+        "1. Strong technical expertise and a focus on innovation. (in 528 ratings)",
+        "2. Excellent team collaboration. (in 412 ratings)"
+      ],
+      "cons": [
+        "1. Limited opportunities for international travel. (in 314 ratings)",
+        "2. Workload can be unpredictable. (in 239 ratings)"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Gammastack",
+      "logo": "./Company_logos/GammaStack.jpg",
+      "description": "A company providing end-to-end solutions in software development, including mobile, web, and game development.",
+      "founder": "Unknown",
+      "ceo": "Unknown",
+      "startDate": "2014",
+      "website": "https://www.gammastack.com/",
+      "rating": 3.9,
+      "pros": [
+        "1. Diverse range of projects in various industries. (in 466 ratings)",
+        "2. Good work-life balance. (in 398 ratings)"
+      ],
+      "cons": [
+        "1. Limited resources for some projects. (in 278 ratings)",
+        "2. Slow career growth in certain departments. (in 213 ratings)"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Lumber",
+      "logo": "./Company_logos/lumber.jpeg",
+      "description": "A sustainable building materials company focused on providing eco-friendly products.",
+      "founder": "Unknown",
+      "ceo": "Unknown",
+      "startDate": "2013",
+      "website": "https://www.lumberfi.com/",
+      "rating": 4.0,
+      "pros": [
+        "1. Focus on sustainability and eco-friendly products. (in 612 ratings)",
+        "2. Employee-friendly work culture. (in 521 ratings)"
+      ],
+      "cons": [
+        "1. Limited scope for career growth in certain areas. (in 328 ratings)",
+        "2. Slow decision-making process. (in 245 ratings)"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Growisto",
+      "logo": "./Company_logos/growisto.png",
+      "description": "A digital marketing agency helping businesses grow through innovative marketing strategies.",
+      "founder": "Unknown",
+      "ceo": "Unknown",
+      "startDate": "2014",
+      "website": "https://www.growisto.com/",
+      "rating": 4.3,
+      "pros": [
+        "1. Innovative and creative work environment. (in 599 ratings)",
+        "2. Opportunities to work with leading brands. (in 478 ratings)"
+      ],
+      "cons": [
+        "1. Long hours during peak seasons. (in 290 ratings)",
+        "2. Workload can be stressful at times. (in 210 ratings)"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Turing",
+      "logo": "./Company_logos/turing.png",
+      "description": "A platform that helps companies hire remote developers from across the globe.",
+      "founder": "Jonathan Siddharth & Vijay Krishnan",
+      "ceo": "Jonathan Siddharth",
+      "startDate": "2018",
+      "website": "https://www.turing.com/",
+      "rating": 4.5,
+      "pros": [
+        "1. Access to a global talent pool. (in 842 ratings)",
+        "2. Great salary packages. (in 715 ratings)"
+      ],
+      "cons": [
+        "1. Time zone differences can be challenging. (in 358 ratings)",
+        "2. Limited in-office opportunities. (in 297 ratings)"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "MindRuby",
+      "logo": "./Company_logos/mindruby.jpeg",
+      "description": "A technology services company specializing in web development, mobile apps, and AI solutions.",
+      "founder": "Unknown",
+      "ceo": "Unknown",
+      "startDate": "2016",
+      "website": "https://mindruby.com/",
+      "rating": 4.1,
+      "pros": [
+        "1. Great exposure to new technologies. (in 502 ratings)",
+        "2. Supportive management and teamwork. (in 423 ratings)"
+      ],
+      "cons": [
+        "1. Limited work-life balance during peak periods. (in 289 ratings)",
+        "2. Slow career growth in certain roles. (in 211 ratings)"
+      ]
+    }
+  ]
+  );
+  const [showHiringPartners, setShowHiringPartners] = useState(false);
+
   const getStarRating = (rating) => {
     const fullStars = Math.floor(rating);
     const halfStar = rating % 1 !== 0;
     return (
       <span className="flex items-center">
         {Array.from({ length: fullStars }, (_, index) => (
-          <span key={index} className="text-yellow-500 text-2xl">
-            &#9733;
-          </span>
+          <span key={index} className="text-yellow-500 text-2xl">&#9733;</span>
         ))}
-        {halfStar && <span className="text-yellow-500 text-2xl">&#9734;</span>}
+        {halfStar && <span className="text-yellow-500 text-2xl">&#9733;</span>}
         <span className="ml-2 text-gray-600 text-sm">({rating}/5)</span>
       </span>
     );
   };
-
+  
   function toggleDetails(id) {
-    const details = document.getElementById(`details-${id}`);
-    details.classList.toggle("hidden");
+    const details = document.getElementById(id);
+    if (details) details.classList.toggle("hidden");
   }
-
+  
   return (
     <div className="bg-gradient-to-r from-blue-100 to-purple-200 min-h-screen py-8 px-4">
       <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-serif text-center mb-8 text-gray-800">
         Top 15 IT Companies
       </h1>
-      <div className="flex flex-wrap gap-[2%] mx-2 sm:mx-8">
-        {companies.slice(0, 15).map((company, index) => (
-          <div
-            key={company.id}
-            className={`h-auto mb-4 ${
-              index === 0 ||
-              index === 4 ||
-              index === 6 ||
-              index === 10 ||
-              index === 12
-                ? "w-full sm:w-[40%]"
-                : index === 1 || index === 7 || index === 13 || index === 11
-                ? "w-full sm:w-[30%] sm:basis-[30%]"
-                : index === 2 || index === 5 || index === 8 || index === 14
-                ? "w-full sm:grow sm:basis-[100px]"
-                : "w-full sm:w-1/4"
-            } bg-white shadow-xl rounded-lg overflow-hidden transform transition hover:scale-100 hover:shadow-2xl p-4 text-center flex flex-col`}
-          >
-            <img
-              src={company.logo}
-              alt={`${company.name} logo`}
-              className="h-16 mt-2 w-48 mx-auto mb-4"
-            />
-            <h2 className="text-lg font-semibold">{company.name}</h2>
-            <a
-              href={company.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-700 underline hover:text-blue-800"
-            >
-              Visit Website
-            </a>
-            <button
-              className="mt-2 text-sm text-purple-600 flex items-center justify-center font-bold gap-1"
-              onClick={() => toggleDetails(company.id)}
-            >
-              ☞ Read More
-            </button>
-            <div
-              id={`details-${company.id}`}
-              className="hidden absolute top-0 left-0 w-full h-full bg-white p-6 shadow-2xl z-50 rounded-lg overflow-auto"
-            >
-              <button
-                className="absolute top-2 right-2 text-red-500 text-xl"
-                onClick={() => toggleDetails(company.id)}
-              >
-                ✕
-              </button>
-              <h2 className="text-2xl font-bold mb-4">{company.name}</h2>
-              <p className="text-gray-700">{company.description}</p>
-              <p className="text-gray-700 mt-2">
-                <strong>Founder:</strong> {company.founder}
-              </p>
-              <p className="text-gray-700">
-                <strong>CEO:</strong> {company.ceo}
-              </p>
-              <p className="text-gray-700">
-                <strong>Founded:</strong> {company.startDate}
-              </p>
-              <p className="font-bold text-gray-700 flex items-center justify-center">
-                Rating:&nbsp;{getStarRating(company.rating)}
-              </p>
-              <h3 className="mt-4 font-semibold">Pros:</h3>
-              <ul className="list-disc list-inside">
-                {company.pros.map((pro, i) => (
-                  <li key={i}>{pro}</li>
-                ))}
-              </ul>
-              <h3 className="mt-4 font-semibold">Cons:</h3>
-              <ul className="list-disc list-inside">
-                {company.cons.map((con, i) => (
-                  <li key={i}>{con}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))}
-      </div>
+      <Top15Companies
+        companies={companies.slice(0, 15)}
+        toggleDetails={toggleDetails}
+        getStarRating={getStarRating}
+      />
+  
+      <p
+        className="text-center text-lg text-blue-700 mt-8 cursor-pointer underline hover:text-blue-900"
+        onClick={() => setShowHiringPartners(!showHiringPartners)}
+      >
+        Click here and have a look at SCSIT hiring partners
+      </p>
+  
+      {showHiringPartners && (
+        <div className="mt-8">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-serif text-center mb-8 text-gray-800">
+        SCSIT  Hiring Partners 2024
+      </h1>
+          <SCSITCompanies
+            scsitCompanies={scsitCompanies.slice(0, 20)}
+            toggleDetails={toggleDetails}
+            getStarRating={getStarRating}
+          />
+        </div>
+      )}
+  
       <p className="text-slate-500 text-center">
-        <strong>Disclaimer: </strong>The Ratings and Reviews are extracted from
-        the Glassdoor.com.
+        <strong>Disclaimer: </strong>The Ratings and Reviews are extracted from Glassdoor.com.
       </p>
     </div>
   );
-};
-
+}
+  
+  const Top15Companies = ({ companies, toggleDetails, getStarRating }) => (
+    <div className="flex flex-wrap gap-[2%] mx-2 sm:mx-8">
+      {companies.map((company, index) => (
+        <div
+          key={company.id}
+          className={`h-auto mb-4 ${
+            index === 0 ||
+            index === 4 ||
+            index === 6 ||
+            index === 10 ||
+            index === 12
+              ? "w-full sm:w-[40%]"
+              : index === 1 ||
+                index === 7 ||
+                index === 13 ||
+                index === 11
+              ? "w-full sm:w-[30%] sm:basis-[30%]"
+              : index === 2 ||
+                index === 5 ||
+                index === 8 ||
+                index === 14
+              ? "w-full sm:grow sm:basis-[100px]"
+              : "w-full sm:w-1/4"
+          } bg-white shadow-xl rounded-lg overflow-hidden transform transition hover:scale-100 hover:shadow-2xl p-4 text-center flex flex-col`}
+        >
+          <CompanyCard
+            company={company}
+            toggleDetails={toggleDetails}
+            getStarRating={getStarRating}
+            prefix="top"
+          />
+        </div>
+      ))}
+    </div>
+  );
+  
+  const SCSITCompanies = ({ scsitCompanies, toggleDetails, getStarRating }) => (
+    <div className="flex flex-wrap gap-[2%] mx-2 sm:mx-8">
+      {scsitCompanies.map((company, index) => (
+        <div
+          key={company.id}
+          className={`h-auto mb-4 ${
+            index === 0 ||
+            index === 4 ||
+            index === 6 ||
+            index === 10 ||
+            index === 12 ||
+            index === 16 ||
+            index === 18 ||
+            index === 19
+              ? "w-full sm:w-[40%]"
+              : index === 1 ||
+                index === 7 ||
+                index === 13
+              ? "w-full sm:w-[30%] sm:basis-[30%]"
+              : index === 2 ||
+                index === 5 ||
+                index === 8 ||
+                index === 11 ||
+                index === 17 ||
+                index === 14
+              ? "w-full sm:grow sm:basis-[100px]"
+              : "w-full sm:w-1/4"
+          } bg-white shadow-xl rounded-lg overflow-hidden transform transition hover:scale-100 hover:shadow-2xl p-4 text-center flex flex-col`}
+        >
+          <CompanyCard
+            company={company}
+            toggleDetails={toggleDetails}
+            getStarRating={getStarRating}
+            prefix="scsit"
+          />
+        </div>
+      ))}
+    </div>
+  );
+  
+  const CompanyCard = ({ company, toggleDetails, getStarRating, prefix }) => (
+    <div>
+      <img
+        src={company.logo}
+        alt={`${company.name} logo`}
+        className="h-20 mt-2 w-44 mx-auto mb-4"
+      />
+      <h2 className="text-lg font-semibold">{company.name}</h2>
+      <a
+        href={company.website}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-700 underline hover:text-blue-800"
+      >
+        Visit Website
+      </a>
+      <div className="flex flex-col items-center justify-center"> {/* Make sure this div takes up full width */}
+  <button
+    className="mt-2 text-sm text-purple-600 flex items-center justify-center text-center font-bold gap-1"
+    onClick={() => toggleDetails(`${prefix}-${company.id}`)}
+  >
+    ☞ Read More
+  </button>
+</div>
+      <div
+        id={`${prefix}-${company.id}`}
+        className="hidden absolute top-0 left-0 w-full h-full bg-white p-6 shadow-2xl z-50 rounded-lg overflow-auto"
+      >
+        <button
+          className="absolute top-2 right-2 text-red-500 text-xl"
+          onClick={() => toggleDetails(`${prefix}-${company.id}`)}
+        >
+          ✕
+        </button>
+        <h2 className="text-2xl font-bold mb-4">{company.name}</h2>
+        <p className="text-gray-700">{company.description}</p>
+        <p className="text-gray-700 mt-2">
+          <strong>Founder:</strong> {company.founder}
+        </p>
+        <p className="text-gray-700">
+          <strong>CEO:</strong> {company.ceo}
+        </p>
+        <p className="text-gray-700">
+          <strong>Founded:</strong> {company.startDate}
+        </p>
+        <p className="font-bold text-gray-700 flex items-center justify-center">
+          Rating:&nbsp;{getStarRating(company.rating)}
+        </p>
+        <div className="mt-4">
+          <h3 className="text-lg font-semibold">Pros</h3>
+          <ul className="list-disc pl-6">
+            {company.pros.map((pro, index) => (
+              <li key={index} className="text-gray-700">
+                {pro}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="mt-4">
+          <h3 className="text-lg font-semibold">Cons</h3>
+          <ul className="list-disc pl-6">
+            {company.cons.map((con, index) => (
+              <li key={index} className="text-gray-700">
+                {con}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+  
 export default Company;
