@@ -1,8 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 
 function MainPage() {
+
+    useEffect(() => {
+        if (!localStorage.getItem('token')) {
+            window.history.pushState(null, null, window.location.href);
+            window.addEventListener('popstate', () => {
+                window.history.pushState(null, null, window.location.href);
+            });
+        }
+    }, []);
+
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isLogin, setIsLogin] = useState(true);
     const navigate = useNavigate();
@@ -72,20 +82,24 @@ function MainPage() {
                 body: JSON.stringify(signupInfo)
             });
             const result = await response.json();
-            const { success, message } = result;
+            const { success, message, jwtToken } = result;
     
             if (success) {
                 handleSuccess(message);
+                localStorage.setItem('token', jwtToken);
+                localStorage.setItem('loggedInUser', name);
                 setTimeout(() => {
-                    setIsLogin(true);
+                    navigate('/home');
+                    closeModal();
                 }, 1000);
             } else {
-                handleError(message); // Handle error directly with message from backend
+                handleError(message);
             }
         } catch (err) {
-            handleError(err.message); // Handle any network or server error
+            handleError(err.message);
         }
-    };    
+    };
+    
 
     const LoginForm = ({ onSubmit }) => {
         const [loginInfo, setLoginInfo] = useState({ email: '', password: '' });

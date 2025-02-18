@@ -16,13 +16,14 @@ const Navbar = () => {
   }, []);
 
   const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("loggedInUser");
+    localStorage.removeItem('token');
+    localStorage.removeItem('loggedInUser');
     handleSuccess("User Logged out");
     setTimeout(() => {
-      navigate("/");
-    }, 1000);
-  };
+    navigate('/', { replace: true }); // Redirect to MainPage without storing history
+    window.location.reload();
+  }, 1000);
+};
 
   const toggleProfileMenu = () => {
     setIsMenuOpen(!isMenuOpen);
