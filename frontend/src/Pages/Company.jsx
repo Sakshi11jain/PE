@@ -410,76 +410,75 @@ const Company = () => {
       "id": 1,
       "name": "Dice",
       "logo": "./Company_logos/dice.png",
-      "description": "A leading job search platform for technology professionals.",
-      "founder": "Michael R. Leventhal",
-      "ceo": "Bob Melk",
-      "startDate": "1990",
+      "description": "Dice is a corporate spend orchestration, digital commerce, and payments platform for enterprises.",
+      "founder": "Lakshay Jain, Prashant Kushwah and Sonam Khubchandani",
+      "ceo": "Prashant Kushwah",
+      "startDate": "2018",
       "website": "https://dice.tech/",
-      "rating": 4.2,
+      "rating": 3.7,
       "pros": [
-        "1. Good benefits and work-life balance. (in 1023 ratings)",
-        "2. Great career opportunities in tech. (in 819 ratings)"
+        "Good startup culture at Dice Pune (in 14 reviews)"
       ],
       "cons": [
-        "1. Salary growth can be slow. (in 412 ratings)",
-        "2. Management can be disorganized. (in 315 ratings)"
+        "There are no cons to display at this time.",
       ]
     },
     {
       "id": 2,
       "name": "Fico",
       "logo": "./Company_logos/FICO.svg",
-      "description": "A global leader in analytics, providing software and tools for credit risk management.",
-      "founder": "William S. Fair & Earl J. Isaac",
-      "ceo": "William P. Lansing",
+      "description": "A global leader in analytics, providing software and tools for credit risk management. FICO, originally Fair, Isaac and Company, is an American data analytics company based in Bozeman, Montana, focused on credit scoring services.",
+      "founder": "Bill Fair and Earl Isaac",
+      "ceo": "William J. Lansing",
       "startDate": "1956",
       "website": "https://www.fico.com/",
-      "rating": 4.0,
+      "rating": 4.1,
       "pros": [
-        "1. Strong company culture with a focus on innovation. (in 914 ratings)",
-        "2. Competitive compensation packages. (in 716 ratings)"
+        "1. Good work/life balance depending on manager and role (in 187 reviews)",
+        "2. Most people were great and the company had good intentions. (in 129 reviews)"
       ],
       "cons": [
-        "1. Workload can be overwhelming at times. (in 520 ratings)",
-        "2. Limited career advancement opportunities in some departments. (in 314 ratings)"
+        "1. Management is poor (in 61 reviews)",
+        "2. Low salary and very far. (in 47 reviews)"
       ]
     },
     {
       "id": 3,
-      "name": "Accenture",
-      "logo": "./Company_logos/Accenture.png",
-      "description": "A global consulting firm offering services in strategy, consulting, digital, technology, and operations.",
-      "founder": "Clarence DeLany & George E. Kinnear",
-      "ceo": "Julie Sweet",
-      "startDate": "1989",
-      "website": "https://www.accenture.com/",
-      "rating": 4.1,
-      "pros": [
-        "1. Excellent work-life balance and flexible working hours. (in 2142 ratings)",
-        "2. Opportunities for growth and learning. (in 1923 ratings)"
+      name: "Accenture",
+      logo: "./Company_logos/Accenture.png",
+      description:
+        "A global professional services company providing consulting and strategy in digital, technology, and operations.",
+      founder: "Arthur Andersen",
+      ceo: "Julie Sweet",
+      startDate: "1989",
+      website: "https://www.accenture.com/",
+      rating: 3.8,
+      pros: [
+        "1. It has been 7 months working in Accenture.....never felt work tirelessly.....trainings are good and good work life balance (in 9381 ratings)",
+        "2. Working here is good because the work culture is good and we get to reskill and upskill ourselves. (in 7036 ratings)",
       ],
-      "cons": [
-        "1. Workload can be high during peak project times. (in 512 ratings)",
-        "2. Bureaucratic and slow decision-making process. (in 342 ratings)"
-      ]
+      cons: [
+        "1. Low salary for resources who are loyal and staying with the company for long years. (in 6798 ratings)",
+        "2. I was in Accenture Kolkata and here management are very very poor like political leader (leader with zero knowledge). (in 3599 ratings)",
+      ],
     },
     {
       "id": 4,
       "name": "LTIMindTree",
       "logo": "./Company_logos/LTIMindtree.webp",
       "description": "A leading global technology consulting and digital transformation company.",
-      "founder": "Ashok Soota",
-      "ceo": "Amit Chadha",
-      "startDate": "1999",
+      "founder": "Debashis Chatterjee",
+      "ceo": "Debashis Chatterjee",
+      "startDate": "1996",
       "website": "https://www.ltimindtree.com/",
-      "rating": 3.9,
+      "rating": 3.5,
       "pros": [
-        "1. Great learning opportunities with diverse projects. (in 998 ratings)",
-        "2. Employee-centric culture and work-life balance. (in 855 ratings)"
+        "1. work life balance is good and again its based on project. (in 883 reviews)",
+        "2. Good work culture and you can learn more if you are placed in good project. (in 418 reviews)"
       ],
       "cons": [
-        "1. Slow career progression in some areas. (in 420 ratings)",
-        "2. Compensation can be lower compared to competitors. (in 312 ratings)"
+        "1. Bad management and not for freshers mostly in bench (in 267 reviews)",
+        "2. Less salary in india and hike is not good. (in 240 reviews)"
       ]
     },
     {
@@ -487,18 +486,18 @@ const Company = () => {
       "name": "Quantiphi",
       "logo": "./Company_logos/quantiphi.png",
       "description": "A data science and AI company helping businesses innovate with AI and ML solutions.",
-      "founder": "Asif Iqbal & Arvind Sankar",
-      "ceo": "Asif Iqbal",
+      "founder": "Asif Hasan, Reghu Hariharan, and Ritesh Patel",
+      "ceo": "Asif Hasan",
       "startDate": "2013",
       "website": "https://www.quantiphi.com/",
-      "rating": 4.4,
+      "rating": 4.3,
       "pros": [
-        "1. Great work culture and supportive management. (in 834 ratings)",
-        "2. Exciting opportunities in AI and machine learning. (in 723 ratings)"
+        "1. Work culture is good employees are good (in 131 reviews)",
+        "2. The culture is good and the work will depend on your project.(in 93 reviews)"
       ],
       "cons": [
-        "1. High workload with tight deadlines. (in 410 ratings)",
-        "2. Limited work-life balance during peak projects. (in 324 ratings)"
+        "1. No work life balance due to all fresher are hired and leads have to look into all small things or deliver project practically by himself (in 321 reviews)",
+        "2. extended working hours and constant need for upskilling. (in 84 reviews)"
       ]
     },
     {
@@ -507,17 +506,17 @@ const Company = () => {
       "logo": "./Company_logos/cognam.jpeg",
       "description": "A software development and IT consulting company offering innovative solutions.",
       "founder": "Unknown",
-      "ceo": "Unknown",
-      "startDate": "2010",
+      "ceo": "Luis Gutierrez-Sheris",
+      "startDate": "2011",
       "website": "https://www.cognam.com/",
       "rating": 3.8,
       "pros": [
-        "1. Good learning opportunities in tech. (in 512 ratings)",
-        "2. Friendly colleagues and collaborative environment. (in 406 ratings)"
+        "1. All people are very good work life balance (in 4 reviews)",
+        "2. Good Atmosphere and salary also. (in 4 reviews)"
       ],
       "cons": [
-        "1. Limited growth opportunities in certain departments. (in 215 ratings)",
-        "2. Workload can be overwhelming. (in 188 ratings)"
+        "1. There is a lack of professionalism, with daily humiliations from managers being a common occurrence. (in 5 reviews)",
+        "2. Old technologies being used CEO not good (in 4 reviews)"
       ]
     },
     {
@@ -525,75 +524,73 @@ const Company = () => {
       "name": "Unthinkable Solutions",
       "logo": "./Company_logos/unthinkable.png",
       "description": "An innovative IT company focused on delivering unique software solutions.",
-      "founder": "Unknown",
-      "ceo": "Unknown",
-      "startDate": "2015",
+      "founder": "Yogesh Agarwal",
+      "ceo": "Yogesh Agarwal",
+      "startDate": "2019",
       "website": "https://www.unthinkable.co/",
-      "rating": 4.1,
+      "rating": 3.6,
       "pros": [
-        "1. A creative and open-minded work environment. (in 638 ratings)",
-        "2. Great work culture with opportunities for innovation. (in 512 ratings)"
+        "1. Good for learning opportunity. (in 21 reviews)",
+        "2. Good work culture. (in 15 reviews)"
       ],
       "cons": [
-        "1. Unclear career progression paths. (in 249 ratings)",
-        "2. Workload can be inconsistent depending on the project. (in 175 ratings)"
+        "1. no work life balance is there. (in 24 reviews)",
+        "2. Poor management. (in 19 reviews)"
       ]
     },
     {
       "id": 8,
       "name": "SafeSend",
       "logo": "./Company_logos/safesend.jpg",
-      "description": "A secure and efficient platform for sending and managing financial documents.",
-      "founder": "Unknown",
-      "ceo": "Unknown",
-      "startDate": "2016",
+      "description": "A secure and efficient platform for sending and managing financial documents. SafeSend’s mission is to automate the tax and accounting profession with innovative, emerging technologies that help practitioners work more efficiently and better serve their clients.",
+      "founder": "Steve Dusablon and Andrew Hatfield",
+      "ceo": "Mathieu Stevenson",
+      "startDate": "2008",
       "website": "https://www.safesend.com/",
-      "rating": 4.2,
+      "rating": 4.1,
       "pros": [
-        "1. Excellent security measures and reliability. (in 723 ratings)",
-        "2. Good work-life balance. (in 611 ratings)"
+        "1. Great culture and progressive technology (in 7 reviews)",
+"2. Good work culture and work environment. (in 5 reviews)"
       ],
       "cons": [
-        "1. Limited advancement opportunities. (in 415 ratings)",
-        "2. Small company with fewer resources. (in 310 ratings)"
+        "There are no cons to display at this time."
       ]
     },
     {
       "id": 9,
       "name": "Nucleusteq",
       "logo": "./Company_logos/nucleusteq.jpeg",
-      "description": "A technology company focused on providing solutions for the nuclear energy sector.",
-      "founder": "Unknown",
-      "ceo": "Unknown",
+      "description": "NucleusTeq is the top-leading software services, solutions, and products company dedicated to empowering and transforming businesses through advanced digital technologies, including big data, analytics, cloud, enterprise automation, and mobility.",
+      "founder": "Ashish Baghel",
+      "ceo": "Ashish Baghel",
       "startDate": "2018",
       "website": "https://nucleusteq.com//",
-      "rating": 4.0,
+      "rating": 3.8,
       "pros": [
-        "1. Opportunities to work on cutting-edge nuclear technology. (in 512 ratings)",
-        "2. Strong commitment to safety and environmental standards. (in 398 ratings)"
+        "1. Best Work Culture (in 9 reviews)",
+        "2. The management is amazing very friendly and transparent on every approach. (in 8 reviews)"
       ],
       "cons": [
-        "1. Niche market with fewer opportunities for diversity. (in 281 ratings)",
-        "2. Long hours and high-pressure projects. (in 243 ratings)"
+        "There are no cons to display at this time."
       ]
     },
     {
       "id": 10,
       "name": "Principal Global Services",
       "logo": "./Company_logos/principal.png",
-      "description": "A global outsourcing and consulting company offering services in technology, finance, and business solutions.",
-      "founder": "Unknown",
-      "ceo": "Unknown",
-      "startDate": "2012",
+      "description": "Principal is a global financial services company passionate about improving the wealth and well-being of families and communities",
+      "founder": "Kaushik Majumdar",
+      "ceo": "Deanna Strable-Soethout",
+      "startDate": "2006",
       "website": "https://www.principal.com/",
       "rating": 3.9,
       "pros": [
-        "1. Good opportunities for entry-level roles. (in 493 ratings)",
-        "2. Employee-friendly culture. (in 382 ratings)"
+        "1. Work life balance is good. (in 322 reviews)",
+        "2. Great benefits and the company overall is working to have the employees to be more antonymous. (in 208 reviews)"
       ],
       "cons": [
-        "1. Limited career growth for senior roles. (in 296 ratings)",
-        "2. The work can be repetitive. (in 221 ratings)"
+        "1. Bad management infact they do not know to manage at all. 4. No employee importance. (in 89 reviews)",
+        "2. There is no training and you are literally thrown into the fire and nobody helps you. (in 39 reviews)"
       ]
     },
     {
@@ -602,17 +599,17 @@ const Company = () => {
       "logo": "./Company_logos/evitamin.png",
       "description": "A business consulting firm specializing in the e-commerce and retail sectors.",
       "founder": "Unknown",
-      "ceo": "Unknown",
+      "ceo": "Vaibhav Daga",
       "startDate": "2017",
       "website": "https://evitamin.in/",
       "rating": 3.8,
       "pros": [
-        "1. Interesting projects in e-commerce. (in 278 ratings)",
-        "2. Good team dynamics. (in 214 ratings)"
+        "1. Work environment at E vitamin is so cool, Seniors are very helpful and friendly. (in 7 reviews)",
+        "2. good working environment and people. (in 5 reviews)"
       ],
       "cons": [
-        "1. The pace of work can be slow at times. (in 159 ratings)",
-        "2. Limited benefits for employees. (in 135 ratings)"
+        "1. Low salary and very minor growth. (in 9 reviews)",
+        "2. The management and administration is bad (in 3 reviews)"
       ]
     },
     {
@@ -621,36 +618,35 @@ const Company = () => {
       "logo": "./Company_logos/nri.jpg",
       "description": "A fintech company offering innovative solutions in finance and banking.",
       "founder": "Unknown",
-      "ceo": "Unknown",
-      "startDate": "2014",
+      "ceo": "Mr. Maulindu Chatterjee",
+      "startDate": "2012",
       "website": "https://www.nrifintech.com/",
-      "rating": 4.3,
+      "rating": 3.8,
       "pros": [
-        "1. Strong focus on employee growth and development. (in 617 ratings)",
-        "2. Excellent benefits package. (in 498 ratings)"
+        "1. Good salary. (in 11 reviews)",
+        "2. Good work culture (in 11 reviews)"
       ],
       "cons": [
-        "1. High workload during peak periods. (in 361 ratings)",
-        "2. Limited resources for innovation. (in 254 ratings)"
+        "1. High workload during peak periods. (in 6 ratings)",
+        "2. No work life balance (in 8 reviews)"
       ]
     },
     {
       "id": 13,
       "name": "McKinley Rice",
       "logo": "./Company_logos/mckinley.png",
-      "description": "A business consultancy offering solutions in IT and management.",
-      "founder": "Unknown",
-      "ceo": "Unknown",
-      "startDate": "2016",
+      "description": "A human capital services company that helps businesses connect with global talent. .",
+      "founder": "Felix Kim",
+      "ceo": "Felix Kim",
+      "startDate": "2018",
       "website": "https://mckinleyrice.com/",
       "rating": 4.1,
       "pros": [
-        "1. Excellent exposure to various industries. (in 534 ratings)",
-        "2. Collaborative environment with a focus on team success. (in 452 ratings)"
+        "1. Friendly and supportive team. (in 18 reviews)",
+        "2. good people to work with. (in 17 reviews)"
       ],
       "cons": [
-        "1. Workload can sometimes be overwhelming. (in 312 ratings)",
-        "2. Limited career advancement opportunities. (in 250 ratings)"
+        "No job security at all. (in 7 reviews)"
       ]
     },
     {
@@ -658,75 +654,70 @@ const Company = () => {
       "name": "Livegage",
       "logo": "./Company_logos/Livegage.jpg",
       "description": "A customer engagement platform that helps businesses personalize communication with clients.",
-      "founder": "Unknown",
-      "ceo": "Unknown",
-      "startDate": "2017",
+      "founder": "Anupam Sarwaikar",
+      "ceo": "Anupam Sarwaikar",
+      "startDate": "2021",
       "website": "https://livegage.ai/",
-      "rating": 4.0,
+      "rating": 4.2,
       "pros": [
-        "1. Fast-paced and challenging environment. (in 482 ratings)",
-        "2. Great work culture with a focus on personal development. (in 376 ratings)"
+        "1.Good Work environment for exploring and implementing things"
       ],
       "cons": [
-        "1. Limited resources for new projects. (in 289 ratings)",
-        "2. Long working hours. (in 214 ratings)"
+        "1.Few from Leadership need to give equal value to each employees"
       ]
     },
     {
       "id": 15,
       "name": "Systango",
       "logo": "./Company_logos/Systango.png",
-      "description": "A technology solutions company offering services in cloud computing, mobile apps, and web development.",
-      "founder": "Unknown",
-      "ceo": "Unknown",
-      "startDate": "2015",
+      "description": "At Systango, we redefine possibilities across product discovery, design, software engineering, and product growth. Our commitment to innovation, scalability, and security is at the core of our technology consultation and service portfolio.",
+      "founder": "Vinita Rathi",
+      "ceo": "Vinita Rathi",
+      "startDate": "2007",
       "website": "https://www.systango.com/",
-      "rating": 4.2,
+      "rating": 4.3,
       "pros": [
-        "1. Strong technical expertise and a focus on innovation. (in 528 ratings)",
-        "2. Excellent team collaboration. (in 412 ratings)"
+        "1. best work culture, and atmosphere so far in my 1 year of experience. (in 11 reviews)",
+        "2. Supportive management. (in 10 reviews)"
       ],
       "cons": [
-        "1. Limited opportunities for international travel. (in 314 ratings)",
-        "2. Workload can be unpredictable. (in 239 ratings)"
+        "1. There's no work life balance. (in 9 reviews)",
+        "2. Less Salary hike. (in 4 reviews)"
       ]
     },
     {
       "id": 16,
       "name": "Gammastack",
       "logo": "./Company_logos/GammaStack.jpg",
-      "description": "A company providing end-to-end solutions in software development, including mobile, web, and game development.",
-      "founder": "Unknown",
-      "ceo": "Unknown",
-      "startDate": "2014",
+      "description": "They work with companies in the iGaming, Blockchain, Logistic, and Automobile industries. They offer services such as iGaming, Fantasy Sports, Custom Software, and Self-storage Management Software.",
+      "founder": "Gaurav Soni",
+      "ceo": "Gaurav Soni",
+      "startDate": "2012",
       "website": "https://www.gammastack.com/",
-      "rating": 3.9,
+      "rating": 4.0,
       "pros": [
-        "1. Diverse range of projects in various industries. (in 466 ratings)",
-        "2. Good work-life balance. (in 398 ratings)"
+        "1. Flexible Timing is only good. (in 24 reviews)",
+        "2. Good Work Culture and Lots of Learning. (in 20 reviews)"
       ],
       "cons": [
-        "1. Limited resources for some projects. (in 278 ratings)",
-        "2. Slow career growth in certain departments. (in 213 ratings)"
+        "1. Low salary and 10 hours working. (in 6 reviews)"
       ]
     },
     {
       "id": 17,
       "name": "Lumber",
       "logo": "./Company_logos/lumber.jpeg",
-      "description": "A sustainable building materials company focused on providing eco-friendly products.",
-      "founder": "Unknown",
-      "ceo": "Unknown",
+      "description": "Lumber bringing AI to the forefront of construction workforce management, integrating siloed systems and simplifying complex processes.",
+      "founder": "Shreesha Ramdas and Manish Kumar",
+      "ceo": "Shreesha Ramdas",
       "startDate": "2013",
       "website": "https://www.lumberfi.com/",
       "rating": 4.0,
       "pros": [
-        "1. Focus on sustainability and eco-friendly products. (in 612 ratings)",
-        "2. Employee-friendly work culture. (in 521 ratings)"
+        "Not available"
       ],
       "cons": [
-        "1. Limited scope for career growth in certain areas. (in 328 ratings)",
-        "2. Slow decision-making process. (in 245 ratings)"
+        "Not available"
       ]
     },
     {
@@ -734,18 +725,18 @@ const Company = () => {
       "name": "Growisto",
       "logo": "./Company_logos/growisto.png",
       "description": "A digital marketing agency helping businesses grow through innovative marketing strategies.",
-      "founder": "Unknown",
-      "ceo": "Unknown",
-      "startDate": "2014",
+      "founder": "Kiran Patil and Pritesh Mittal",
+      "ceo": "Kiran Patil",
+      "startDate": "2015",
       "website": "https://www.growisto.com/",
-      "rating": 4.3,
+      "rating": 4.2,
       "pros": [
-        "1. Innovative and creative work environment. (in 599 ratings)",
-        "2. Opportunities to work with leading brands. (in 478 ratings)"
+        "1. great work culture. (in 16 reviews)",
+"2. Culture is good. (in 13 reviews)"
       ],
       "cons": [
-        "1. Long hours during peak seasons. (in 290 ratings)",
-        "2. Workload can be stressful at times. (in 210 ratings)"
+        "1. Not a place for anyone who is looking for work life balance in terms of fixed working hours. (in 7 reviews)",
+        "2. Senior management is a downright bully. (in 6 reviews)"
       ]
     },
     {
@@ -757,33 +748,32 @@ const Company = () => {
       "ceo": "Jonathan Siddharth",
       "startDate": "2018",
       "website": "https://www.turing.com/",
-      "rating": 4.5,
+      "rating": 3.9,
       "pros": [
-        "1. Access to a global talent pool. (in 842 ratings)",
-        "2. Great salary packages. (in 715 ratings)"
+        "1. Great work culture. (in 68 reviews)",
+        "2. Good salary and you can work anywhere. (in 42 reviews)"
       ],
       "cons": [
-        "1. Time zone differences can be challenging. (in 358 ratings)",
-        "2. Limited in-office opportunities. (in 297 ratings)"
+        "1. Frequent layoffs due to restructuring of organisation. (in 32 reviews)",
+        "2. No benefits are there for hourly payment employees. (in 19 reviews)"
       ]
     },
     {
       "id": 20,
       "name": "MindRuby",
       "logo": "./Company_logos/mindruby.jpeg",
-      "description": "A technology services company specializing in web development, mobile apps, and AI solutions.",
-      "founder": "Unknown",
-      "ceo": "Unknown",
+      "description": "A technology services company We intend to design tailored cloud solutions that allow our customers to transform their company into a cloud-first business.",
+      "founder": "Avinash Kumar",
+      "ceo": "Sateesh Chandrashekhar",
       "startDate": "2016",
       "website": "https://mindruby.com/",
       "rating": 4.1,
       "pros": [
-        "1. Great exposure to new technologies. (in 502 ratings)",
-        "2. Supportive management and teamwork. (in 423 ratings)"
+        "1. Good work life balance in this organisation. (in 5 reviews)",
+"2. Comfortable work culture with balanced Professional and Personal life. (in 3 reviews)"
       ],
       "cons": [
-        "1. Limited work-life balance during peak periods. (in 289 ratings)",
-        "2. Slow career growth in certain roles. (in 211 ratings)"
+        "There are no cons to display at this time."
       ]
     }
   ]
@@ -973,7 +963,7 @@ const Company = () => {
         </p>
         <div className="mt-4">
           <h3 className="text-lg font-semibold">Pros</h3>
-          <ul className="list-disc pl-6">
+          <ul>
             {company.pros.map((pro, index) => (
               <li key={index} className="text-gray-700">
                 {pro}
@@ -983,7 +973,7 @@ const Company = () => {
         </div>
         <div className="mt-4">
           <h3 className="text-lg font-semibold">Cons</h3>
-          <ul className="list-disc pl-6">
+          <ul>
             {company.cons.map((con, index) => (
               <li key={index} className="text-gray-700">
                 {con}
