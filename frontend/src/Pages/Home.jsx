@@ -312,11 +312,21 @@ function Home() {
           </div>
         </div>
       </div>
-      <Faq />
+      <div id="Faq">
+            <Faq />
+      </div>
+      <div id="resume">
       <ResumeBuilder />
+      </div>
+      <div id="companies">
       <Company />
+      </div>
+      <div id="guidance">
       <SeniorGuidance />
+      </div>
+      <div id="feedback">
       <Feedback />
+      </div>
       <Footer />
       <ScrollToTopButton />
     </>

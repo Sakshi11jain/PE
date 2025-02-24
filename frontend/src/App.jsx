@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import MainPage from "./Pages/MainPage";
-import ChatInterface from "./Pages/ChatInterface"; // Import the chat page
+import ChatInterface from "./Pages/ChatInterface";
 import { useState } from "react";
 import RefrshHandler from "./RefrshHandler";
 
