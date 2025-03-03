@@ -9,6 +9,11 @@ import ScrollToTopButton from "./ScrollToTop";
 import Footer from "./Footer";
 import { motion, AnimatePresence, useScroll } from "framer-motion";
 import Faq from "./Faq";
+import EtiquetteSection from "./EtiquetteSection";
+import RoadmapSection from "./RoadmapSection";
+import TestSelection from "./TestSelection";
+import CodingPlatform from "./CodingPlatform";
+import About from "./About";
 
 function Home() {
   const navigate = useNavigate();
@@ -312,17 +317,33 @@ function Home() {
           </div>
         </div>
       </div>
-      <div id="Faq">
-            <Faq />
+      
+      <div id="roadmap">
+      <RoadmapSection/>
       </div>
       <div id="resume">
       <ResumeBuilder />
+      </div>
+      <div id="mcq">
+      <TestSelection/>
+      </div>
+      <div id="coding">
+      <CodingPlatform/>
+      </div>
+      <div id="Faq">
+      <Faq />
       </div>
       <div id="companies">
       <Company />
       </div>
       <div id="guidance">
       <SeniorGuidance />
+      </div>
+      <div id="etiquettes">
+      <EtiquetteSection/>
+      </div>
+      <div id="about">
+      <About />
       </div>
       <div id="feedback">
       <Feedback />

@@ -1,0 +1,99 @@
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import "./Roadmap.css";
+
+const RoadmapSection = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+
+    window.onpopstate = () => {
+      navigate("/home");
+    };
+
+    return () => {
+      window.onpopstate = null;
+    };
+  }, [navigate]);
+
+  return (
+    <div className="bg-gradient-to-r from-blue-100 to-purple-200 min-h-screen flex flex-col items-center justify-center text-white p-6 relative overflow-hidden">
+      
+      {/* Glowing Background Animation */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-br from-cyan-700 to-blue-800 opacity-20 rounded-full w-[80%] md:w-[60%] h-[60%] blur-3xl"
+        initial={{ scale: 0 }}
+        animate={{ scale: [1, 1.2, 1] }}
+        transition={{ duration: 5, repeat: Infinity, repeatType: "mirror" }}
+      />
+
+      {/* Animated Heading with Rocket */}
+      <motion.div
+        className="flex flex-col md:flex-row items-center justify-center mb-8 gap-3 relative"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+      >
+        <motion.h1
+          className="text-4xl md:text-6xl font-bold font-serif text-center mb-8 bg-clip-text text-gray-800"
+          
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        >
+          Preparation Roadmap
+        </motion.h1>
+
+        {/* Rocket Animation */}
+        <motion.span 
+          className="text-3xl md:text-4xl"
+          initial={{ x: -10, y: 0, rotate: 0 }}
+          animate={{ x: [0, 10, 0], y: [-5, 5, -5], rotate: [0, 15, -15] }}
+          transition={{ duration: 1.5, repeat: Infinity, repeatType: "mirror", ease: "easeInOut" }}
+        >
+          🚀
+        </motion.span>
+      </motion.div>
+
+      {/* Subheading */}
+      <motion.p
+        className="text-base md:text-xl text-center mb-10 max-w-3xl px-4 text-gray-800 font-medium"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
+      >
+        Plan your learning journey with structured roadmaps and track your progress effectively!
+      </motion.p>
+
+      {/* Animated Buttons with Glassmorphism */}
+      <motion.div 
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-4xl px-4"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
+        }}
+      >
+        {["frontend", "backend", "fullstack"].map((section) => (
+          <motion.button
+            key={section}
+            onClick={() => navigate(`/roadmap/${section}`)}
+            className="relative bg-purple-600 px-6 py-3 text-base md:text-lg font-bold rounded-xl shadow-md bg-purple-280 text-gray-800 hover:bg-[#cb93e3] transition-all duration-300 w-full"
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+            }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            {section.charAt(0).toUpperCase() + section.slice(1)}
+          </motion.button>
+        ))}
+      </motion.div>
+    </div>
+  );
+};
+
+export default RoadmapSection;

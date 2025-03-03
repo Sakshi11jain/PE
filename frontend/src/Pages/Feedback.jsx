@@ -24,7 +24,7 @@ const FeedbackForm = () => {
   };
 
   return (
-    <div className="flex flex-wrap items-center justify-center min-h-screen bg-gradient-to-r from-blue-100 to-purple-200 p-8">
+    <div className="flex flex-wrap items-center justify-center min-h-screen bg-gradient-to-r from-blue-200 to-bluue-50 p-8">
     <div className="flex flex-col lg:flex-row w-full max-w-4xl">
       <div className="w-full lg:w-1/2 p-8 bg-purple-100 shadow-2xl rounded-t-3xl lg:rounded-l-3xl lg:rounded-tr-none transform transition-all duration-300">
         <h2 className="text-2xl md:text-3xl font-semibold text-center text-gray-800 mb-6">

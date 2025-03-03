@@ -2,12 +2,14 @@ import React, { useEffect, useState, useRef } from "react";
 import { handleSuccess } from "../utils";
 import { ToastContainer } from "react-toastify";
 import { Menu, X } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = ({ navigateTo }) => {
   const [loggedInUser, setLoggedInUser] = useState("User");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
   const menuRef = useRef(null);
+  const navigate = useNavigate()
 
   useEffect(() => {
     setLoggedInUser(localStorage.getItem("loggedInUser") || "User");
@@ -18,9 +20,9 @@ const Navbar = ({ navigateTo }) => {
     localStorage.removeItem("loggedInUser");
     handleSuccess("User Logged out");
     setTimeout(() => {
-      window.location.reload();
+        navigate('/'); // Redirect to MainPage
     }, 1000);
-  };
+};
 
   const toggleProfileMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -73,16 +75,17 @@ const Navbar = ({ navigateTo }) => {
         }`}
       >
         <div className="flex flex-col md:flex-row md:space-x-6">
+        <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("mcq")}>MCQ</a>
           <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("Faq")}>FAQ</a>
-          {/* <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("etiquettes")}>Interview Etiquettes</a> */}
-          <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("guidance")}>Senior Guidance</a>
           <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("resume")}>Resume Builder</a>
           <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("companies")}>Companies Info</a>
-          {/* <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("roadmap")}>RoadMap</a> */}
-          {/* <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("preference")}>Job Preference</a> */}
-          {/* <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("coding")}>Coding</a> */}
-          {/* <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("about")}>About us</a> */}
-          <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("feedback")}>Contact us</a>
+          <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("roadmap")}>RoadMap</a>
+          <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("coding")}>Coding</a>
+          <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("guidance")}>Senior Guidance</a>
+          <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("preference")}>Job Preference</a>
+          <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("etiquettes")}>Etiquettes</a>
+          <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("about")}>About</a>
+          <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("feedback")}>Contact</a>
         </div>
       </div>
 

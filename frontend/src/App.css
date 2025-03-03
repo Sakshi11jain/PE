@@ -1,0 +1,164 @@
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.85); /* Darker background for better focus */
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    position: relative;
+    width: 90vw;
+    height: 90vh;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-header,
+  .modal-footer {
+    padding: 1rem;
+    background-color: #f1f1f1;
+    text-align: right;
+  }
+  
+  .modal-body {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .modal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;  
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  .animate-bounce {
+    animation: bounce 1.5s infinite;
+  }
+  
+  button {
+    background: linear-gradient(to right, #4caf50, #2f9e91); /* Vibrant gradient */
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  button:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, #3e8e41, #268076); /* Slightly darker gradient */
+  }
+  
+  /* ✅ Navbar fix */
+  .navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: #0044cc; /* Blue background */
+    padding: 15px 0;
+  }
+  
+  /* ✅ Fix for navbar overlap issue */
+  body {
+    padding-top: 70px; /* Navbar ke height ke barabar */
+  }
+  
+  /* ✅ Fix for content alignment */
+  .mcq-test {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  /* Buttons Styling */
+  .mcq-buttons {
+    display: flex;
+    gap: 15px; /* Space between buttons */
+    margin-top: 20px;
+  }
+  
+  .mcq-buttons button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .mcq-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  .mcq-buttons button:last-child {
+    background-color: #dc3545; /* Exit Button Red */
+  }
+  
+  .mcq-buttons button:last-child:hover {
+    background-color: #a71d2a;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* Ensure the entire app takes full height */
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Main content should expand to fill remaining space */
+  .main-content {
+    flex: 1;
+  }
+  
+  /* Fix footer positioning if needed */
+  .footer {
+    margin-top: auto;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Ensure Full Height */
+  html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }

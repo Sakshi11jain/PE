@@ -124,7 +124,7 @@ const SeniorGuidance = () => {
 
 
   return (
-    <div className="p-10 bg-gradient-to-br from-blue-200 to-blue-50 min-h-screen">
+    <div className="p-10 bg-gradient-to-r from-blue-100 to-purple-200 min-h-screen">
       <h1 className="text-6xl font-bold font-serif text-center mb-8 text-gray-800">
         Senior Guidance
       </h1>

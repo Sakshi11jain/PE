@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
+import { motion } from 'framer-motion';
 
 function MainPage() {
 
@@ -201,23 +202,64 @@ function MainPage() {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center h-screen bg-slate-800 text-white">
-            <h1 className="text-5xl font-bold mb-4">PrepEdge</h1>
-            <p className="text-lg text-center mb-8 px-4">
-                PrepEdge is your ultimate platform to ace technical interviews. Practice, learn, and grow with interactive features designed just for you.
-            </p>
-            <button
-                className="bg-slate-300 text-slate-800 px-6 py-3 rounded-lg hover:bg-slate-400"
-                onClick={handleGetStartedClick}
-            >
-                Get Started
-            </button>
+        <div className="relative flex flex-col items-center justify-center h-screen text-white">
+        {/* Background Video */}
+        <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute top-0 left-0 w-full h-full object-cover -z-10 brightness-[0.6]"
+        >
+            <source src="/background.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    
+        {/* Heading */}
+        <motion.h1
+            className="text-[100px] font-extrabold tracking-wide"
+            style={{
+                fontFamily:  "'Georgia', sans-serif", // Modern, clean font
+                WebkitTextStroke: "2px black", 
+                color: "white",
+            }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+        >
+            PrepEdge
+        </motion.h1>
+    
+        {/* Description */}
+        <motion.p
+            className="text-lg text-center px-6 py-4 w-[60%] text-white font-medium rounded-xl shadow-lg"
+            style={{
+                fontFamily:  "'Georgia', sans-serif",
+                color: "#e5e7eb", // Softer white for better readability
+            }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+        >
+            PrepEdge is your ultimate platform to ace technical interviews. Practice, learn, and grow with interactive features designed just for you. Your smart interview preparation hub where you can take mock interviews, MCQ tests, built ats-friendly resumes, check out hiring partners, code, and more—ALL IN ONE PLACE.
+        </motion.p>
+    
+        {/* Button */}
+        <motion.button
+    className="mt-6 bg-gradient-to-r from-blue-700 via-blue-800 to-blue-900 text-white text-xl px-10 py-4 rounded-xl border-2 border-transparent hover:bg-slate-600 hover:border-white transition-all shadow-lg w-[250px] text-center"
+    onClick={handleGetStartedClick}
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+>
+    Get Started
+</motion.button>   
+
             {isModalOpen && (
                 <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
                     <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-sm relative">
                         <button
                             onClick={closeModal}
-                            className="absolute top-2 right-2 text-gray-500 text-xl"
+                            className="absolute top-0 right-2 text-gray-500 text-2xl"
                         >
                             &times;
                         </button>
