@@ -11,6 +11,10 @@ import FullStack from "./Pages/Roadmap/FullStack";
 import TestSelection from "./Pages/TestSelection";
 import MCQTest from "./Pages/MCQTest";
 import CodingPlatform from "./Pages/CodingPlatform";
+import ResumeBuilder from "./Pages/ResumeBuilder";
+import FaqPage from "./Pages/Faq";
+import EtiquetteSection from "./Pages/EtiquetteSection";
+import Company from "./Pages/Company";
 
 
 function App() {
@@ -27,6 +31,10 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
         <Route path="/chat-interface" element={<PrivateRoute><ChatInterface /></PrivateRoute>} />
+        <Route path="/resume" element={<ResumeBuilder />} />
+        <Route path="/faq" element={<FaqPage />} />
+        <Route path="/etiquettes" element={<EtiquetteSection />} />
+        <Route path="/companies" element={<Company />} />
         <Route path="/roadmap" element={<RoadmapSection />} />
         <Route path="/roadmap/frontend" element={<Frontend />} />
         <Route path="/roadmap/backend" element={<Backend />} />
