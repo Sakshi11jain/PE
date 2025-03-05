@@ -50,15 +50,3 @@ function App() {
 }
 
 export default App;
-
-// import JobList from "./Pages/JobList";
-
-// function App() {
-//   return (
-//     <div className="min-h-screen flex justify-center items-center bg-gray-100">
-//       <JobList />
-//     </div>
-//   );
-// }
-
-// export default App;
