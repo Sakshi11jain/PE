@@ -14,6 +14,7 @@ import RoadmapSection from "./RoadmapSection";
 import TestSelection from "./TestSelection";
 import CodingPlatform from "./CodingPlatform";
 import About from "./About";
+import JobPortal from "./JobPortal";
 
 function Home() {
   const navigate = useNavigate();
@@ -36,56 +37,56 @@ function Home() {
       title: "MCQ TEST",
       image: "./slider_images/mcq.jpg",
       description: "Practice MCQs for interviews.",
-      link: "/new-page-1",
+      link: "/mcq",
     },
     {
       id: 2,
       title: "RESUME BUILDER",
       image: "./slider_images/resume.jpg",
       description: "Create ats-friendly resumes easily.",
-      link: "/new-page-2",
+      link: "/resume",
     },
     {
       id: 3,
       title: "ROADMAP",
       image: "./slider_images/roadmap.jpg",
       description: "Detailed roadmap for success.",
-      link: "/new-page-2",
+      link: "/roadmap",
     },
     {
       id: 4,
       title: "FAQ QNA",
       image: "./slider_images/faq.jpg",
       description: "Read and learn.",
-      link: "/new-page-2",
+      link: "/faq",
     },
     {
       id: 5,
       title: "INTERVIEW ETIQUETTES",
       image: "./slider_images/etiquettes.jpg",
       description: "Learn proper interview manners.",
-      link: "/new-page-2",
+      link: "/etiquettes",
     },
     {
       id: 6,
       title: "CODING PLATFORM",
       image: "./slider_images/coding.jpg",
       description: "Code and review solutions here.",
-      link: "/new-page-2",
+      link: "/coding",
     },
     {
       id: 7,
-      title: "JOB PREFERENCE",
+      title: "JOB PORTAL",
       image: "./slider_images/job.jpg",
       description: "Set your job preferences.",
-      link: "/new-page-2",
+      link: "/job",
     },
     {
       id: 8,
       title: "IT COMPANIES",
       image: "./slider_images/companies.jpg",
       description: "Explore top IT companies.",
-      link: "/new-page-1",
+      link: "/companies",
     },
   ];
 
@@ -192,7 +193,7 @@ function Home() {
 
             <button
               onClick={() => navigate("/chat-interface")}
-              className="relative mt-4 px-6 py-3 bg-slate-700 text-white rounded-lg text-lg font-semibold transition-all duration-300 ease-in-out 
+              className="relative mt-4 px-6 py-3 bg-slate-800 text-white rounded-lg text-lg font-semibold transition-all duration-300 ease-in-out 
         hover:bg-slate-800 hover:w-52 flex items-center justify-center group overflow-hidden shadow-lg hover:shadow-blue-500/50"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 opacity-0 group-hover:opacity-30 transition-opacity duration-300"></span>
@@ -338,6 +339,9 @@ function Home() {
       </div>
       <div id="guidance">
       <SeniorGuidance />
+      </div>
+      <div id="job">
+        <JobPortal/>
       </div>
       <div id="etiquettes">
       <EtiquetteSection/>

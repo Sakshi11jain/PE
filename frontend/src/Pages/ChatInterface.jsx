@@ -130,7 +130,7 @@ const ChatInterface = () => {
                   {/* Bot Question */}
                   <div className="flex justify-start">
                     <div className="bg-white p-4 rounded-xl shadow-md max-w-[70%]">
-                      <p className="text-sm font-medium text-gray-600">Bot:</p>
+                      <p className="text-sm font-medium text-gray-600">Interviewer:</p>
                       <p className="text-gray-800">{chat.question}</p>
                     </div>
                   </div>
@@ -142,9 +142,9 @@ const ChatInterface = () => {
                     </div>
                   </div>
                   {/* Bot Feedback */}
-                  <div className="flex justify-start">
+                  <div className="flex justify-start pb-4">
                     <div className="bg-white p-4 rounded-xl shadow-md max-w-[70%]">
-                      <p className="text-sm font-medium text-gray-600">Bot:</p>
+                      <p className="text-sm font-medium text-gray-600">Interviewer:</p>
                       <p className="text-gray-800">{chat.feedback}</p>
                     </div>
                   </div>
@@ -154,7 +154,7 @@ const ChatInterface = () => {
               {questions.length > 0 && feedback === "" && (
                 <div className="flex justify-start">
                   <div className="bg-white p-4 rounded-xl shadow-md max-w-[70%]">
-                    <p className="text-sm font-medium text-gray-600">Bot:</p>
+                    <p className="text-sm font-medium text-gray-600">Interviewer:</p>
                     <p className="text-gray-800">
                       {questions[currentQuestionIndex].questionText}
                     </p>

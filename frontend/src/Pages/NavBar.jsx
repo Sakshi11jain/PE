@@ -82,7 +82,7 @@ const Navbar = ({ navigateTo }) => {
           <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("roadmap")}>RoadMap</a>
           <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("coding")}>Coding</a>
           <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("guidance")}>Senior Guidance</a>
-          <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("preference")}>Job Preference</a>
+          <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("job")}>Job Portal</a>
           <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("etiquettes")}>Etiquettes</a>
           <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("about")}>About</a>
           <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("feedback")}>Contact</a>

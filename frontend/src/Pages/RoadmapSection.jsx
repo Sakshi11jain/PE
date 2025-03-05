@@ -80,7 +80,7 @@ const RoadmapSection = () => {
           <motion.button
             key={section}
             onClick={() => navigate(`/roadmap/${section}`)}
-            className="relative bg-purple-600 px-6 py-3 text-base md:text-lg font-bold rounded-xl shadow-md bg-purple-280 text-gray-800 hover:bg-[#cb93e3] transition-all duration-300 w-full"
+            className="relative bg-purple-500 px-6 py-3 text-base md:text-lg font-bold rounded-xl shadow-md bg-purple-280 text-gray-800 hover:bg-[#ffaaf5] transition-all duration-300 w-full border-2 border-white"
             variants={{
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }

@@ -820,7 +820,7 @@ const Company = () => {
       {showHiringPartners && (
         <div className="mt-8">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-serif text-center mb-8 text-gray-800">
-        SCSIT  Hiring Partners 2024
+        SCSIT  Hiring Partners 2024-25
       </h1>
           <SCSITCompanies
             scsitCompanies={scsitCompanies.slice(0, 20)}

@@ -11,6 +11,11 @@ import FullStack from "./Pages/Roadmap/FullStack";
 import TestSelection from "./Pages/TestSelection";
 import MCQTest from "./Pages/MCQTest";
 import CodingPlatform from "./Pages/CodingPlatform";
+import ResumeBuilder from "./Pages/ResumeBuilder";
+import FaqPage from "./Pages/Faq";
+import EtiquetteSection from "./Pages/EtiquetteSection";
+import Company from "./Pages/Company";
+import JobPortal from "./Pages/JobPortal";
 
 
 function App() {
@@ -27,6 +32,10 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
         <Route path="/chat-interface" element={<PrivateRoute><ChatInterface /></PrivateRoute>} />
+        <Route path="/resume" element={<ResumeBuilder />} />
+        <Route path="/faq" element={<FaqPage />} />
+        <Route path="/etiquettes" element={<EtiquetteSection />} />
+        <Route path="/companies" element={<Company />} />
         <Route path="/roadmap" element={<RoadmapSection />} />
         <Route path="/roadmap/frontend" element={<Frontend />} />
         <Route path="/roadmap/backend" element={<Backend />} />
@@ -34,9 +43,22 @@ function App() {
         <Route path="/mcq" element={<TestSelection />} />
         <Route path="/mcq/:category" element={<MCQTest />} />
         <Route path="/coding" element={<CodingPlatform />} />
+        <Route path="/job" element={<JobPortal />} />
       </Routes>
     </div>
   );
 }
 
 export default App;
+
+// import JobList from "./Pages/JobList";
+
+// function App() {
+//   return (
+//     <div className="min-h-screen flex justify-center items-center bg-gray-100">
+//       <JobList />
+//     </div>
+//   );
+// }
+
+// export default App;
