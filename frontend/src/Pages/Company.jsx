@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const Company = () => {
-  const [companies, setCompanies] = useState([
+  const companies = [
     {
       id: 1,
       name: "Google",
@@ -403,9 +403,9 @@ const Company = () => {
         "2.All the good things about the company can go for a toss if you are reporting to a bad manager. (in 215 ratings)",
       ],
     },
-  ]);
+  ];
 
-  const [scsitCompanies, setScsitCompanies] = useState([
+  const scsitCompanies = [
     {
       "id": 1,
       "name": "Dice",
@@ -776,8 +776,7 @@ const Company = () => {
         "There are no cons to display at this time."
       ]
     }
-  ]
-  );
+  ];
   const [showHiringPartners, setShowHiringPartners] = useState(false);
 
   const getStarRating = (rating) => {
@@ -860,7 +859,12 @@ const Company = () => {
                 index === 14
               ? "w-full sm:grow sm:basis-[100px]"
               : "w-full sm:w-1/4"
-          } bg-white shadow-xl rounded-lg overflow-hidden transform transition hover:scale-100 hover:shadow-2xl p-4 text-center flex flex-col`}
+          }  shadow-xl rounded-lg overflow-hidden transform transition hover:scale-100 hover:shadow-2xl p-4 text-center flex flex-col`}
+          style={{
+            backgroundImage: 'url(https://media.istockphoto.com/id/654139850/vector/vector-3d-illustration-white-cubes.jpg?s=612x612&w=0&k=20&c=AbgXLBnxqu6-PBB_csQwrPh7xuIvHv6hqZVPTbuoYUc=)',
+            backgroundPosition: 'bottom',
+            backgroundSize: 'cover',
+          }}          
         >
           <CompanyCard
             company={company}
@@ -901,6 +905,11 @@ const Company = () => {
               ? "w-full sm:grow sm:basis-[100px]"
               : "w-full sm:w-1/4"
           } bg-white shadow-xl rounded-lg overflow-hidden transform transition hover:scale-100 hover:shadow-2xl p-4 text-center flex flex-col`}
+          style={{
+            backgroundImage: 'url(https://media.istockphoto.com/id/654139850/vector/vector-3d-illustration-white-cubes.jpg?s=612x612&w=0&k=20&c=AbgXLBnxqu6-PBB_csQwrPh7xuIvHv6hqZVPTbuoYUc=)',
+            backgroundPosition: 'bottom',
+            backgroundSize: 'cover',
+          }}    
         >
           <CompanyCard
             company={company}
@@ -925,21 +934,26 @@ const Company = () => {
         href={company.website}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-blue-700 underline hover:text-blue-800"
+        className="text-blue-700 text-lg underline hover:text-blue-800"
       >
         Visit Website
       </a>
       <div className="flex flex-col items-center justify-center"> {/* Make sure this div takes up full width */}
   <button
-    className="mt-2 text-sm text-purple-600 flex items-center justify-center text-center font-bold gap-1"
+    className="mt-2 border-2 border-purple-900 rounded-lg p-2 bg-gradient-to-r from-blue-200 to-purple-200 text-sm text-blue-800 flex items-center justify-center text-center font-bold gap-1"
     onClick={() => toggleDetails(`${prefix}-${company.id}`)}
   >
-    ☞ Read More
+    ☞ Read Details
   </button>
 </div>
       <div
         id={`${prefix}-${company.id}`}
-        className="hidden absolute top-0 left-0 w-full h-full bg-white p-6 shadow-2xl z-50 rounded-lg overflow-auto"
+        className="hidden absolute top-0 left-0 w-full h-full p-6 shadow-2xl z-50 rounded-lg overflow-auto"
+        style={{
+          backgroundImage: 'url(https://media.istockphoto.com/id/654139850/vector/vector-3d-illustration-white-cubes.jpg?s=612x612&w=0&k=20&c=AbgXLBnxqu6-PBB_csQwrPh7xuIvHv6hqZVPTbuoYUc=)',
+          backgroundPosition: 'bottom',
+          backgroundSize: 'cover',
+        }}    
       >
         <button
           className="absolute top-2 right-2 text-red-500 text-xl"
