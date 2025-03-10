@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './SeniorGuidance.css';
+import React, { useState } from "react";
+import "./SeniorGuidance.css";
 
 const SeniorGuidance = () => {
   const [flippedCards, setFlippedCards] = useState({});
@@ -14,114 +14,127 @@ const SeniorGuidance = () => {
   const users = [
     {
       name: "Sakshi Jain",
+      initial: "S",
       companyName: "Accenture",
       Role: "Associate Software Engineer",
       salary: "4.5 LPA",
       contact: "sakj2966@gmail.com",
-      profilePhoto: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
-      experience: "Worked on multiple software projects, leading teams, and ensuring smooth project deliveries. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum obcaecati quidem neque repellat iure, autem culpa eum dignissimos, officia suscipit aspernatur blanditiis laudantium aliquid molestiae praesentium sit nostrum quibusdam! Rerum.",
+      profilePhoto: "./seniors/sakshi.jpg",
+      experience:
+        "Worked on multiple software projects, leading teams, and ensuring smooth project deliveries. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum obcaecati quidem neque repellat iure, autem culpa eum dignissimos, officia suscipit aspernatur blanditiis laudantium aliquid molestiae praesentium sit nostrum quibusdam! Rerum.",
     },
     {
       name: "Ayushi Pawar",
+      initial: "A",
       companyName: "Accenture",
       Role: "Associate Software Engineer",
       salary: "4.5 LPA",
       contact: "",
-      profilePhoto: "",
-      experience: "Specialized in front-end development and successfully delivered client-focused designs. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum obcaecati quidem neque repellat iure, autem culpa eum dignissimos, officia suscipit aspernatur blanditiis laudantium aliquid molestiae praesentium sit nostrum quibusdam! Rerum.",
+      profilePhoto: "./seniors/Ayushi.png",
+      experience:
+        "Specialized in front-end development and successfully delivered client-focused designs. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum obcaecati quidem neque repellat iure, autem culpa eum dignissimos, officia suscipit aspernatur blanditiis laudantium aliquid molestiae praesentium sit nostrum quibusdam! Rerum.",
     },
     {
       name: "Manika Dutt",
+      initial: "M",
       companyName: "Accenture",
       Role: "Associate Software Engineer",
       salary: "4.5 LPA",
       contact: "",
       profilePhoto: "",
-      experience: "Experienced in backend APIs and optimizing database queries for high performance. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum obcaecati quidem neque repellat iure, autem culpa eum dignissimos, officia suscipit aspernatur blanditiis laudantium aliquid molestiae praesentium sit nostrum quibusdam! Rerum. ",
+      experience:
+        "Experienced in backend APIs and optimizing database queries for high performance. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum obcaecati quidem neque repellat iure, autem culpa eum dignissimos, officia suscipit aspernatur blanditiis laudantium aliquid molestiae praesentium sit nostrum quibusdam! Rerum. ",
     },
     {
       name: "Skandh Jadon",
+      initial: "S",
       companyName: "Accenture",
       Role: "Associate Software Engineer",
       salary: "4.5 LPA",
       contact: "",
       profilePhoto: "",
-      experience: ""
+      experience: "",
     },
     {
       name: "Shruti Solanki",
+      initial: "S",
       companyName: "Dice",
       salary: "10 LPA",
       contact: "",
       profilePhoto: "",
-      experience: ""
+      experience: "",
     },
     {
       name: "Chanchala Mukati",
+      initial: "C",
       companyName: "Safesend",
       Role: "Software Engineer",
       salary: "6 LPA",
       contact: "",
       profilePhoto: "",
-      experience: ""
+      experience: "",
     },
     {
       name: "Rajveer Choudhary",
+      initial: "R",
       companyName: "Infosys",
       Role: "Software Engineer",
       salary: "3.6 LPA",
       contact: "",
       profilePhoto: "",
-      experience: ""
+      experience: "",
     },
     {
       name: "Anjali Vishwakarma",
+      initial: "A",
       companyName: "Infosys",
       Role: "Software Engineer",
       salary: "3.6 LPA",
       contact: "",
       profilePhoto: "",
-      experience: ""
+      experience: "",
     },
     {
       name: "Rohit Kumar",
+      initial: "R",
       companyName: "Infosys",
       Role: "Software Engineer",
       salary: "3.6 LPA",
       contact: "",
       profilePhoto: "",
-      experience: ""
+      experience: "",
     },
     {
       name: "Aryan Sindhe",
+      initial: "A",
       companyName: "Infosys",
       Role: "Software Engineer",
       salary: "3.6 LPA",
       contact: "",
       profilePhoto: "",
-      experience: ""
+      experience: "",
     },
     {
       name: "Harsh Soni",
+      initial: "H",
       companyName: "Infosys",
       Role: "Software Engineer",
       salary: "3.6 LPA",
       contact: "",
       profilePhoto: "",
-      experience: ""
+      experience: "",
     },
     {
       name: "Saurav Thoke",
+      initial: "S",
       companyName: "GammaStack",
       Role: "Solution Engineer",
       salary: "4.15 LPA",
       contact: "",
       profilePhoto: "",
-      experience: ""
-    }
+      experience: "",
+    },
   ];
-
-
 
   return (
     <div className="p-10 bg-gradient-to-r from-blue-100 to-purple-200 min-h-screen">
@@ -132,21 +145,37 @@ const SeniorGuidance = () => {
         {users.map((user, index) => (
           <div
             key={index}
-            className={`card ${flippedCards[index] ? 'flipped' : ''}`}
+            className={`card ${flippedCards[index] ? "flipped" : ""}`}
           >
             <div className="card-inner">
               {/* Front Side */}
               <div className="card-front bg-white text-gray-800 p-7 rounded-xl shadow-lg transform transition-all duration-300">
-                <img
-                  className="mx-auto h-32 w-32 rounded-full mb-3 shadow-md"
-                  src={user.profilePhoto || "https://via.placeholder.com/150"}
-                  alt={user.name}
-                />
-                <h1 className="text-2xl text-center font-bold mb-4">{user.name}</h1>
-                <h2 className="pl-6"><strong>Placed in:</strong> {user.companyName}</h2>
-                <h2 className="pl-6"><strong>Role:</strong> {user.Role}</h2>
-                <h2 className="pl-6"><strong>Salary:</strong> {user.salary}</h2>
-                <h2 className="pl-6"><strong>Email:</strong> {user.contact || "N/A"}</h2>
+                <div className="mx-auto h-32 w-32 rounded-full mb-3 shadow-md flex items-center justify-center bg-gray-100 text-blue-200 text-7xl font-semibold">
+                  {user.profilePhoto ? (
+                    <img
+                      className="h-full w-full rounded-full"
+                      src={user.profilePhoto}
+                      alt={user.initial}
+                    />
+                  ) : (
+                    <span>{user.initial}</span>
+                  )}
+                </div>
+                <h1 className="text-2xl text-center font-bold mb-4">
+                  {user.name}
+                </h1>
+                <h2 className="pl-6">
+                  <strong>Placed in:</strong> {user.companyName}
+                </h2>
+                <h2 className="pl-6">
+                  <strong>Role:</strong> {user.Role}
+                </h2>
+                <h2 className="pl-6">
+                  <strong>Salary:</strong> {user.salary}
+                </h2>
+                <h2 className="pl-6">
+                  <strong>Email:</strong> {user.contact || "N/A"}
+                </h2>
                 <button
                   onClick={() => toggleFlip(index)}
                   className="mt-4 w-full bg-gradient-to-r from-blue-800 to-blue-900 text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
@@ -157,7 +186,9 @@ const SeniorGuidance = () => {
 
               {/* Back Side */}
               <div className="card-back bg-gray-100 flex flex-col items-center justify-center rounded-xl shadow-lg p-6">
-                <p className="text-base font-medium px-6 text-gray-800 mb-4">{user.experience}</p>
+                <p className="text-base font-medium px-6 text-gray-800 mb-4">
+                  {user.experience}
+                </p>
                 <button
                   onClick={() => toggleFlip(index)}
                   className="w-full bg-gradient-to-r from-purple-800 to-purple-900 text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
