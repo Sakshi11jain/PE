@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import { motion, AnimatePresence, useScroll } from "framer-motion";
 import NavBar from "./NavBar";
 import Company from "./Company";
 import Feedback from "./Feedback";
@@ -7,7 +8,6 @@ import ResumeBuilder from "./ResumeBuilder";
 import SeniorGuidance from "./SeniorGuidance";
 import ScrollToTopButton from "./ScrollToTop";
 import Footer from "./Footer";
-import { motion, AnimatePresence, useScroll } from "framer-motion";
 import Faq from "./Faq";
 import EtiquetteSection from "./EtiquetteSection";
 import RoadmapSection from "./RoadmapSection";
