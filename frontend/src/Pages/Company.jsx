@@ -861,7 +861,7 @@ const Company = () => {
               : "w-full sm:w-1/4"
           }  shadow-xl rounded-lg overflow-hidden transform transition hover:scale-100 hover:shadow-2xl p-4 text-center flex flex-col`}
           style={{
-            backgroundImage: 'url(https://media.istockphoto.com/id/654139850/vector/vector-3d-illustration-white-cubes.jpg?s=612x612&w=0&k=20&c=AbgXLBnxqu6-PBB_csQwrPh7xuIvHv6hqZVPTbuoYUc=)',
+            backgroundImage: 'url(/Company_logos/backgroundcard.jpg)',
             backgroundPosition: 'bottom',
             backgroundSize: 'cover',
           }}          
@@ -906,7 +906,7 @@ const Company = () => {
               : "w-full sm:w-1/4"
           } bg-white shadow-xl rounded-lg overflow-hidden transform transition hover:scale-100 hover:shadow-2xl p-4 text-center flex flex-col`}
           style={{
-            backgroundImage: 'url(https://media.istockphoto.com/id/654139850/vector/vector-3d-illustration-white-cubes.jpg?s=612x612&w=0&k=20&c=AbgXLBnxqu6-PBB_csQwrPh7xuIvHv6hqZVPTbuoYUc=)',
+            backgroundImage: 'url(/Company_logos/backgroundcard.jpg)',
             backgroundPosition: 'bottom',
             backgroundSize: 'cover',
           }}    
@@ -950,7 +950,7 @@ const Company = () => {
         id={`${prefix}-${company.id}`}
         className="hidden absolute top-0 left-0 w-full h-full p-6 shadow-2xl z-50 rounded-lg overflow-auto"
         style={{
-          backgroundImage: 'url(https://media.istockphoto.com/id/654139850/vector/vector-3d-illustration-white-cubes.jpg?s=612x612&w=0&k=20&c=AbgXLBnxqu6-PBB_csQwrPh7xuIvHv6hqZVPTbuoYUc=)',
+          backgroundImage: 'url(/Company_logos/backgroundcard.jpg)',
           backgroundPosition: 'bottom',
           backgroundSize: 'cover',
         }}    
