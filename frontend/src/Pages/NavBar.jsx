@@ -54,7 +54,7 @@ const Navbar = ({ navigateTo }) => {
   };
 
   return (
-    <nav className="flex items-center justify-between px-6 py-4 bg-slate-800 shadow-md">
+    <nav className="flex items-center justify-between px-6 py-6 bg-slate-800 shadow-md">
       {/* Mobile Menu Icon */}
       <button className="md:hidden text-white" onClick={toggleNavMenu}>
         {isNavOpen ? <X size={28} /> : <Menu size={28} />}
@@ -98,9 +98,9 @@ const Navbar = ({ navigateTo }) => {
         <img src="./images/profile.png" alt="Profile" className="w-10 h-10 rounded-full" />
         <span className="text-white font-medium">{loggedInUser}</span>
         {isMenuOpen && (
-          <div className="absolute right-0 mt-32 w-40 bg-white border rounded shadow-md">
+          <div className="absolute right-0 w-40 bg-white border rounded shadow-md">
             <button
-              className="w-full text-left px-4 py-2 text-blue-800 hover:bg-gray-100"
+              className="w-full text-left px-4 py-3 text-blue-800 hover:bg-gray-100"
               onClick={handleLogout}
             >
               Logout
