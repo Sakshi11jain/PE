@@ -70,25 +70,35 @@ const Navbar = ({ navigateTo }) => {
 
       {/* Navigation Links */}
       <div
-        className={`px-12 absolute md:static top-16 left-0 w-full md:w-auto bg-slate-800 md:bg-transparent shadow-md md:shadow-none transform transition-transform duration-300 z-50 md:flex ${
+        className={`mt-4 md:mt-0 text-[18px] absolute md:static top-16 left-0 w-full md:w-auto bg-slate-800 md:bg-transparent shadow-md md:shadow-none transform transition-transform duration-300 z-50 md:flex ${
           isNavOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
         }`}
       >
         <div className="flex flex-col md:flex-row md:space-x-6">
-        <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("mcq")}>MCQ</a>
-          <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("Faq")}>FAQ</a>
-          <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("resume")}>Resume Builder</a>
-          <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("companies")}>Companies Info</a>
-          <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("roadmap")}>RoadMap</a>
-          <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("coding")}>Coding</a>
-          <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("guidance")}>Senior Guidance</a>
-          <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("job")}>Job Portal</a>
-          <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("etiquettes")}>Etiquettes</a>
-          <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("about")}>About</a>
-          <a className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer" onClick={() => handleScrollTo("feedback")}>Contact</a>
+          {[
+            { label: "MCQ", id: "mcq" },
+            { label: "FAQ", id: "Faq" },
+            { label: "Resume Builder", id: "resume" },
+            { label: "Companies Info", id: "companies" },
+            { label: "RoadMap", id: "roadmap" },
+            { label: "Coding", id: "coding" },
+            { label: "Senior Guidance", id: "guidance" },
+            { label: "Job Portal", id: "job" },
+            { label: "Etiquettes", id: "etiquettes" },
+            { label: "About", id: "about" },
+            { label: "Contact", id: "feedback" },
+          ].map((item, index) => (
+            <a
+              key={index}
+              className="text-gray-300 hover:text-blue-500 py-2 md:py-0 cursor-pointer border-b-2 sm:border-b-2 md:border-0 border-slate-700 px-12 sm:px-12 md:px-0"
+              onClick={() => handleScrollTo(item.id)}
+            >
+              {item.label}
+            </a>
+          ))}
         </div>
       </div>
-
+      
       {/* Profile Section */}
       <div
         className="relative flex items-center space-x-2 cursor-pointer p-2 ml-auto"
@@ -100,7 +110,7 @@ const Navbar = ({ navigateTo }) => {
         {isMenuOpen && (
           <div className="absolute right-0 w-40 bg-white border rounded shadow-md">
             <button
-              className="w-full text-left px-4 py-3 text-blue-800 hover:bg-gray-100"
+              className="w-full text-center px-4 py-3 text-blue-800 hover:bg-gray-100"
               onClick={handleLogout}
             >
               Logout
