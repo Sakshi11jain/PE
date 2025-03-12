@@ -66,19 +66,19 @@ const ResumeBuilder = () => {
 
       <div className="text-center mb-8">
         <div className="flex items-center justify-center mb-2">
-          <h1 className="text-6xl font-bold mb-4 font-serif text-gray-800 mr-4">
+          <h1 className="text-5xl font-bold mb-4 font-serif text-gray-800 mr-4">
             Resume Templates
           </h1>
           {/* Icon */}
           <div
-            className="w-12 h-12 rounded-full bg-blue-500 flex justify-center items-center cursor-pointer glow-icon animate-spin"
-            onClick={toggleModal}
-            onMouseOver={toggleModal}
-            onMouseEnter={(e) => e.target.classList.add("glow")}
-            onMouseLeave={(e) => e.target.classList.remove("glow")}
-          >
-            <i className="text-white">📄</i>
-          </div>
+    className="w-12 h-12 sm:w-14 sm:h-14 ml-0 sm:ml-2 rounded-full bg-blue-500 flex justify-center items-center cursor-pointer glow-icon animate-spin shrink-0"
+    onClick={toggleModal}
+    onMouseOver={toggleModal}
+    onMouseEnter={(e) => e.target.classList.add("glow")}
+    onMouseLeave={(e) => e.target.classList.remove("glow")}
+  >
+    <i className="text-white text-lg sm:text-xl">📄</i>
+  </div>
         </div>
         <h3 className="text-gray-700 font-bold text-center mb-2">
           Download a professional and ATS-friendly resume templates (Word file),<br/> customize it effortlessly, and shine in your job interviews! Best of luck! 🎉
@@ -88,54 +88,54 @@ const ResumeBuilder = () => {
         </p>
       </div>
 
-      {/* Modal */}
+     {/* Modal */}
       {isOpen && (
         <div
-          className="fixed inset-0 px-8 bg-gray-900 bg-opacity-50 flex justify-center items-center z-50"
+          className="fixed inset-0 px-4 sm:px-6 md:px-8 bg-gray-900 bg-opacity-50 flex justify-center items-center z-50"
           onClick={toggleModal}
         >
           <div
-            className="bg-gradient-to-r from-slate-50 px-10 via-blue-50 to-blue-100 py-10 w-full md:w-3/4 lg:w-1/2 rounded-lg relative"
+            className="bg-gradient-to-r from-slate-50 via-blue-50 to-blue-100 py-8 px-6 sm:px-8 md:px-10 w-full max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-2xl xl:max-w-3xl rounded-lg relative"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
-              className="absolute top-1 right-3 text-gray-600 hover:text-gray-800 text-3xl"
+              className="absolute top-2 right-4 text-gray-600 hover:text-gray-800 text-2xl sm:text-3xl"
               onClick={toggleModal}
               aria-label="Close modal"
             >
               &times;
             </button>
-            <div className="max-w-5xl mx-auto text-center">
-              <h2 className="text-4xl font-extrabold text-gray-800 mb-6 animate__animated animate__fadeInDown">
+            <div className="text-center">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-800 mb-4 sm:mb-6 animate__animated animate__fadeInDown">
                 Why You Need an ATS-Friendly Resume
               </h2>
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 sm:mb-8">
                 Did you know that 75% of resumes never reach a recruiter because they fail ATS checks? Here’s why an ATS-friendly resume is essential for your success.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                <div className="p-6 bg-white rounded-lg shadow hover:shadow-lg hover:scale-105 transition-all">
-                  <h3 className="text-lg font-semibold mb-3 text-blue-700">Higher Selection Chances</h3>
-                  <p className="text-sm text-gray-600">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
+                <div className="p-4 sm:p-6 bg-white rounded-lg shadow hover:shadow-lg hover:scale-105 transition-all">
+                  <h3 className="text-md sm:text-lg font-semibold mb-2 sm:mb-3 text-blue-700">Higher Selection Chances</h3>
+                  <p className="text-xs sm:text-sm text-gray-600">
                     ATS-friendly resumes pass filters to ensure your application gets seen.
                   </p>
                 </div>
-                <div className="p-6 bg-white rounded-lg shadow hover:shadow-lg hover:scale-105 transition-all">
-                  <h3 className="text-lg font-semibold mb-3 text-blue-700">Improved Readability</h3>
-                  <p className="text-sm text-gray-600">
+                <div className="p-4 sm:p-6 bg-white rounded-lg shadow hover:shadow-lg hover:scale-105 transition-all">
+                  <h3 className="text-md sm:text-lg font-semibold mb-2 sm:mb-3 text-blue-700">Improved Readability</h3>
+                  <p className="text-xs sm:text-sm text-gray-600">
                     Organized formats make it easy for systems and recruiters to scan.
                   </p>
                 </div>
-                <div className="p-6 bg-white rounded-lg shadow hover:shadow-lg hover:scale-105 transition-all">
-                  <h3 className="text-lg font-semibold mb-3 text-blue-700">Keyword Optimization</h3>
-                  <p className="text-sm text-gray-600">
+                <div className="p-4 sm:p-6 bg-white rounded-lg shadow hover:shadow-lg hover:scale-105 transition-all">
+                  <h3 className="text-md sm:text-lg font-semibold mb-2 sm:mb-3 text-blue-700">Keyword Optimization</h3>
+                  <p className="text-xs sm:text-sm text-gray-600">
                     Incorporates job-relevant keywords for better match scores.
                   </p>
                 </div>
               </div>
               <a
                 href="https://recruiterflow.com/blog/applicant-tracking-system-benefits-of-ats/" target="_blank"
-                className="mt-10 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all"
+                className="mt-6 sm:mt-10 bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg shadow-lg hover:shadow-xl transition-all"
               >
                 Learn More About ATS Resumes
               </a>
