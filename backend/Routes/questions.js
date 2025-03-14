@@ -8,7 +8,7 @@ router.get("/:category", async (req, res) => {
   const { category } = req.params;
 
   try {
-    if (!["frontend", "backend", "fullstack", "hr"].includes(category)) {
+    if (!["frontend", "backend", "fullstack", "DSA", "hr"].includes(category)) {
       return res.status(400).send("Invalid category");
     }
 
@@ -25,7 +25,7 @@ router.post("/evaluate", async (req, res) => {
     const { category, questionId, userAnswer } = req.body;
   
     try {
-      if (!["frontend", "backend", "fullstack", "hr"].includes(category)) {
+      if (!["frontend", "backend", "fullstack", "DSA", "hr"].includes(category)) {
         return res.status(400).send("Invalid category");
       }
   
@@ -50,14 +50,24 @@ router.post("/evaluate", async (req, res) => {
   
       // Refine the feedback logic based on similarity score
       let feedback;
+
+      // High similarity: Answer is well-articulated and correct.
       if (similarity > 0.8) {
         feedback = "Correct! Your answer is well-articulated.";
-      } else if (similarity > 0.6) {
-        feedback = "Almost there! Your answer is close. Tip: " + question.feedbackCriteria;
-      } else {
-        feedback = `Not quite right. Tip: ${question.feedbackCriteria}`;
+      } 
+      // Moderate similarity: Answer is close but needs slight refinement.
+      else if (similarity > 0.6) {
+        feedback = "Almost there! Your answer is close. Consider this tip: " + question.feedbackCriteria;
+      } 
+      // Low similarity: Answer has some relevance but needs improvement.
+      else if (similarity > 0.3) {
+        feedback = "Good attempt! Your answer has relevant points but needs refinement. Tip: " + question.feedbackCriteria;
+      } 
+      // Very low similarity: Answer is incorrect or lacks key details.
+      else {
+        feedback = `Not quite right. Review this tip to improve: ${question.feedbackCriteria}`;
       }
-  
+
       // Return the feedback
       res.json({ feedback, similarity });
     } catch (error) {
