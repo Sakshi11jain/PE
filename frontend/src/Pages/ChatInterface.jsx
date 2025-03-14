@@ -38,12 +38,6 @@ const ChatInterface = () => {
       return;
     }
 
-    // Check if the answer contains only English characters
-    if (!englishOnlyRegex.test(userAnswer)) {
-      alert("Please use English only for your answer.");
-      return;
-    }
-
     try {
       const currentQuestion = questions[currentQuestionIndex];
       const response = await axios.post(
@@ -109,6 +103,7 @@ const ChatInterface = () => {
           <option value="frontend">Frontend</option>
           <option value="backend">Backend</option>
           <option value="fullstack">Fullstack</option>
+          <option value="DSA">DSA</option>
           <option value="hr">HR</option>
         </select>
       </div>
