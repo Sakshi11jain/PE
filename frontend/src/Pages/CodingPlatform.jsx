@@ -69,7 +69,7 @@ function CodingPlatform() {
       setOutput(data.stdout || data.stderr || "No Output");
     } catch (error) {
       console.error("Error running code:", error);
-      setOutput("❌ Error executing code. Check API Key & Usage Limits.");
+      setOutput("❌ Error executing code.");
     }
   };
 
