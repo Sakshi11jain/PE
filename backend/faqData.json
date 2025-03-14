@@ -365,6 +365,90 @@
       "answer": "Serverless architecture is a cloud computing execution model where the cloud provider dynamically manages the allocation of machine resources. Developers write code in the form of functions, and the provider handles the execution, scaling, and management, allowing developers to focus on code without managing servers."
     }
   ],
+
+  "DSA":[
+    {
+      "question": "What is an array?",
+      "answer": "An array is a linear data structure that stores elements of the same type in contiguous memory locations, allowing efficient indexing and traversal."
+    },
+    {
+      "question": "What is the difference between an array and a linked list?",
+      "answer": "An array has fixed size and stores elements in contiguous memory, while a linked list consists of nodes with pointers, allowing dynamic memory allocation and efficient insertions/deletions."
+    },
+    {
+      "question": "What is a stack, and how does it work?",
+      "answer": "A stack is a linear data structure that follows the Last In, First Out (LIFO) principle, meaning elements are added and removed from the same end, known as the top."
+    },
+    {
+      "question": "What is a queue, and how is it different from a stack?",
+      "answer": "A queue is a linear data structure that follows the First In, First Out (FIFO) principle, where elements are inserted at the rear and removed from the front, unlike a stack."
+    },
+    {
+      "question": "What are the different types of linked lists?",
+      "answer": "The main types of linked lists are singly linked lists, doubly linked lists, and circular linked lists, each with different node connectivity and traversal mechanisms."
+    },
+    {
+      "question": "What is the time complexity of searching in a binary search tree (BST)?",
+      "answer": "In a balanced BST, searching has an average and worst-case time complexity of O(log n), while in an unbalanced BST, it can degrade to O(n)."
+    },
+    {
+      "question": "What is the difference between a binary tree and a binary search tree (BST)?",
+      "answer": "A binary tree is a hierarchical structure where each node has at most two children, whereas a BST is an ordered binary tree where the left child is smaller and the right child is greater than the parent."
+    },
+    {
+      "question": "What is a heap, and what are its types?",
+      "answer": "A heap is a complete binary tree used for priority-based operations. There are two types: Max Heap (parent nodes are greater than children) and Min Heap (parent nodes are smaller than children)."
+    },
+    {
+      "question": "What is hashing, and why is it used?",
+      "answer": "Hashing is a technique that maps keys to values using a hash function, enabling fast data retrieval in O(1) time in average cases."
+    },
+    {
+      "question": "What is dynamic programming?",
+      "answer": "Dynamic programming is an optimization technique that breaks a problem into overlapping subproblems and solves each once, storing results for future reference to avoid redundant computations."
+    },
+    {
+      "question": "What is the difference between recursion and iteration?",
+      "answer": "Recursion is a function calling itself until a base condition is met, using the call stack, while iteration repeatedly executes a block of code using loops."
+    },
+    {
+      "question": "What is the two-pointer technique?",
+      "answer": "The two-pointer technique is used for optimizing searching and sorting problems by using two indices, typically moving towards each other or in the same direction based on conditions."
+    },
+    {
+      "question": "What is the sliding window technique?",
+      "answer": "The sliding window technique is used in problems involving subarrays or substrings, allowing efficient calculations by maintaining a window that moves dynamically."
+    },
+    {
+      "question": "What is Floyd’s cycle detection algorithm?",
+      "answer": "Floyd’s cycle detection algorithm, also known as the slow and fast pointer approach, is used to detect cycles in linked lists and graphs."
+    },
+    {
+      "question": "What are the different types of sorting algorithms?",
+      "answer": "Common sorting algorithms include Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort, Heap Sort, and Counting Sort, each with different time complexities."
+    },
+    {
+      "question": "What is the difference between Merge Sort and Quick Sort?",
+      "answer": "Merge Sort is a divide-and-conquer algorithm with O(n log n) complexity in all cases, while Quick Sort has an average case of O(n log n) but a worst case of O(n²)."
+    },
+    {
+      "question": "What is backtracking, and where is it used?",
+      "answer": "Backtracking is a recursive algorithmic technique used to explore all possible solutions by undoing choices when they lead to failure, commonly used in problems like Sudoku and N-Queens."
+    },
+    {
+      "question": "What is a graph, and how is it represented?",
+      "answer": "A graph is a data structure consisting of nodes (vertices) connected by edges. It is represented using an adjacency matrix or adjacency list."
+    },
+    {
+      "question": "What is Breadth-First Search (BFS) and Depth-First Search (DFS)?",
+      "answer": "BFS explores all neighbors level by level using a queue, while DFS explores as deep as possible using a stack or recursion."
+    },
+    {
+      "question": "What is a trie, and where is it used?",
+      "answer": "A trie is a tree-like data structure used for efficient string searching, commonly used in autocomplete and dictionary applications."
+    }
+  ],
+    
   "database": [
     {
       "question": "What is a Database?",
