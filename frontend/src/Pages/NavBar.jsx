@@ -76,12 +76,12 @@ const Navbar = ({ navigateTo }) => {
       >
         <div className="flex flex-col md:flex-row md:space-x-6">
           {[
-            { label: "MCQ", id: "mcq" },
-            { label: "FAQ", id: "Faq" },
+             { label: "RoadMap", id: "roadmap" },
             { label: "Resume Builder", id: "resume" },
-            { label: "Companies Info", id: "companies" },
-            { label: "RoadMap", id: "roadmap" },
+            { label: "MCQ", id: "mcq" },
             { label: "Coding", id: "coding" },
+            { label: "FAQ", id: "Faq" },
+            { label: "Companies Info", id: "companies" },
             { label: "Senior Guidance", id: "guidance" },
             { label: "Job Portal", id: "job" },
             { label: "Etiquettes", id: "etiquettes" },
