@@ -8,6 +8,7 @@ import RefrshHandler from "./RefrshHandler";
 import Frontend from "./Pages/Roadmap/Frontend";
 import Backend from "./Pages/Roadmap/Backend";
 import FullStack from "./Pages/Roadmap/FullStack";
+import DSA from "./Pages/Roadmap/DSA";
 import TestSelection from "./Pages/TestSelection";
 import MCQTest from "./Pages/MCQTest";
 import CodingPlatform from "./Pages/CodingPlatform";
@@ -40,6 +41,7 @@ function App() {
         <Route path="/roadmap/frontend" element={<Frontend />} />
         <Route path="/roadmap/backend" element={<Backend />} />
         <Route path="/roadmap/fullstack" element={<FullStack/>}/>
+        <Route path="/roadmap/dsa" element={<DSA />} />
         <Route path="/mcq" element={<TestSelection />} />
         <Route path="/mcq/:category" element={<MCQTest />} />
         <Route path="/coding" element={<CodingPlatform />} />
