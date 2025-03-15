@@ -2,42 +2,41 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const About = () => {
-
   return (
     <section className="bg-gradient-to-r from-blue-100 to-purple-200 min-h-screen flex items-center justify-center py-12 w-full">
-      <div className="container mx-auto px-6 lg:px-20 flex flex-col md:flex-row items-center gap-16">
+      <div className="container mx-auto px-6 lg:px-20 flex flex-col md:flex-row items-center gap-12 md:gap-16">
         
         {/* Left Section - Image */}
         <motion.div 
-          className="md:w-1/2 flex justify-center mt-6"
+          className="w-full md:w-1/2 flex justify-center md:justify-start"
           initial={{ opacity: 0, x: -50 }} 
           animate={{ opacity: 1, x: 0 }} 
           transition={{ duration: 0.8 }}
         >
-          <img
+           <img
             src="/about.jpg"
             alt="About PrepEdge"
-            className="rounded-xl shadow-lg w-full max-w-xs sm:max-w-sm md:max-w-lg h-auto object-cover transition-transform duration-300 hover:scale-105"
+            className="rounded-xl shadow-2xl w-5/6 sm:w-4/5 md:w-full max-w-sm sm:max-w-md md:max-w-xl h-auto object-cover transition-transform duration-300 hover:scale-105"
           />
         </motion.div>
 
         {/* Right Section - Content */}
         <motion.div 
-          className="md:w-1/2 text-center md:text-left mt-8"
+          className="w-full md:w-1/2 text-center md:text-left"
           initial={{ opacity: 0, x: 50 }} 
           animate={{ opacity: 1, x: 0 }} 
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight font-sans">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight font-sans">
             About <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-black">PrepEdge</span>
           </h2>
 
-          <p className="text-gray-700 text-lg mt-6 leading-relaxed font-light">
-            <span className="font-bold text-black">PrepEdge</span> is a 
-            <span className="font-semibold text-gray-900"> Placement Preparation</span> platform designed to help students excel in their careers. 
-            We provide <span className="text-gray-800 font-medium">coding practice, aptitude tests, mock interviews,</span> and 
-            <span className="text-gray-800 font-medium"> resume-building tools.</span> 
-            Our mission is to <span className="text-gray-900 font-semibold">bridge the gap between academia and industry,</span> ensuring students are job-ready.
+          <p className="text-gray-700 text-base sm:text-lg mt-6 leading-relaxed font-light">
+            <span className="font-semibold text-black">PrepEdge</span> is your ultimate placement companion! 
+            it equip you with everything needed to crack IT job interviews, from 
+            <span className="font-semibold text-gray-900"> Chatbot mock interviews, resume building, coding practice, Interview Questions, senior guidance, 
+             structured roadmap , mcq tests, IT insights, job portals, and interview etiquette.</span>
+             &nbsp;Our goal is to ensure a smooth transition from campus to corporate.
           </p>
 
           {/* Mission & Vision Section */}
@@ -47,10 +46,9 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }} 
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <h3 className="text-2xl font-semibold text-gray-900 font-serif">Our Mission</h3>
-              <p className="text-gray-700 text-lg mt-2 leading-relaxed font-light">
-                We provide students with <span className="font-semibold text-gray-900">high-quality resources</span>, real-world coding challenges, 
-                and structured roadmaps to ace technical interviews and secure their dream jobs.
+              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 font-serif">🌍 Vision</h3>
+              <p className="text-gray-700 text-base sm:text-lg mt-2 leading-relaxed font-light">
+              To empower students with the right tools, guidance, and resources for a seamless, structured, and effective transition from campus to corporate.
               </p>
             </motion.div>
 
@@ -59,13 +57,18 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }} 
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <h3 className="text-2xl font-semibold text-gray-900 font-serif">Our Vision</h3>
-              <p className="text-gray-700 text-lg mt-2 leading-relaxed font-light">
-                Empowering students, irrespective of background, by offering <span className="text-gray-900 font-medium">expert guidance</span>, 
-                industry insights, and premium preparation materials.
+              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 font-serif">🎯 Mission</h3>
+              <p className="text-gray-700 text-base sm:text-lg mt-2 leading-relaxed font-light">
+                 Deliver structured, expert-curated resources for placement excellence.<br/>
+                 Enhance interview confidence with mock interviews & MCQ practice.<br/>
+                 Bridge the gap between students & industry leaders through mentorship.
               </p>
             </motion.div>
           </div>
+
+          <p className="text-lg sm:text-xl font-semibold text-gray-900 mt-6">
+            With PrepEdge, you're not just preparing but you're unlocking your dream career! 🚀
+          </p>
         </motion.div>
       </div>
     </section>
