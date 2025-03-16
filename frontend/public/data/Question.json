@@ -83,6 +83,6 @@
       { "question": "Which JavaScript framework is used for building user interfaces?", "options": ["Django", "Angular", "React", "Flask"], "answer": "React" },
       { "question": "Which data structure follows First In First Out (FIFO) principle?", "options": ["Stack", "Queue", "Heap", "Graph"], "answer": "Queue" },
       { "question": "Which programming language is known as the 'write once, run anywhere' language?", "options": ["C", "Python", "Java", "Swift"], "answer": "Java" },
-      { "question": "Which operator is used for dereferencing pointers in C?", "options": ["", "&", "->", "::"], "answer": "" }
+      { "question": "Which operator is used for dereferencing pointers in C?", "options": [".", "&", "->", "::"], "answer": "" }
     ]
   }
