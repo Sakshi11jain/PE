@@ -95,7 +95,11 @@ function CodingPlatform() {
           <select
             className="p-2 w-[130px] bg-gray-700 text-white rounded"
             value={language ? language.name : ""}
-            onChange={(e) => setLanguage(languages.find(lang => lang.name === e.target.value) || null)}
+            onChange={(e) => {
+              setLanguage(languages.find(lang => lang.name === e.target.value) || null);
+              setCode(""); // Clear previous code
+            }
+            }
           >
             <option value="" disabled>Select lang.</option>
             {languages.map((lang) => (
