@@ -29,7 +29,7 @@ const SeniorGuidance = () => {
       companyName: "Accenture",
       Role: "Associate Software Engineer",
       salary: "4.5 LPA",
-      contact: "",
+      contact: "ayushipawar@gmail.com",
       profilePhoto: "./seniors/Ayushi.png",
       experience:
         "Specialized in front-end development and successfully delivered client-focused designs. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum obcaecati quidem neque repellat iure, autem culpa eum dignissimos, officia suscipit aspernatur blanditiis laudantium aliquid molestiae praesentium sit nostrum quibusdam! Rerum.",
@@ -59,6 +59,7 @@ const SeniorGuidance = () => {
       name: "Shruti Solanki",
       initial: "S",
       companyName: "Dice",
+      Role: "Frontend Devloper",
       salary: "10 LPA",
       contact: "",
       profilePhoto: "",
@@ -149,7 +150,7 @@ const SeniorGuidance = () => {
           >
             <div className="card-inner">
               {/* Front Side */}
-              <div className="card-front bg-white text-gray-800 p-7 rounded-xl shadow-lg transform transition-all duration-300">
+              <div className="card-front text-gray-800 p-7 rounded-xl transform transition-all duration-300">
                 <div className="mx-auto h-32 w-32 rounded-full mb-3 shadow-md flex items-center justify-center bg-gray-100 text-blue-200 text-7xl font-semibold">
                   {user.profilePhoto ? (
                     <img
@@ -178,15 +179,15 @@ const SeniorGuidance = () => {
                 </h2>
                 <button
                   onClick={() => toggleFlip(index)}
-                  className="mt-4 w-full bg-gradient-to-r from-blue-800 to-blue-900 text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+                  className="mt-[1.85rem] w-full bg-gradient-to-r from-blue-800 to-blue-900 text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
                 >
                   View Experience
                 </button>
               </div>
 
               {/* Back Side */}
-              <div className="card-back bg-gray-100 flex flex-col items-center justify-center rounded-xl shadow-lg p-6">
-                <p className="text-base font-medium px-6 text-gray-800 mb-4">
+              <div className="card-back flex flex-col items-center justify-center rounded-xl p-6">
+                <p className="px-6 mb-4">
                   {user.experience}
                 </p>
                 <button
