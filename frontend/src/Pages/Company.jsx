@@ -284,26 +284,6 @@ const Company = () => {
     },
     {
       id: 15,
-      name: "FICO",
-      logo: "./Company_logos/FICO.svg",
-      description:
-        "An American data analytics company focused on credit scoring services.",
-      founder: "Bill Fair & Earl Isaac",
-      ceo: "William Lansing",
-      startDate: "1956",
-      website: "./Company_logos/FICO.svg",
-      rating: 4.1,
-      pros: [
-        "1. Good work/life balance depending on manager and role (in 185 ratings)",
-        "2. Most people were great and the company had good intentions. (in 135 ratings)",
-      ],
-      cons: [
-        "1. Management is poor (in 59 ratings)",
-        "Low salary and very far (in 50 ratings)",
-      ],
-    },
-    {
-      id: 16,
       name: "Salesforce",
       logo: "https://uipath.com/cdn-cgi/image/width=575,format=auto/https:////images.ctfassets.net/5965pury2lcm/3GNvyZ3UUnTGPTdDVSqYJu/f3851b55467b1533937b7191ed2f4da7/Salesforce-Logo-Video-Spotlight.png",
       description:
@@ -320,87 +300,6 @@ const Company = () => {
       cons: [
         "1. Poor management (both middle management and executives) (in 462 ratings)",
         "2. Bad managers thrive creating terrible and deep differences between departments and culture. (in 382 ratings)",
-      ],
-    },
-    {
-      id: 17,
-      name: "Uber",
-      logo: "https://download.logo.wine/logo/Uber/Uber-Logo.wine.png",
-      description:
-        "A global technology company revolutionizing mobility and logistics through ridesharing and delivery services.",
-      founder: "Travis Kalanick, Garrett Camp",
-      ceo: "Dara Khosrowshahi",
-      startDate: "March 2009",
-      website: "https://www.uber.com/",
-      rating: 3.9,
-      pros: [
-        "1. The people are great and the use of data within the company to inform decisions is incredible. (in 1012 ratings)",
-        "2. Benefits and work balance is great (in 945 ratings)",
-      ],
-      cons: [
-        "1. The pay is low and you have to repair your own car after you have driven it into oblivion. (in 1233 ratings)",
-        "2. Bad management and stocks (in 340 ratings)",
-      ],
-    },
-    {
-      id: 18,
-      name: "Twitter",
-      logo: "https://img.freepik.com/premium-photo/x-twitter-apps-logo-new-twitter-logo-x-twitter-x-logo-x-letter-logo-icon-vector-illustration_570092-1081.jpg?semt=ais_hybrid",
-      description:
-        "A social media and technology company known for its microblogging and real-time communication platform.",
-      founder: "Jack Dorsey, Noah Glass, Biz Stone, Evan Williams",
-      ceo: "Linda Yaccarino",
-      startDate: "March 21, 2006",
-      website: "https://www.twitter.com/",
-      rating: 3.1,
-      pros: [
-        "1. The people are great and the work you do makes an impact (in 252 ratings)",
-        "2. Great culture and business porpuse (in 247 ratings)",
-      ],
-      cons: [
-        "1. Poor management and overworked. (in 87 ratings)",
-        "2. Poor leadership and lack of direction. (in 83 ratings)",
-      ],
-    },
-    {
-      id: 19,
-      name: "Spotify",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Spotify_logo_with_text.svg/2560px-Spotify_logo_with_text.svg.png",
-      description:
-        "A global leader in music streaming services, offering personalized playlists and innovative audio experiences.",
-      founder: "Daniel Ek, Martin Lorentzon",
-      ceo: "Daniel Ek",
-      startDate: "April 23, 2006",
-      website: "https://www.spotify.com/",
-      rating: 4.0,
-      pros: [
-        "1. Working from anywhere is great for people with family and living far from the office. (in 198 ratings)",
-        "2. great culture and company values (in 187 ratings)",
-      ],
-      cons: [
-        "1. Management is poor. (in 48 ratings)",
-        "2. Layoffs are common these days (in 47 ratings)",
-      ],
-    },
-    {
-      id: 20,
-      name: "PayPal",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/3/39/PayPal_logo.svg",
-      description:
-        "A global technology platform for digital payments, enabling online money transfers and e-commerce.",
-      founder:
-        "Max Levchin, Peter Thiel, Luke Nosek, Ken Howery, Yu Pan, Elon Musk",
-      ceo: "Alex Chriss",
-      startDate: "December 1998",
-      website: "https://www.paypal.com/",
-      rating: 3.7,
-      pros: [
-        "1. Good work life balance is good (in 853 ratings)",
-        "2. The benefits are good and the work atmosphere was wonderful. (in 821 ratings)",
-      ],
-      cons: [
-        "1.poor management: not trained to manage people. (in 314 ratings)",
-        "2.All the good things about the company can go for a toss if you are reporting to a bad manager. (in 215 ratings)",
       ],
     },
   ];
