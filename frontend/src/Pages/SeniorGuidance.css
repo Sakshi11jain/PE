@@ -1,6 +1,6 @@
 .card {
   width: 100%;
-  height: 28rem; /* Increased height */
+  height: 30rem; /* Increased height */
   perspective: 1000px;
 }
 
