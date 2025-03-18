@@ -56,9 +56,9 @@ const DSA = () => {
 
   const downloadAllImages = () => {
     const imageLinks = [
-      "/images/DSA1.jpeg",
-      "/images/DSA2.jpeg",
-      "/images/DSA3.jpeg",
+      "/roadmap_images/DSA1.png",
+      "/roadmap_images/DSA2.png",
+      "/roadmap_images/DSA3.png",
     ];
     imageLinks.forEach((link) => {
       const a = document.createElement("a");
