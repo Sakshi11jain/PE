@@ -16,11 +16,17 @@ const MCQTest = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-  
-    window.onpopstate = () => {
-      navigate("/mcq");
-    };
+    if (isTestCompleted) {
+      setTimeout(() => {
+        navigate("/mcq", { replace: true });
+      }, 3000);
+    }
+  }, [isTestCompleted, navigate]);
 
+  useEffect(() => {
+    window.onpopstate = () => {
+      navigate("/home", { replace: true });
+    };
     return () => {
       window.onpopstate = null;
     };
@@ -30,7 +36,7 @@ const MCQTest = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await fetch('/data/Question.json');
+        const response = await fetch('http://localhost:3000/api/mcq');
         const data = await response.json();
         let categoryQuestions = category === 'aptitude' ? data.aptitude_questions : data.technical_questions;
         if (categoryQuestions?.length) {
