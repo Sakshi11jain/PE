@@ -20,7 +20,7 @@ const Footer = () => {
           </p>
           <div className="flex justify-center space-x-8 pt-4">
             <a
-              href="https://linkedin.com/in/prepedge2k25/"
+              href="https://www.linkedin.com/in/prepedge/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-500 transition-colors"
@@ -50,14 +50,14 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="https://www.facebook.com/prepedge2k25"
+              href="https://www.facebook.com/share/1aNxwYGgkp/?mibextid=qi2Omg"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-600 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="1 1 24 24"
+                viewBox="2 2 24 24"
                 fill="currentColor"
                 className="w-9 h-9"
               >
