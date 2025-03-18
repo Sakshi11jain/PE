@@ -49,6 +49,7 @@ const etiquetteList = {
 
   ],
 };
+
 function EtiquetteSection() {
   return (
     <div className="min-h-screen flex flex-col items-center px-4 sm:px-6 md:px-12 lg:px-20 pt-20 pb-12 bg-gradient-to-br from-blue-200 to-blue-50 overflow-hidden">
@@ -56,22 +57,26 @@ function EtiquetteSection() {
         ✨ Interview Etiquette ✨
       </h1>
       <div className="w-full max-w-6xl bg-white p-6 sm:p-8 rounded-lg shadow-lg flex flex-col sm:flex-row gap-6">
-        <div className="w-full sm:w-1/2 bg-green-100 p-6 rounded-lg shadow max-h-96 overflow-y-auto">
-          <h2 className="text-xl sm:text-2xl font-bold text-gray-800 text-center mb-4">✅ Do's</h2>
-          <ul className="space-y-4">
+        <div className="w-full sm:w-1/2 bg-green-100 p-6 rounded-lg shadow h-96 flex flex-col">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-800 text-center mb-4">
+            ✅ Do's
+          </h2>
+          <ul className="space-y-4 overflow-y-auto flex-1">
             {etiquetteList.do.map((item) => (
-              <li key={item.id} className="bg-white p-4 rounded-md shadow hover:scale-105 transition-transform">
+              <li key={item.id} className="bg-white p-4 rounded-md shadow">
                 <h3 className="text-lg font-semibold text-gray-800">{item.title}</h3>
                 <p className="text-gray-600">{item.description}</p>
               </li>
             ))}
           </ul>
         </div>
-        <div className="w-full sm:w-1/2 bg-red-100 p-6 rounded-lg shadow max-h-96 overflow-y-auto">
-          <h2 className="text-xl sm:text-2xl font-bold text-gray-800 text-center mb-4">❌ Don'ts</h2>
-          <ul className="space-y-4">
+        <div className="w-full sm:w-1/2 bg-red-100 p-6 rounded-lg shadow h-96 flex flex-col">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-800 text-center mb-4">
+            ❌ Don'ts
+          </h2>
+          <ul className="space-y-4 overflow-y-auto flex-1">
             {etiquetteList.dont.map((item) => (
-              <li key={item.id} className="bg-white p-4 rounded-md shadow hover:scale-105 transition-transform">
+              <li key={item.id} className="bg-white p-4 rounded-md shadow">
                 <h3 className="text-lg font-semibold text-gray-800">{item.title}</h3>
                 <p className="text-gray-600">{item.description}</p>
               </li>
