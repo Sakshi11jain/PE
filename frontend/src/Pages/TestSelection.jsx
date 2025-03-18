@@ -6,25 +6,27 @@ const TestSelection = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-      window.onpopstate = () => {
-        navigate("/home");
-      };
-  
-      return () => {
-        window.onpopstate = null;
-      };
-    }, [navigate]);
+    window.history.pushState(null, null, window.location.href);
+
+    const handleBack = () => {
+      navigate("/home", { replace: true });
+    };
+
+    window.onpopstate = handleBack;
+
+    return () => {
+      window.onpopstate = null;
+    };
+  }, [navigate]);
 
   return (
     <div className="bg-gradient-to-r from-blue-100 to-purple-200 min-h-screen flex items-center justify-center p-6">
-      {/* Main Container */}
       <motion.div 
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 p-6 md:p-8"
       >
-        {/* Left Column - Technical MCQ Info */}
         <motion.div 
           initial={{ opacity: 0, x: -50 }} 
           animate={{ opacity: 1, x: 0 }} 
@@ -42,7 +44,6 @@ const TestSelection = () => {
           </p>
         </motion.div>
 
-        {/* Right Column - Test Selection */}
         <motion.div 
           initial={{ opacity: 0, x: 50 }} 
           animate={{ opacity: 1, x: 0 }} 
