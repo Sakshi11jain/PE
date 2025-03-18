@@ -11,7 +11,7 @@ const SeniorGuidance = () => {
     }));
   };
 
-   const users = [
+  const users = [
     {
       name: "Sakshi Jain",
       initial: "S",
@@ -52,7 +52,7 @@ const SeniorGuidance = () => {
       Role: "Associate Software Engineer",
       salary: "4.5 LPA",
       email: "akankshasingh2431@gmail.com",
-      profilePhoto: "",
+      profilePhoto: "./seniors/akanksha.jpg",
       experience: "There were four  rounds the cognitive assessment,coding round, communication round and the interview. Questions which were asked are mentioned below: 1. My introduction ,2. Project details ,3. My role in my project ( if it's a team project).,4. Database Basics,5. Brief about testing tools ,6. And situation based questions ( decision making),7. Asked a few questions about Accenture.,8. And my hobbies ",
     },
     
@@ -70,7 +70,7 @@ const SeniorGuidance = () => {
     {
       name: "Pawan Dabi",
       initial: "P",
-      companyName: "GammaEdge Technologies ",
+      companyName: "GammaEdge",
       Role: "Associate Software Engineer",
       salary: "2.5 LPA",
       email: "dabi001pawan@gmail.com",
@@ -91,18 +91,18 @@ const SeniorGuidance = () => {
       name: "Rohit Kumar",
       initial: "R",
       companyName: "Infosys",
-      Role: "Software Engineer",
+      Role: "System Engineer",
       salary: "3.6 LPA",
-      email: "",
-      profilePhoto: "",
-      experience: "",
+      email: "rohit.tinsel165@slmail.me",
+      profilePhoto: "./seniors/rohit.jpg",
+      experience: "My interview experience was pretty average. It was a single round where they asked basic programming questions, along with some OOP concepts. They also asked a few questions on databases and SQL. In addition, there were some situational and behavioral questions.",
     },
     {
       name: "Rashmi Barethiya ",
       initial: "R",
-      companyName: "Apace Risk Investigation Pvt Ltd ",
+      companyName: "Apace Risk Investigation",
       Role: "Risk coordinator",
-      salary: "1. 80 LPA",
+      salary: "1.80 LPA",
       email: "rashmibarethiya2130@gmail.com",
       profilePhoto: "./seniors/rashmi.jpg",
       experience: "",
@@ -114,18 +114,18 @@ const SeniorGuidance = () => {
       Role: "System Engineer",
       salary: "3.5 LPA",
       email: "anjalivishwakarma9617@gmail.com",
-      profilePhoto: "",
+      profilePhoto: "./seniors/Anjali.jpg",
       experience: "There were 2 rounds - online test followed by an interview. Questions were only based on Whatever I had mentioned In my resume + some questions on core subjects like software engineering and DBMS.",
     },
     {
       name: "Shruti Solanki",
       initial: "S",
-      companyName: "Dice",
+      companyName: "Dice Enterprises",
       Role: "Frontend Devloper",
       salary: "10 LPA",
-      email: "",
-      profilePhoto: "",
-      experience: "",
+      email: "shrutisolanki2607@gmail.com",
+      profilePhoto: "./seniors/shruti.jpg",
+      experience: "Selection Process: Round 1: Conducted by CEO & frontend developers, focused on React.js fundamentals. Round 2: Tested DSA, React, and JavaScript. Final Round: Assessed C++ & JavaScript, included solving DSA problems in JavaScript and code analysis. Experience: Joining Dice Enterprises, a fast-paced startup, has been enriching as a frontend developer. Strong fundamentals and passion for development are key. The journey has been a continuous learning experience, improving my problem-solving and technical skills.",
     },
     {
       name: "Chanchala Mukati",
@@ -133,29 +133,39 @@ const SeniorGuidance = () => {
       companyName: "Safesend",
       Role: "Software Engineer",
       salary: "6 LPA",
-      email: "",
-      profilePhoto: "",
-      experience: "",
+      email: "chanchalamukati14@gmail.com",
+      profilePhoto: "./seniors/chanchla.jpg",
+      experience: "Interview Process:   1. First Round: Aptitude, reasoning, verbal ability, and 2 DSA problems.   2. Technical Round: Prime number program, normalization (1NF & 2NF), SQL JOIN query, optimized DSA problem (GFG), and project-related questions.   3. HR Round: Self-introduction, first interview experience, why SafeSend, product vs. service-based company, relocation, and family details.",
     },
     {
       name: "Aryan Sindhe",
       initial: "A",
       companyName: "Infosys",
-      Role: "Software Engineer",
+      Role: "System Engineer",
       salary: "3.6 LPA",
-      email: "",
-      profilePhoto: "",
-      experience: "",
+      email: "aryan980shinde@gmail.com",
+      profilePhoto: "./seniors/aryan.jpg",
+      experience: "It was a 2 day process 1st day : apti. round  (include reasoning , maths , english) 2nd day : HR and TR (20 to 25 min interview , mostly technical, be redy with core subjects and their real time applications with a well prepared CV)",
     },
     {
-      name: "Harsh Soni",
+      name: "Harsh Molpariya",
       initial: "H",
+      companyName: "GammaEdge",
+      Role: "Automation test engineer",
+      salary: "6.5 LPA",
+      email: "harshmoyal17502@gmail.com",
+      profilePhoto: "./seniors/harsh.jpg",
+      experience: "Interview Process: HR Round: Focused on communication skills. Technical Round 1: Covered basic verbal and dry-run coding questions based on the languages mentioned in my resume (Java, C, C++). Technical Round 2: Fully Java-based, including OOPs, file handling, exception handling, and multithreading. Experience: It's been almost 4 months since I joined, and my experience has been great. I have learned various new technologies and am currently exploring even more.",
+    },
+    {
+      name: "Gautam Parmar",
+      initial: "G",
       companyName: "Infosys",
-      Role: "Software Engineer",
+      Role: "System Engineer",
       salary: "3.6 LPA",
-      email: "",
-      profilePhoto: "",
-      experience: "",
+      email: "parmargautam933@gmail.com",
+      profilePhoto: "./seniors/gautam.jpg",
+      experience: "Interview Process:  1. Round 1: Aptitude, reasoning, verbal ability & pseudo code questions. 2. Technical + HR Round:   - Self-introduction   - Graduation project & cloud deployment (Firebase)   - Development process (explained & drew on paper)   - Why should we hire you?   - What do you know about the company?",
     },
     {
       name: "Saurav Thoke",
@@ -163,11 +173,12 @@ const SeniorGuidance = () => {
       companyName: "GammaStack",
       Role: "Solution Engineer",
       salary: "4.15 LPA",
-      email: "",
-      profilePhoto: "",
-      experience: "",
+      email: "sauravthoke28@gmail.com",
+      profilePhoto: "./seniors/Saurav.jpg",
+      experience: "Interview Process: Coding Round: Arrays, strings, trees, backtracking (4 questions). Technical 1: Java, OOPs, 1 coding (online), binary search, bubble sort, SQL. Technical 2: 3 coding – frequency count, pattern, least combination. Experience: 2 months at GAMMASTACK, great work culture, supportive seniors, and exploring game development..",
     },
   ];
+
   return (
     <div className="p-10 bg-gradient-to-r from-blue-100 to-purple-200 min-h-screen">
       <h1 className="text-6xl font-bold font-serif text-center mb-8 text-gray-800">
@@ -181,7 +192,7 @@ const SeniorGuidance = () => {
           >
             <div className="card-inner">
               {/* Front Side */}
-              <div className="card-front text-gray-800 p-7 rounded-xl transform transition-all duration-300">
+              <div className="card-front text-gray-800 py-7 px-4 rounded-xl transform transition-all duration-300">
                 <div className="mx-auto h-32 w-32 rounded-full mb-3 shadow-md flex items-center justify-center bg-gray-100 text-blue-200 text-7xl font-semibold">
                   {user.profilePhoto ? (
                     <img
@@ -206,7 +217,7 @@ const SeniorGuidance = () => {
                   <strong>Salary:</strong> {user.salary}
                 </h2>
                 <h2 className="pl-6">
-                  <strong>Email:</strong> {user.contact || "N/A"}
+                  <strong>Email:</strong> {user.email || "N/A"}
                 </h2>
                 <button
                   onClick={() => toggleFlip(index)}
